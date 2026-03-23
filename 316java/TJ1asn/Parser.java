@@ -105,7 +105,16 @@ public final class Parser {
     TJ.output.printSymbol(NTsingleVarDecl);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    accept(IDENT);
+    while (getCurrentToken() == LBRACKET) {
+      nextToken();
+      accept(RBRACKET);
+    }
+
+    if (getCurrentToken() == BECOMES) {
+      nextToken();
+      expr3();
+    }
 
     TJ.output.decTreeDepth();
   }
