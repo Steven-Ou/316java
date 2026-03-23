@@ -264,7 +264,11 @@ public final class Parser {
     TJ.output.printSymbol(NTwhileStmt);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    accept(WHILE);
+    accept(LPAREN);
+    expr7();
+    accept(RPAREN);
+    statement();
 
     TJ.output.decTreeDepth();
   }
