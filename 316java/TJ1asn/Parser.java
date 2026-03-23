@@ -133,8 +133,23 @@ public final class Parser {
   private static void methodDecl() throws SourceFileErrorException {
     TJ.output.printSymbol(NTmethodDecl);
     TJ.output.incTreeDepth();
-
-    /* ???????? */
+    
+    accept(STATIC);
+    if(getCurrentToken()== VOID){
+      nextToken();
+    }else if ((getCurrentToken() == INT)) {
+      while (getCurrentToken() == LBRACKET) {
+        nextToken();
+        accept(RBRACKET);
+      }
+    }else{
+      throw new SourceFileErrorException("ReturnType Expected");
+    }
+    accept(IDENT);
+    accept(LBRACE);
+    parameterDecl();
+    accept(RBRACE);
+    compoundStmt();
 
     TJ.output.decTreeDepth();
   }
