@@ -155,9 +155,9 @@ public final class Parser {
       throw new SourceFileErrorException("ReturnType Expected");
     }
     accept(IDENT);
-    accept(LBRACE);
+    accept(LPAREN);
     parameterDecl();
-    accept(RBRACE);
+    accept(RPAREN);
     compoundStmt();
 
     TJ.output.decTreeDepth();
