@@ -481,13 +481,18 @@ public final class Parser {
         break;
       case IDENT:
         nextToken();
-        if (getCurrentToken() == DOT) { 
-          nextToken(); 
+        if (getCurrentToken() == DOT) {
+          nextToken();
           accept(NEXTINT);
           accept(LPAREN);
           accept(RPAREN);
-        }else if (getCurrentToken() == LPAREN) {
+        } else if (getCurrentToken() == LPAREN) {
           argumentList();
+          while (getCurrentToken() == LBRACKET) {
+            nextToken();
+            expr3();
+            accept(RBRACKET);
+          }
         } else {
           while (getCurrentToken() == LBRACKET) {
             nextToken();
