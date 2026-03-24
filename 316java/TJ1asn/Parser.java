@@ -345,7 +345,7 @@ public final class Parser {
         break;
       default:
         throw new SourceFileErrorException("print() or println() expected, not "
-                              + getCurrentToken().symbolRepresentationForOutputFile);
+            + getCurrentToken().symbolRepresentationForOutputFile);
     }
 
     TJ.output.decTreeDepth();
@@ -355,8 +355,11 @@ public final class Parser {
     TJ.output.printSymbol(NTprintArgument);
     TJ.output.incTreeDepth();
 
-    accept(CHARSTRING);
-    expr3();
+    if (getCurrentToken() == CHARSTRING) {
+      nextToken();
+    } else {
+      expr3();
+    }
 
     TJ.output.decTreeDepth();
   }
