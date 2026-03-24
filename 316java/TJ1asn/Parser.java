@@ -344,7 +344,8 @@ public final class Parser {
         accept(SEMICOLON);
         break;
       default:
-        throw new SourceFileErrorException("print() or println( expected");
+        throw new SourceFileErrorException("print() or println() expected, not "
+                              + getCurrentToken().symbolRepresentationForOutputFile);
     }
 
     TJ.output.decTreeDepth();
