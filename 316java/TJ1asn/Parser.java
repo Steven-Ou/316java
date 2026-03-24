@@ -334,7 +334,8 @@ public final class Parser {
     TJ.output.printSymbol(NTprintArgument);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    accept(CHARSTRING);
+    expr3();
 
     TJ.output.decTreeDepth();
   }
@@ -343,8 +344,7 @@ public final class Parser {
     TJ.output.printSymbol(NTexpr7);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
-
+    
     TJ.output.decTreeDepth();
   }
 
