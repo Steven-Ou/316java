@@ -142,16 +142,16 @@ public final class Parser {
   private static void methodDecl() throws SourceFileErrorException {
     TJ.output.printSymbol(NTmethodDecl);
     TJ.output.incTreeDepth();
-    
+
     accept(STATIC);
-    if(getCurrentToken()== VOID){
+    if (getCurrentToken() == VOID) {
       nextToken();
-    }else if ((getCurrentToken() == INT)) {
+    } else if ((getCurrentToken() == INT)) {
       while (getCurrentToken() == LBRACKET) {
         nextToken();
         accept(RBRACKET);
       }
-    }else{
+    } else {
       throw new SourceFileErrorException("ReturnType Expected");
     }
     accept(IDENT);
@@ -252,11 +252,11 @@ public final class Parser {
     TJ.output.incTreeDepth();
 
     accept(IDENT);
-    if (getCurrentToken()==LPAREN) {
+    if (getCurrentToken() == LPAREN) {
       argumentList();
       accept(SEMICOLON);
-    }else{
-      while (getCurrentToken()==LBRACKET) {
+    } else {
+      while (getCurrentToken() == LBRACKET) {
         nextToken();
         expr3();
         accept(RBRACKET);
@@ -274,14 +274,14 @@ public final class Parser {
 
     accept(LPAREN);
 
-    if(getCurrentToken()!=RPAREN){
+    if (getCurrentToken() != RPAREN) {
       expr3();
-      while (getCurrentToken()==COMMA) {
+      while (getCurrentToken() == COMMA) {
         nextToken();
         expr3();
       }
     }
-      accept(RPAREN);
+    accept(RPAREN);
     TJ.output.decTreeDepth();
   }
 
@@ -337,7 +337,7 @@ public final class Parser {
       case PRINTLN:
         nextToken();
         accept(LPAREN);
-        if(getCurrentToken()!= RBRACE){
+        if (getCurrentToken() != RBRACE) {
           printArgument();
         }
         accept(RPAREN);
@@ -366,7 +366,7 @@ public final class Parser {
 
     expr6();
 
-    while (getCurrentToken()== OR) {
+    while (getCurrentToken() == OR) {
       nextToken();
       expr6();
     }
@@ -379,7 +379,7 @@ public final class Parser {
 
     expr5();
 
-    while (getCurrentToken()== AND) {
+    while (getCurrentToken() == AND) {
       nextToken();
       expr5();
     }
@@ -393,7 +393,6 @@ public final class Parser {
 
     expr4();
 
-
     TJ.output.decTreeDepth();
   }
 
@@ -401,7 +400,15 @@ public final class Parser {
     TJ.output.printSymbol(NTexpr4);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    expr3();
+
+    while (getCurrentToken() == EQ || getCurrentToken() == NE ||
+        getCurrentToken() == GT || getCurrentToken() == GE ||
+        getCurrentToken() == LT || getCurrentToken() == LE) {
+      nextToken();
+      expr3();
+
+    }
 
     TJ.output.decTreeDepth();
   }
