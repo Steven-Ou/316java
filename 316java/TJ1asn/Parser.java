@@ -272,8 +272,16 @@ public final class Parser {
     TJ.output.printSymbol(NTargumentList);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    accept(LPAREN);
+    
+    if(getCurrentToken()!=RPAREN)
+      expr3();
+      while (getCurrentToken()==COMMA) {
+        nextToken();
+        expr3();
+      }
 
+      accept(RPAREN);
     TJ.output.decTreeDepth();
   }
 
