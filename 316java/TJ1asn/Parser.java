@@ -383,7 +383,7 @@ public final class Parser {
       nextToken();
       expr5();
     }
-    
+
     TJ.output.decTreeDepth();
   }
 
@@ -391,7 +391,8 @@ public final class Parser {
     TJ.output.printSymbol(NTexpr5);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    expr4();
+
 
     TJ.output.decTreeDepth();
   }
