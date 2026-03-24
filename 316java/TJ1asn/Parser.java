@@ -251,8 +251,20 @@ public final class Parser {
     TJ.output.printSymbol(NTassignmentOrInvoc);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
-
+    accept(IDENT);
+    if (getCurrentToken()==LPAREN) {
+      argumentList();
+      accept(SEMICOLON);
+    }else{
+      while (getCurrentToken()==LBRACKET) {
+        nextToken();
+        expr3();
+        accept(RBRACKET);
+      }
+      accept(BECOMES);
+      expr3();
+      accept(SEMICOLON);
+    }
     TJ.output.decTreeDepth();
   }
 
