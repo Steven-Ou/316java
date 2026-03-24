@@ -307,15 +307,21 @@ public final class Parser {
     accept(DOT);
 
     switch (getCurrentToken()) {
-
-      /*
-       * ????????
-       * 
-       * default: throw new
-       * SourceFileErrorException("print() or println() expected, not "
-       * + getCurrentToken().symbolRepresentationForOutputFile);
-       */
-
+      case PRINT:
+        nextToken();
+        accept(LBRACE);
+        printArgument();
+        accept(RBRACE);
+        accept(SEMICOLON);
+        break;
+      case PRINTLN:
+        nextToken();
+        accept(LBRACE);
+        if(getCurrentToken()!= RBRACE){
+          printArgument();
+        }
+        accept(RBRACE);
+        break;
     }
 
     TJ.output.decTreeDepth();
