@@ -323,6 +323,8 @@ public final class Parser {
         accept(RPAREN);
         accept(SEMICOLON);
         break;
+      default:
+        throw new SourceFileErrorException("print() or println( expected");
     }
 
     TJ.output.decTreeDepth();
