@@ -337,7 +337,7 @@ public final class Parser {
       case PRINTLN:
         nextToken();
         accept(LPAREN);
-        if (getCurrentToken() != RBRACE) {
+        if (getCurrentToken() != RPAREN) {
           printArgument();
         }
         accept(RPAREN);
