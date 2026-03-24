@@ -329,9 +329,9 @@ public final class Parser {
     switch (getCurrentToken()) {
       case PRINT:
         nextToken();
-        accept(LBRACE);
+        accept(LPAREN);
         printArgument();
-        accept(RBRACE);
+        accept(RPAREN);
         accept(SEMICOLON);
         break;
       case PRINTLN:
