@@ -489,19 +489,16 @@ public final class Parser {
           accept(NEXTINT);
           accept(LPAREN);
           accept(RPAREN);
-        } else if (getCurrentToken() == LPAREN) {
+        } else {if (getCurrentToken() == LPAREN) {
           argumentList();
+        }
+
           while (getCurrentToken() == LBRACKET) {
             nextToken();
             expr3();
             accept(RBRACKET);
           }
-        } else {
-          while (getCurrentToken() == LBRACKET) {
-            nextToken();
-            expr3();
-            accept(RBRACKET);
-          }
+        } 
         }
         break;
 
@@ -516,6 +513,5 @@ public final class Parser {
 
     }
 
-    TJ.output.decTreeDepth();
-  }
-}
+  TJ.output.decTreeDepth();
+}}
