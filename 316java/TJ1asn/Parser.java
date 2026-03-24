@@ -469,18 +469,20 @@ public final class Parser {
         nextToken();
         expr1();
         break;
-
       case UNSIGNEDINT:
       case NULL:
         nextToken();
         break;
-
       case NEW:
         nextToken();
         accept(INT);
         accept(LBRACKET);
         expr3();
         accept(RBRACKET);
+        while (getCurrentToken() == LBRACKET) {
+          nextToken();
+          accept(RBRACKET);
+        }
         break;
       case IDENT:
         nextToken();
@@ -489,29 +491,21 @@ public final class Parser {
           accept(NEXTINT);
           accept(LPAREN);
           accept(RPAREN);
-        } else {if (getCurrentToken() == LPAREN) {
-          argumentList();
-        }
-
+        } else {
+          if (getCurrentToken() == LPAREN) {
+            argumentList();
+          }
           while (getCurrentToken() == LBRACKET) {
             nextToken();
             expr3();
             accept(RBRACKET);
           }
-        } 
         }
         break;
-
-      case NEXTINT:
-        nextToken();
-        accept(LPAREN);
-        accept(RPAREN);
-        break;
-
       default:
         throw new SourceFileErrorException("Malformed expression");
-
     }
 
-  TJ.output.decTreeDepth();
-}}
+    TJ.output.decTreeDepth();
+  }
+}
