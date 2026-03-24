@@ -397,6 +397,10 @@ public final class Parser {
     TJ.output.incTreeDepth();
 
     expr4();
+    while (getCurrentToken() == EQ || getCurrentToken() == NE) {
+      nextToken();
+      expr4();
+    }
 
     TJ.output.decTreeDepth();
   }
@@ -407,8 +411,7 @@ public final class Parser {
 
     expr3();
 
-    while (getCurrentToken() == EQ || getCurrentToken() == NE
-        || getCurrentToken() == GT || getCurrentToken() == GE
+    while (getCurrentToken() == GT || getCurrentToken() == GE
         || getCurrentToken() == LT || getCurrentToken() == LE) {
       nextToken();
       expr3();
