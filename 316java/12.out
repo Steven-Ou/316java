@@ -250,6 +250,23 @@
           <expr2>
            <expr1>
             IDENTIFIER: KB
+            .
+            Reserved Word: nextInt
+            (
+            )
             ... node has no more children
            ... node has no more children
           ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       }
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ <methodDecl>
+  Reserved Word: static
