@@ -2173,7 +2173,1372 @@
                ... node has no more children
               )
               ... node has no more children
+             [
+             <expr3>
+              <expr2>
+               <expr1>
+                IDENTIFIER: i1
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             ]
              ... node has no more children
             ... node has no more children
            ... node has no more children
           ... node has no more children
+         )
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: i1
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: i1
+            ... node has no more children
+           ... node has no more children
+          +
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 1
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       }
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    Reserved Word: return
+    <expr3>
+     <expr2>
+      <expr1>
+       UNSIGNED INTEGER LITERAL: 0
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ;
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ <methodDecl>
+  Reserved Word: static
+  Reserved Word: int
+  [
+  ]
+  IDENTIFIER: push
+  (
+  <parameterDeclList>
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: stack
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: top
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: v
+    ... node has no more children
+   ... node has no more children
+  )
+  <compoundStmt>
+   {
+   <statement>
+    <varDecl>
+     Reserved Word: int
+     <singleVarDecl>
+      IDENTIFIER: i
+      =
+      <expr3>
+       <expr2>
+        <expr1>
+         IDENTIFIER: top
+         [
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 0
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ]
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ,
+     <singleVarDecl>
+      IDENTIFIER: newStack
+      [
+      ]
+      =
+      <expr3>
+       <expr2>
+        <expr1>
+         Reserved Word: new
+         Reserved Word: int
+         [
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 51
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ]
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <whileStmt>
+     Reserved Word: while
+     (
+     <expr7>
+      <expr6>
+       <expr5>
+        <expr4>
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: i
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         >=
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 0
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     )
+     <statement>
+      <compoundStmt>
+       {
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: newStack
+         [
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: i
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ]
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: stack
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               IDENTIFIER: i
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: i
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: i
+            ... node has no more children
+           ... node has no more children
+          -
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 1
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       }
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: top
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 0
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: top
+        [
+        <expr3>
+         <expr2>
+          <expr1>
+           UNSIGNED INTEGER LITERAL: 0
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ]
+        ... node has no more children
+       ... node has no more children
+      +
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 1
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: newStack
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: top
+        [
+        <expr3>
+         <expr2>
+          <expr1>
+           UNSIGNED INTEGER LITERAL: 0
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ]
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: v
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    Reserved Word: return
+    <expr3>
+     <expr2>
+      <expr1>
+       IDENTIFIER: newStack
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ;
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ <methodDecl>
+  Reserved Word: static
+  Reserved Word: int
+  [
+  ]
+  IDENTIFIER: pop
+  (
+  <parameterDeclList>
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: stack
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: top
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: value
+    [
+    ]
+    ... node has no more children
+   ... node has no more children
+  )
+  <compoundStmt>
+   {
+   <statement>
+    <varDecl>
+     Reserved Word: int
+     <singleVarDecl>
+      IDENTIFIER: newStack
+      [
+      ]
+      =
+      <expr3>
+       <expr2>
+        <expr1>
+         IDENTIFIER: stack
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: value
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 0
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: stack
+        [
+        <expr3>
+         <expr2>
+          <expr1>
+           IDENTIFIER: top
+           [
+           <expr3>
+            <expr2>
+             <expr1>
+              UNSIGNED INTEGER LITERAL: 0
+              ... node has no more children
+             ... node has no more children
+            ... node has no more children
+           ]
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ]
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: top
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 0
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: top
+        [
+        <expr3>
+         <expr2>
+          <expr1>
+           UNSIGNED INTEGER LITERAL: 0
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ]
+        ... node has no more children
+       ... node has no more children
+      -
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 1
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    Reserved Word: return
+    <expr3>
+     <expr2>
+      <expr1>
+       IDENTIFIER: newStack
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ;
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ <methodDecl>
+  Reserved Word: static
+  Reserved Word: int
+  [
+  ]
+  IDENTIFIER: initstack
+  (
+  <parameterDeclList>
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: stack
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: top
+    [
+    ]
+    ... node has no more children
+   ... node has no more children
+  )
+  <compoundStmt>
+   {
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: top
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 0
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        -
+        <expr1>
+         UNSIGNED INTEGER LITERAL: 1
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    Reserved Word: return
+    <expr3>
+     <expr2>
+      <expr1>
+       IDENTIFIER: stack
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ;
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ <methodDecl>
+  Reserved Word: static
+  Reserved Word: void
+  IDENTIFIER: swaplistij
+  (
+  <parameterDeclList>
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: i
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: j
+    ... node has no more children
+   ... node has no more children
+  )
+  <compoundStmt>
+   {
+   <statement>
+    <varDecl>
+     Reserved Word: int
+     <singleVarDecl>
+      IDENTIFIER: temp
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: temp
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: numlist
+        [
+        <expr3>
+         <expr2>
+          <expr1>
+           IDENTIFIER: i
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ]
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: numlist
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: i
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: numlist
+        [
+        <expr3>
+         <expr2>
+          <expr1>
+           IDENTIFIER: j
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ]
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: numlist
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: j
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        IDENTIFIER: temp
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ <methodDecl>
+  Reserved Word: static
+  Reserved Word: void
+  IDENTIFIER: oneswap
+  (
+  <parameterDeclList>
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: i
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: j
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: p
+    ... node has no more children
+   ... node has no more children
+  )
+  <compoundStmt>
+   {
+   <statement>
+    <whileStmt>
+     Reserved Word: while
+     (
+     <expr7>
+      <expr6>
+       <expr5>
+        <expr4>
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: numlist
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               IDENTIFIER: i
+               [
+               <expr3>
+                <expr2>
+                 <expr1>
+                  UNSIGNED INTEGER LITERAL: 0
+                  ... node has no more children
+                 ... node has no more children
+                ... node has no more children
+               ]
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         <=
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: p
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     )
+     <statement>
+      <assignmentOrInvoc>
+       IDENTIFIER: i
+       [
+       <expr3>
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 0
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ]
+       =
+       <expr3>
+        <expr2>
+         <expr1>
+          IDENTIFIER: i
+          [
+          <expr3>
+           <expr2>
+            <expr1>
+             UNSIGNED INTEGER LITERAL: 0
+             ... node has no more children
+            ... node has no more children
+           ... node has no more children
+          ]
+          ... node has no more children
+         ... node has no more children
+        +
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 1
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ;
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <whileStmt>
+     Reserved Word: while
+     (
+     <expr7>
+      <expr6>
+       <expr5>
+        <expr4>
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: numlist
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               IDENTIFIER: j
+               [
+               <expr3>
+                <expr2>
+                 <expr1>
+                  UNSIGNED INTEGER LITERAL: 0
+                  ... node has no more children
+                 ... node has no more children
+                ... node has no more children
+               ]
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         >
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: p
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     )
+     <statement>
+      <assignmentOrInvoc>
+       IDENTIFIER: j
+       [
+       <expr3>
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 0
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ]
+       =
+       <expr3>
+        <expr2>
+         <expr1>
+          IDENTIFIER: j
+          [
+          <expr3>
+           <expr2>
+            <expr1>
+             UNSIGNED INTEGER LITERAL: 0
+             ... node has no more children
+            ... node has no more children
+           ... node has no more children
+          ]
+          ... node has no more children
+         ... node has no more children
+        -
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 1
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ;
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <ifStmt>
+     Reserved Word: if
+     (
+     <expr7>
+      <expr6>
+       <expr5>
+        <expr4>
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: i
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               UNSIGNED INTEGER LITERAL: 0
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         <
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: j
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               UNSIGNED INTEGER LITERAL: 0
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     )
+     <statement>
+      <compoundStmt>
+       {
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: swaplistij
+         <argumentList>
+          (
+          <expr3>
+           <expr2>
+            <expr1>
+             IDENTIFIER: i
+             [
+             <expr3>
+              <expr2>
+               <expr1>
+                UNSIGNED INTEGER LITERAL: 0
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             ]
+             ... node has no more children
+            ... node has no more children
+           ... node has no more children
+          ,
+          <expr3>
+           <expr2>
+            <expr1>
+             IDENTIFIER: j
+             [
+             <expr3>
+              <expr2>
+               <expr1>
+                UNSIGNED INTEGER LITERAL: 0
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             ]
+             ... node has no more children
+            ... node has no more children
+           ... node has no more children
+          )
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: i
+         [
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 0
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ]
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: i
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               UNSIGNED INTEGER LITERAL: 0
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          +
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 1
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: j
+         [
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 0
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ]
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: j
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               UNSIGNED INTEGER LITERAL: 0
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          -
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 1
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       }
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ <methodDecl>
+  Reserved Word: static
+  Reserved Word: void
+  IDENTIFIER: findpivot
+  (
+  <parameterDeclList>
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: pivot
+    [
+    ]
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: first
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: last
+    ... node has no more children
+   ,
+   <parameterDecl>
+    Reserved Word: int
+    IDENTIFIER: allsame
+    [
+    ]
+    ... node has no more children
+   ... node has no more children
+  )
+  <compoundStmt>
+   {
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: allsame
+     [
+     <expr3>
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 0
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ]
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 0
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <varDecl>
+     Reserved Word: int
+     <singleVarDecl>
+      IDENTIFIER: k
+      =
+      <expr3>
+       <expr2>
+        <expr1>
+         IDENTIFIER: first
+         ... node has no more children
+        ... node has no more children
+       +
+       <expr2>
+        <expr1>
+         UNSIGNED INTEGER LITERAL: 1
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <whileStmt>
+     Reserved Word: while
+     (
+     <expr7>
+      <expr6>
+       <expr5>
+        <expr4>
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: eq
+            <argumentList>
+             (
+             <expr3>
+              <expr2>
+               <expr1>
+                IDENTIFIER: numlist
+                [
+                <expr3>
+                 <expr2>
+                  <expr1>
+                   IDENTIFIER: k
+                   ... node has no more children
+                  ... node has no more children
+                 ... node has no more children
+                ]
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             ,
+             <expr3>
+              <expr2>
+               <expr1>
+                IDENTIFIER: numlist
+                [
+                <expr3>
+                 <expr2>
+                  <expr1>
+                   IDENTIFIER: first
+                   ... node has no more children
+                  ... node has no more children
+                 ... node has no more children
+                ]
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             )
+             ... node has no more children
+            ... node has no more children
+           *
+           <expr1>
+            IDENTIFIER: leq
+            <argumentList>
+             (
+             <expr3>
+              <expr2>
+               <expr1>
+                IDENTIFIER: k
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             ,
+             <expr3>
+              <expr2>
+               <expr1>
+                IDENTIFIER: last
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             )
+             ... node has no more children
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ==
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 1
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     )
+     <statement>
+      <assignmentOrInvoc>
+       IDENTIFIER: k
+       =
+       <expr3>
+        <expr2>
+         <expr1>
+          IDENTIFIER: k
+          ... node has no more children
+         ... node has no more children
+        +
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 1
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ;
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <ifStmt>
+     Reserved Word: if
+     (
+     <expr7>
+      <expr6>
+       <expr5>
+        <expr4>
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: k
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ==
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: last
+            ... node has no more children
+           ... node has no more children
+          +
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 1
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     )
+     <statement>
+      <assignmentOrInvoc>
+       IDENTIFIER: allsame
+       [
+       <expr3>
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 0
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ]
+       =
+       <expr3>
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 1
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ;
+       ... node has no more children
+      ... node has no more children
+     Reserved Word: else
+     <statement>
+      <ifStmt>
+       Reserved Word: if
+       (
+       <expr7>
+        <expr6>
+         <expr5>
+          <expr4>
+           <expr3>
+            <expr2>
+             <expr1>
+              IDENTIFIER: numlist
+              [
+              <expr3>
+               <expr2>
+                <expr1>
+                 IDENTIFIER: k
+                 ... node has no more children
+                ... node has no more children
+               ... node has no more children
+              ]
+              ... node has no more children
+             ... node has no more children
+            ... node has no more children
+           <
+           <expr3>
+            <expr2>
+             <expr1>
+              IDENTIFIER: numlist
+              [
+              <expr3>
+               <expr2>
+                <expr1>
+                 IDENTIFIER: first
+                 ... node has no more children
+                ... node has no more children
+               ... node has no more children
+              ]
+              ... node has no more children
+             ... node has no more children
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       )
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: pivot
+         [
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 0
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ]
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: numlist
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               IDENTIFIER: k
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       Reserved Word: else
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: pivot
+         [
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 0
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ]
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: numlist
+            [
+            <expr3>
+             <expr2>
+              <expr1>
+               IDENTIFIER: first
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ]
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
+   }
+   ... node has no more children
+  ... node has no more children
+ }
+ ... node has no more children
