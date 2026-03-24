@@ -1,0 +1,255 @@
+<program>
+ <importStmt>
+  Reserved Word: import
+  Reserved Word: java
+  .
+  Reserved Word: util
+  .
+  Reserved Word: Scanner
+  ;
+  ... node has no more children
+ Reserved Word: class
+ IDENTIFIER: CS316ex12
+ {
+ <dataFieldDecl>
+  Reserved Word: static
+  <varDecl>
+   Reserved Word: int
+   <singleVarDecl>
+    IDENTIFIER: size
+    ... node has no more children
+   ,
+   <singleVarDecl>
+    IDENTIFIER: again
+    ... node has no more children
+   ,
+   <singleVarDecl>
+    IDENTIFIER: numlist
+    [
+    ]
+    ... node has no more children
+   ;
+   ... node has no more children
+  ... node has no more children
+ <mainDecl>
+  Reserved Word: public
+  Reserved Word: static
+  Reserved Word: void
+  Reserved Word: main
+  (
+  Reserved Word: String
+  IDENTIFIER: args
+  [
+  ]
+  )
+  <compoundStmt>
+   {
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: numlist
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        Reserved Word: new
+        Reserved Word: int
+        [
+        <expr3>
+         <expr2>
+          <expr1>
+           UNSIGNED INTEGER LITERAL: 51
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ]
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <assignmentOrInvoc>
+     IDENTIFIER: again
+     =
+     <expr3>
+      <expr2>
+       <expr1>
+        UNSIGNED INTEGER LITERAL: 1
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     ;
+     ... node has no more children
+    ... node has no more children
+   <statement>
+    <whileStmt>
+     Reserved Word: while
+     (
+     <expr7>
+      <expr6>
+       <expr5>
+        <expr4>
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: again
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ==
+         <expr3>
+          <expr2>
+           <expr1>
+            UNSIGNED INTEGER LITERAL: 1
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ... node has no more children
+      ... node has no more children
+     )
+     <statement>
+      <compoundStmt>
+       {
+       <statement>
+        <outputStmt>
+         Reserved Word: System
+         .
+         Reserved Word: out
+         .
+         Reserved Word: println
+         (
+         )
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: readin
+         <argumentList>
+          (
+          )
+          ... node has no more children
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <ifStmt>
+         Reserved Word: if
+         (
+         <expr7>
+          <expr6>
+           <expr5>
+            <expr4>
+             <expr3>
+              <expr2>
+               <expr1>
+                IDENTIFIER: size
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             !=
+             <expr3>
+              <expr2>
+               <expr1>
+                UNSIGNED INTEGER LITERAL: 0
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             ... node has no more children
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
+         )
+         <statement>
+          <compoundStmt>
+           {
+           <statement>
+            <varDecl>
+             Reserved Word: int
+             <singleVarDecl>
+              IDENTIFIER: x
+              =
+              <expr3>
+               <expr2>
+                <expr1>
+                 IDENTIFIER: sort
+                 <argumentList>
+                  (
+                  )
+                  ... node has no more children
+                 ... node has no more children
+                ... node has no more children
+               ... node has no more children
+              ... node has no more children
+             ;
+             ... node has no more children
+            ... node has no more children
+           <statement>
+            <assignmentOrInvoc>
+             IDENTIFIER: sort
+             <argumentList>
+              (
+              )
+              ... node has no more children
+             ;
+             ... node has no more children
+            ... node has no more children
+           <statement>
+            <assignmentOrInvoc>
+             IDENTIFIER: writeout
+             <argumentList>
+              (
+              )
+              ... node has no more children
+             ;
+             ... node has no more children
+            ... node has no more children
+           }
+           ... node has no more children
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <outputStmt>
+         Reserved Word: System
+         .
+         Reserved Word: out
+         .
+         Reserved Word: print
+         (
+         <printArgument>
+          CHARACTER STRING LITERAL: "Type 1 to try again, 0 to quit: "
+          ... node has no more children
+         )
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <varDecl>
+         Reserved Word: Scanner
+         IDENTIFIER: KB
+         =
+         Reserved Word: new
+         Reserved Word: Scanner
+         (
+         Reserved Word: System
+         .
+         Reserved Word: in
+         )
+         ;
+         ... node has no more children
+        ... node has no more children
+       <statement>
+        <assignmentOrInvoc>
+         IDENTIFIER: again
+         =
+         <expr3>
+          <expr2>
+           <expr1>
+            IDENTIFIER: KB
+            ... node has no more children
+           ... node has no more children
+          ... node has no more children
