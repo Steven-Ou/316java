@@ -450,13 +450,52 @@ public final class Parser {
     TJ.output.incTreeDepth();
 
     switch (getCurrentToken()) {
+      case LPAREN:
+        nextToken();
+        expr7();
+        accept(RPAREN);
+        break;
+      case PLUS:
+      case MINUS:
+      case NOT:
+        nextToken();
+        expr1();
+        break;
 
-      /*
-       * ????????
-       * 
-       * default: throw new SourceFileErrorException("Malformed expression");
-       * 
-       */
+      case UNSIGNEDINT:
+      case NULL:
+        nextToken();
+        break;
+
+      case NEW:
+        nextToken();
+        accept(INT);
+        accept(LBRACKET);
+        expr3();
+        accept(RBRACKET);
+        break;
+      case IDENT:
+        nextToken();
+        if (getCurrentToken() == LPAREN) {
+          argumentList();
+        } else {
+          while (getCurrentToken() == LBRACKET) {
+            nextToken();
+            expr3();
+            accept(RBRACKET);
+          }
+        }
+        break;
+
+      case NEXTINT:
+        nextToken();
+        accept(LPAREN);
+        accept(RPAREN);
+        break;
+
+      default:
+        throw new SourceFileErrorException("Malformed expression");
+
     }
 
     TJ.output.decTreeDepth();
