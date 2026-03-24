@@ -147,6 +147,7 @@ public final class Parser {
     if (getCurrentToken() == VOID) {
       nextToken();
     } else if ((getCurrentToken() == INT)) {
+      nextToken();
       while (getCurrentToken() == LBRACKET) {
         nextToken();
         accept(RBRACKET);
