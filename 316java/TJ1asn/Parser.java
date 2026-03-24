@@ -344,7 +344,12 @@ public final class Parser {
     TJ.output.printSymbol(NTexpr7);
     TJ.output.incTreeDepth();
 
-    
+    expr6();
+
+    while (getCurrentToken()== OR) {
+      nextToken();
+      expr6();
+    }
     TJ.output.decTreeDepth();
   }
 
