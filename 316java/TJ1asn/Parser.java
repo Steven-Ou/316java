@@ -402,9 +402,9 @@ public final class Parser {
 
     expr3();
 
-    while (getCurrentToken() == EQ || getCurrentToken() == NE ||
-        getCurrentToken() == GT || getCurrentToken() == GE ||
-        getCurrentToken() == LT || getCurrentToken() == LE) {
+    while (getCurrentToken() == EQ || getCurrentToken() == NE
+        || getCurrentToken() == GT || getCurrentToken() == GE
+        || getCurrentToken() == LT || getCurrentToken() == LE) {
       nextToken();
       expr3();
 
@@ -419,7 +419,7 @@ public final class Parser {
 
     expr2();
 
-    while (getCurrentToken()==PLUS||getCurrentToken()==MINUS) {
+    while (getCurrentToken() == PLUS || getCurrentToken() == MINUS) {
       nextToken();
       expr2();
     }
