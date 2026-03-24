@@ -156,7 +156,7 @@ public final class Parser {
     }
     accept(IDENT);
     accept(LPAREN);
-    parameterDecl();
+    parameterDeclList();
     accept(RPAREN);
     compoundStmt();
 
