@@ -316,11 +316,12 @@ public final class Parser {
         break;
       case PRINTLN:
         nextToken();
-        accept(LBRACE);
+        accept(LPAREN);
         if(getCurrentToken()!= RBRACE){
           printArgument();
         }
-        accept(RBRACE);
+        accept(RPAREN);
+        accept(SEMICOLON);
         break;
     }
 
