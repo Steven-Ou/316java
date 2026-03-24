@@ -97,7 +97,9 @@
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
@@ -150,7 +152,9 @@
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             !=
+             ... node has no more children
+            !=
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
@@ -302,7 +306,9 @@
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
@@ -550,7 +556,9 @@
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
@@ -589,7 +597,9 @@
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
@@ -653,7 +663,9 @@
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             !=
+             ... node has no more children
+            !=
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
@@ -1368,7 +1380,9 @@
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         !=
+         ... node has no more children
+        !=
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
@@ -1553,7 +1567,9 @@
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             ==
+             ... node has no more children
+            ==
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
@@ -1639,7 +1655,9 @@
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             ==
+             ... node has no more children
+            ==
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
@@ -1743,7 +1761,9 @@
                     ... node has no more children
                    ... node has no more children
                   ... node has no more children
-                 ==
+                 ... node has no more children
+                ==
+                <expr4>
                  <expr3>
                   <expr2>
                    <expr1>
@@ -1783,7 +1803,9 @@
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
-                     !=
+                     ... node has no more children
+                    !=
+                    <expr4>
                      <expr3>
                       <expr2>
                        <expr1>
@@ -3329,7 +3351,9 @@
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
@@ -3379,7 +3403,9 @@
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>

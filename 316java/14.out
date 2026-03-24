@@ -1,0 +1,58 @@
+<program>
+ <importStmt>
+  Reserved Word: import
+  Reserved Word: java
+  .
+  Reserved Word: util
+  .
+  Reserved Word: Scanner
+  ;
+  ... node has no more children
+ Reserved Word: class
+ IDENTIFIER: CS316ex14
+ {
+ <dataFieldDecl>
+  Reserved Word: static
+  <varDecl>
+   Reserved Word: int
+   <singleVarDecl>
+    IDENTIFIER: mat
+    [
+    ]
+    [
+    ]
+    ... node has no more children
+   ;
+   ... node has no more children
+  ... node has no more children
+ <dataFieldDecl>
+  Reserved Word: static
+  <varDecl>
+   Reserved Word: int
+   <singleVarDecl>
+    IDENTIFIER: threeDmat
+    [
+    ]
+    [
+    ]
+    [
+    ]
+    =
+    <expr3>
+     <expr2>
+      <expr1>
+       Reserved Word: new
+       Reserved Word: int
+       [
+       <expr3>
+        <expr2>
+         <expr1>
+          UNSIGNED INTEGER LITERAL: 5
+          ... node has no more children
+         ... node has no more children
+        ... node has no more children
+       ]
+       ... node has no more children
+      ... node has no more children
+     ... node has no more children
+    ... node has no more children
