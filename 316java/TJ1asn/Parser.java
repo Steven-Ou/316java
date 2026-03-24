@@ -377,8 +377,13 @@ public final class Parser {
     TJ.output.printSymbol(NTexpr6);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    expr5();
 
+    while (getCurrentToken()== AND) {
+      nextToken();
+      expr5();
+    }
+    
     TJ.output.decTreeDepth();
   }
 
