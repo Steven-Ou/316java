@@ -621,7 +621,13 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTexpr6);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    expr5();
+
+    while (getCurrentToken() == AND) {
+      nextToken();
+      expr5();
+      new ANDinstr();
+    }
 
     TJ.output.decTreeDepth();
   }
