@@ -527,7 +527,26 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTargumentList);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    if (getCurrentToken() != RPAREN) {
+      expr3();
+      int count = 1;
+      while (getCurrentToken() == COMMA) {
+        nextToken();
+        expr3();
+        count++;
+      }
+      if (m.getArgCount() != MethodRec.NOT_KNOWN && m.getArgCount() != count) {
+        throw new SourceFileErrorException("Method " + m.name + " was previously called with "
+            + m.getArgCount() + " arguments");
+      }
+      m.setArgCount(count);
+    } else {
+      if (m.getArgCount() != MethodRec.NOT_KNOWN && m.getArgCount() != 0) {
+        throw new SourceFileErrorException("Method " + m.name + " was previously called with "
+            + m.getArgCount() + " arguments");
+      }
+      m.setArgCount(0);
+    }
 
     TJ.output.decTreeDepth();
   }
