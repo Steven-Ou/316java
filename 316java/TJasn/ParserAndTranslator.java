@@ -490,8 +490,9 @@ public final class ParserAndTranslator {
       if (dim > t.dimensionCount)
         throw new SourceFileErrorException("Unexpected index(es)");
 
-      /* ???????? */
-
+      accept(BECOMES);
+      expr3();
+      new SAVETOADDRinstr();
     }
 
     else {
