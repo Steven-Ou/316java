@@ -471,9 +471,9 @@ public final class ParserAndTranslator {
         throw new SourceFileErrorException("int variable expected");
 
       if (t instanceof LocalVariableRec) {
-        /* ???????? */
+        new PUSHLOCADDRinstr(t.offset);
       } else {
-        /* ???????? */
+        new PUSHSTATADDRinstr(t.offset);
       }
 
       int dim = 0;
