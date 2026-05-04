@@ -11,12 +11,11 @@ import TJlexer.LexicalAnalyzer;
 import TJasn.symbolTable.*;
 import TJasn.virtualMachine.*;
 
-
 // ******************* Recursive Descent ParserAndTranslator ***************************
 
 public final class ParserAndTranslator {
 
-  private static class IdentList {    // for parameter lists of methods
+  private static class IdentList { // for parameter lists of methods
     String name;
     int dimensions;
     IdentList next;
@@ -35,46 +34,42 @@ public final class ParserAndTranslator {
 
   private static Boolean ScannerImported = false;
 
-  private static void accept (Symbols expectedToken) throws SourceFileErrorException
-  {
+  private static void accept(Symbols expectedToken) throws SourceFileErrorException {
     if (getCurrentToken() == expectedToken)
       nextToken();
-    else throw new SourceFileErrorException("Something's wrong--maybe the following token is missing: "
-                                               + expectedToken.symbolRepresentationForOutputFile);
+    else
+      throw new SourceFileErrorException("Something's wrong--maybe the following token is missing: "
+          + expectedToken.symbolRepresentationForOutputFile);
   }
-
 
   private static MethodRec lookUpCalledMethod(String methodName, int expectedType)
-                                          throws SourceFileErrorException
-  {
-     MethodRec t = (MethodRec) BlockRec.searchForStatic(methodName, true);
+      throws SourceFileErrorException {
+    MethodRec t = (MethodRec) BlockRec.searchForStatic(methodName, true);
 
-     if (t == null) { /* the method has never been declared nor called */
-        t = new MethodRec(methodName, expectedType, MethodRec.NOT_KNOWN);
-        t.setStartAddr(Instruction.OPERAND_NOT_YET_KNOWN);
-        MethodRec.incUndeclaredMethodCount();
-     }
+    if (t == null) { /* the method has never been declared nor called */
+      t = new MethodRec(methodName, expectedType, MethodRec.NOT_KNOWN);
+      t.setStartAddr(Instruction.OPERAND_NOT_YET_KNOWN);
+      MethodRec.incUndeclaredMethodCount();
+    }
 
-     else if (expectedType == MethodRec.NOT_KNOWN)
-         ;
-     else if (t.getType() == MethodRec.NOT_KNOWN)
-         t.setType(expectedType);
+    else if (expectedType == MethodRec.NOT_KNOWN)
+      ;
+    else if (t.getType() == MethodRec.NOT_KNOWN)
+      t.setType(expectedType);
 
-     else if (expectedType != t.getType())
-             throw new SourceFileErrorException("Method does not have appropriate return type");
+    else if (expectedType != t.getType())
+      throw new SourceFileErrorException("Method does not have appropriate return type");
 
-     return t;
+    return t;
   }
 
-
-  static void program () throws SourceFileErrorException
-  {
+  static void program() throws SourceFileErrorException {
     TJ.output.printSymbol(NTprogram);
     TJ.output.incTreeDepth();
 
     if (getCurrentToken() == IMPORT) {
-       ScannerImported = true;
-       importStmt();
+      ScannerImported = true;
+      importStmt();
     }
 
     accept(CLASS);
@@ -101,9 +96,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void importStmt() throws SourceFileErrorException
-  {
+  private static void importStmt() throws SourceFileErrorException {
     TJ.output.printSymbol(NTimport);
     TJ.output.incTreeDepth();
 
@@ -118,9 +111,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void dataFieldDecl() throws SourceFileErrorException
-  {
+  private static void dataFieldDecl() throws SourceFileErrorException {
     TJ.output.printSymbol(NTdataFieldDecl);
     TJ.output.incTreeDepth();
 
@@ -130,9 +121,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void varDecl() throws SourceFileErrorException
-  {
+  private static void varDecl() throws SourceFileErrorException {
     TJ.output.printSymbol(NTvarDecl);
     TJ.output.incTreeDepth();
 
@@ -144,8 +133,7 @@ public final class ParserAndTranslator {
         singleVarDecl();
       }
       accept(SEMICOLON);
-    }
-    else if (getCurrentToken() == SCANNER) {
+    } else if (getCurrentToken() == SCANNER) {
 
       if (!ScannerImported)
         throw new SourceFileErrorException("Scanner used without having been imported");
@@ -156,18 +144,19 @@ public final class ParserAndTranslator {
         if (level == 1) {
           if (BlockRec.searchForStatic(LexicalAnalyzer.getCurrentSpelling(), false) != null)
             throw new SourceFileErrorException("Illegal redeclaration of class variable "
-                                          + LexicalAnalyzer.getCurrentSpelling());
-          else new ClassVariableRec(LexicalAnalyzer.getCurrentSpelling());
-        }
-        else {
+                + LexicalAnalyzer.getCurrentSpelling());
+          else
+            new ClassVariableRec(LexicalAnalyzer.getCurrentSpelling());
+        } else {
           if (symTab.searchForLocal(LexicalAnalyzer.getCurrentSpelling()) != null)
             throw new SourceFileErrorException("Illegal redeclaration of local variable "
-                                          + LexicalAnalyzer.getCurrentSpelling());
-          else new LocalVariableRec(LexicalAnalyzer.getCurrentSpelling());
+                + LexicalAnalyzer.getCurrentSpelling());
+          else
+            new LocalVariableRec(LexicalAnalyzer.getCurrentSpelling());
         }
         nextToken();
-      }
-      else throw new SourceFileErrorException("Scanner name expected");
+      } else
+        throw new SourceFileErrorException("Scanner name expected");
 
       accept(BECOMES);
       accept(NEW);
@@ -178,15 +167,13 @@ public final class ParserAndTranslator {
       accept(IN);
       accept(RPAREN);
       accept(SEMICOLON);
-    }
-    else throw new SourceFileErrorException("\"int\" or \"Scanner\" expected");
+    } else
+      throw new SourceFileErrorException("\"int\" or \"Scanner\" expected");
 
     TJ.output.decTreeDepth();
   }
 
-
-  private static void singleVarDecl() throws SourceFileErrorException
-  {
+  private static void singleVarDecl() throws SourceFileErrorException {
     TJ.output.printSymbol(NTsingleVarDecl);
     TJ.output.incTreeDepth();
 
@@ -199,15 +186,15 @@ public final class ParserAndTranslator {
       nextToken();
 
       while (getCurrentToken() == LBRACKET) {
-            dimensions++;
-            nextToken();
-            accept(RBRACKET);
+        dimensions++;
+        nextToken();
+        accept(RBRACKET);
       }
 
       if (level == 1) {
         if (BlockRec.searchForStatic(identName, false) != null)
           throw new SourceFileErrorException("Illegal redeclaration of class variable "
-                              + LexicalAnalyzer.getCurrentSpelling());
+              + LexicalAnalyzer.getCurrentSpelling());
         else {
           int addr = staticTab.getNextOffset();
           v = new ClassVariableRec(identName, VariableRec.INT, dimensions, addr);
@@ -215,10 +202,10 @@ public final class ParserAndTranslator {
         }
       }
 
-      else {  // level > 1
+      else { // level > 1
         if (symTab.searchForLocal(identName) != null)
           throw new SourceFileErrorException("Illegal redeclaration of local variable "
-                              + LexicalAnalyzer.getCurrentSpelling());
+              + LexicalAnalyzer.getCurrentSpelling());
         else {
           int stackFrameOffset = symTab.getNextOffset();
           v = new LocalVariableRec(identName, VariableRec.INT, dimensions, stackFrameOffset);
@@ -235,17 +222,13 @@ public final class ParserAndTranslator {
         expr3();
         new SAVETOADDRinstr();
       }
-    }
-    else
+    } else
       throw new SourceFileErrorException("Variable name expected");
-
 
     TJ.output.decTreeDepth();
   }
 
-
-  private static void mainDecl() throws SourceFileErrorException
-  {
+  private static void mainDecl() throws SourceFileErrorException {
     TJ.output.printSymbol(NTmainDecl);
     TJ.output.incTreeDepth();
 
@@ -263,8 +246,7 @@ public final class ParserAndTranslator {
     MethodRec t = new MethodRec("main", MethodRec.VOID, 0);
     t.setStartAddr(Instruction.getNextCodeAddress());
 
-    INITSTKFRMinstr iInstr
-      = new INITSTKFRMinstr(Instruction.OPERAND_NOT_YET_KNOWN);
+    INITSTKFRMinstr iInstr = new INITSTKFRMinstr(Instruction.OPERAND_NOT_YET_KNOWN);
 
     compoundStmt(t, null);
 
@@ -275,9 +257,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void methodDecl() throws SourceFileErrorException
-  {
+  private static void methodDecl() throws SourceFileErrorException {
     INITSTKFRMinstr iInstr = null;
     int dimensions = 0;
     int type;
@@ -291,12 +271,11 @@ public final class ParserAndTranslator {
       type = MethodRec.INT;
       nextToken();
       while (getCurrentToken() == LBRACKET) {
-            dimensions++;
-            nextToken();
-            accept(RBRACKET);
+        dimensions++;
+        nextToken();
+        accept(RBRACKET);
       }
-    }
-    else {
+    } else {
       type = MethodRec.VOID;
       accept(VOID);
     }
@@ -306,10 +285,10 @@ public final class ParserAndTranslator {
     if (getCurrentToken() == IDENT) {
       t = (MethodRec) BlockRec.searchForStatic(LexicalAnalyzer.getCurrentSpelling(), true);
 
-      if (t == null)                             /* no call or declaration of this method has yet been seen */
+      if (t == null) /* no call or declaration of this method has yet been seen */
         t = new MethodRec(LexicalAnalyzer.getCurrentSpelling(), type, dimensions);
 
-      else if (t.getCallsToBeFixedUp() != null) {/* method was previously called (but not previously declared)*/
+      else if (t.getCallsToBeFixedUp() != null) {/* method was previously called (but not previously declared) */
 
         t.getCallsToBeFixedUp().redirectThemToHere(type);
         t.setCallsToBeFixedUp(null);
@@ -319,33 +298,32 @@ public final class ParserAndTranslator {
         if (t.getType() == MethodRec.NOT_KNOWN)
           t.setType(type);
         else if (t.getType() != type)
-          throw new SourceFileErrorException
-                      ("Declared return type inconsistent with earlier call of this method");
+          throw new SourceFileErrorException("Declared return type inconsistent with earlier call of this method");
 
         MethodRec.decUndeclaredMethodCount();
       }
 
-      else throw new SourceFileErrorException("Method " + LexicalAnalyzer.getCurrentSpelling()
-                                                 + " has already been declared");
+      else
+        throw new SourceFileErrorException("Method " + LexicalAnalyzer.getCurrentSpelling()
+            + " has already been declared");
 
       t.setStartAddr(Instruction.getNextCodeAddress());
 
       iInstr = new INITSTKFRMinstr(Instruction.OPERAND_NOT_YET_KNOWN);
 
       nextToken();
-    }
-    else
+    } else
       throw new SourceFileErrorException("Method name expected");
 
     accept(LPAREN);
     ParameterList parameters = parameterDeclList();
     accept(RPAREN);
 
-    if (t.getArgCount() == MethodRec.NOT_KNOWN)  // Method has not yet been called
+    if (t.getArgCount() == MethodRec.NOT_KNOWN) // Method has not yet been called
       t.setArgCount(parameters.paramCount);
     else if (t.getArgCount() != parameters.paramCount)
       throw new SourceFileErrorException("Method " + t.name + " was previously called with "
-                                             + t.getArgCount() + " arguments");
+          + t.getArgCount() + " arguments");
 
     compoundStmt(t, parameters.theParams);
 
@@ -357,31 +335,26 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static ParameterList parameterDeclList() throws SourceFileErrorException
-  {
+  private static ParameterList parameterDeclList() throws SourceFileErrorException {
     TJ.output.printSymbol(NTparameterDeclList);
     TJ.output.incTreeDepth();
 
     ParameterList p = new ParameterList();
 
     if (getCurrentToken() == INT) {
+      parameterDecl(p);
+      while (getCurrentToken() == COMMA) {
+        nextToken();
         parameterDecl(p);
-        while (getCurrentToken() == COMMA) {
-          nextToken();
-          parameterDecl(p);
-        }
-    }
-    else
+      }
+    } else
       TJ.output.printSymbol(EMPTY);
 
     TJ.output.decTreeDepth();
     return p;
   }
 
-
-  private static void parameterDecl(ParameterList p) throws SourceFileErrorException
-  {
+  private static void parameterDecl(ParameterList p) throws SourceFileErrorException {
     TJ.output.printSymbol(NTparameterDecl);
     TJ.output.incTreeDepth();
 
@@ -389,24 +362,22 @@ public final class ParserAndTranslator {
 
     accept(INT);
     if (getCurrentToken() == IDENT) {
-          param.name = LexicalAnalyzer.getCurrentSpelling();
-          param.next = p.theParams;
-          p.theParams = param;
-          p.paramCount++;
+      param.name = LexicalAnalyzer.getCurrentSpelling();
+      param.next = p.theParams;
+      p.theParams = param;
+      p.paramCount++;
     }
     accept(IDENT);
     while (getCurrentToken() == LBRACKET) {
-          param.dimensions++;
-          nextToken();
-          accept(RBRACKET);
+      param.dimensions++;
+      nextToken();
+      accept(RBRACKET);
     }
 
     TJ.output.decTreeDepth();
   }
 
-
-  private static void compoundStmt(MethodRec m, IdentList params) throws SourceFileErrorException
-  {
+  private static void compoundStmt(MethodRec m, IdentList params) throws SourceFileErrorException {
     TJ.output.printSymbol(NTcompoundStmt);
     TJ.output.incTreeDepth();
 
@@ -421,7 +392,7 @@ public final class ParserAndTranslator {
       for (IdentList p = params; p != null; p = p.next) {
         if (symTab.searchForLocal(p.name) != null)
           throw new SourceFileErrorException("Illegal redeclaration of parameter "
-                              + p.name);
+              + p.name);
         else
           new LocalVariableRec(p.name, VariableRec.INT, p.dimensions, --offset);
       }
@@ -434,7 +405,7 @@ public final class ParserAndTranslator {
 
     MethodBlockRec mb = ((CompoundStmtBlockRec) symTab).methodBlock;
     mb.setMaxNextOffset(Math.max(symTab.getNextOffset(),
-                                         mb.getMaxNextOffset()));
+        mb.getMaxNextOffset()));
     symTab = symTab.enclosingBlock;
 
     level--;
@@ -442,38 +413,49 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void statement() throws SourceFileErrorException
-  {
+  private static void statement() throws SourceFileErrorException {
     TJ.output.printSymbol(NTstatement);
     TJ.output.incTreeDepth();
 
     switch (getCurrentToken()) {
-      case SEMICOLON: nextToken(); break;
-      case RETURN: nextToken();
-                           if (((CompoundStmtBlockRec) symTab)
-                                    .methodBlock.methodRec.getType() == MethodRec.INT)
-                                 expr3();
-                           new RETURNinstr(((CompoundStmtBlockRec) symTab)
-                                                 .methodBlock.methodRec.getArgCount());
-                           accept(SEMICOLON);
-                           break;
-      case INT: case SCANNER: varDecl(); break;
-      case IDENT: assignmentOrInvoc(); break;
-      case LBRACE: compoundStmt(null, null); break;
-      case IF: ifStmt(); break;
-      case WHILE: whileStmt(); break;
-      case SYSTEM: outputStmt(); break;
-      default: throw new SourceFileErrorException("Expected first token of a <statement>, not "
-                              + getCurrentToken().symbolRepresentationForOutputFile);
+      case SEMICOLON:
+        nextToken();
+        break;
+      case RETURN:
+        nextToken();
+        if (((CompoundStmtBlockRec) symTab).methodBlock.methodRec.getType() == MethodRec.INT)
+          expr3();
+        new RETURNinstr(((CompoundStmtBlockRec) symTab).methodBlock.methodRec.getArgCount());
+        accept(SEMICOLON);
+        break;
+      case INT:
+      case SCANNER:
+        varDecl();
+        break;
+      case IDENT:
+        assignmentOrInvoc();
+        break;
+      case LBRACE:
+        compoundStmt(null, null);
+        break;
+      case IF:
+        ifStmt();
+        break;
+      case WHILE:
+        whileStmt();
+        break;
+      case SYSTEM:
+        outputStmt();
+        break;
+      default:
+        throw new SourceFileErrorException("Expected first token of a <statement>, not "
+            + getCurrentToken().symbolRepresentationForOutputFile);
     }
 
     TJ.output.decTreeDepth();
   }
 
-
-  private static void assignmentOrInvoc() throws SourceFileErrorException
-  {
+  private static void assignmentOrInvoc() throws SourceFileErrorException {
     TJ.output.printSymbol(NTassignmentOrInvoc);
     TJ.output.incTreeDepth();
 
@@ -489,24 +471,24 @@ public final class ParserAndTranslator {
         throw new SourceFileErrorException("int variable expected");
 
       if (t instanceof LocalVariableRec) {
-          /* ???????? */
-      }
-      else {
-          /* ???????? */
+        /* ???????? */
+      } else {
+        /* ???????? */
       }
 
       int dim = 0;
 
       while (getCurrentToken() == LBRACKET) {
-           new LOADFROMADDRinstr();
-           nextToken();
-           expr3();
-           accept(RBRACKET);
-           new ADDTOPTRinstr();
-           dim++;
+        new LOADFROMADDRinstr();
+        nextToken();
+        expr3();
+        accept(RBRACKET);
+        new ADDTOPTRinstr();
+        dim++;
       }
 
-      if (dim > t.dimensionCount) throw new SourceFileErrorException("Unexpected index(es)");
+      if (dim > t.dimensionCount)
+        throw new SourceFileErrorException("Unexpected index(es)");
 
       /* ???????? */
 
@@ -521,18 +503,18 @@ public final class ParserAndTranslator {
       CALLSTATMETHODinstr cInstr = new CALLSTATMETHODinstr(t.getStartAddr());
 
       if (t.getStartAddr() == Instruction.OPERAND_NOT_YET_KNOWN)
-                             /* the method has not yet been declared */
+        /* the method has not yet been declared */
         if (t.getType() == MethodRec.NOT_KNOWN)
           t.setCallsToBeFixedUp(new FixUpRec(cInstr, t.getCallsToBeFixedUp(),
-                                                new NOPorDISCARDVALUEinstr()));
+              new NOPorDISCARDVALUEinstr()));
         else {
           t.setCallsToBeFixedUp(new FixUpRec(cInstr, t.getCallsToBeFixedUp()));
           if (t.getType() != MethodRec.VOID)
-            new NOPorDISCARDVALUEinstr(false);  // generate DISCARDVALUE instruction
+            new NOPorDISCARDVALUEinstr(false); // generate DISCARDVALUE instruction
         }
 
       else if (t.getType() != MethodRec.VOID)
-        new NOPorDISCARDVALUEinstr(false);  // generate DISCARDVALUE instruction
+        new NOPorDISCARDVALUEinstr(false); // generate DISCARDVALUE instruction
 
       accept(SEMICOLON);
     }
@@ -540,20 +522,16 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
+  private static void argumentList(MethodRec m) throws SourceFileErrorException {
+    TJ.output.printSymbol(NTargumentList);
+    TJ.output.incTreeDepth();
 
-  private static void argumentList(MethodRec m) throws SourceFileErrorException
-  {
-     TJ.output.printSymbol(NTargumentList);
-     TJ.output.incTreeDepth();
+    /* ???????? */
 
-     /* ???????? */
-
-     TJ.output.decTreeDepth();
+    TJ.output.decTreeDepth();
   }
 
-
-  private static void ifStmt() throws SourceFileErrorException
-  {
+  private static void ifStmt() throws SourceFileErrorException {
     TJ.output.printSymbol(NTifStmt);
     TJ.output.incTreeDepth();
 
@@ -562,8 +540,7 @@ public final class ParserAndTranslator {
     expr7();
     accept(RPAREN);
 
-    JUMPONFALSEinstr jInstr1 =
-        new JUMPONFALSEinstr(Instruction.OPERAND_NOT_YET_KNOWN);
+    JUMPONFALSEinstr jInstr1 = new JUMPONFALSEinstr(Instruction.OPERAND_NOT_YET_KNOWN);
 
     statement();
 
@@ -577,16 +554,13 @@ public final class ParserAndTranslator {
       statement();
 
       jInstr2.fixUpOperand(Instruction.getNextCodeAddress());
-    }
-    else
+    } else
       jInstr1.fixUpOperand(Instruction.getNextCodeAddress());
 
     TJ.output.decTreeDepth();
   }
 
-
-  private static void whileStmt() throws SourceFileErrorException
-  {
+  private static void whileStmt() throws SourceFileErrorException {
     TJ.output.printSymbol(NTwhileStmt);
     TJ.output.incTreeDepth();
 
@@ -595,8 +569,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-  private static void outputStmt() throws SourceFileErrorException
-  {
+  private static void outputStmt() throws SourceFileErrorException {
     TJ.output.printSymbol(NToutputStmt);
     TJ.output.incTreeDepth();
 
@@ -607,20 +580,20 @@ public final class ParserAndTranslator {
 
     switch (getCurrentToken()) {
 
-      /* ????????
-
-      default: throw new SourceFileErrorException("print() or println() expected, not "
-                              + getCurrentToken().symbolRepresentationForOutputFile);
-      */
+      /*
+       * ????????
+       * 
+       * default: throw new
+       * SourceFileErrorException("print() or println() expected, not "
+       * + getCurrentToken().symbolRepresentationForOutputFile);
+       */
 
     }
 
     TJ.output.decTreeDepth();
   }
 
-
-  private static void printArgument() throws SourceFileErrorException
-  {
+  private static void printArgument() throws SourceFileErrorException {
     TJ.output.printSymbol(NTprintArgument);
     TJ.output.incTreeDepth();
 
@@ -629,9 +602,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void expr7() throws SourceFileErrorException
-  {
+  private static void expr7() throws SourceFileErrorException {
     TJ.output.printSymbol(NTexpr7);
     TJ.output.incTreeDepth();
 
@@ -640,9 +611,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void expr6() throws SourceFileErrorException
-  {
+  private static void expr6() throws SourceFileErrorException {
     TJ.output.printSymbol(NTexpr6);
     TJ.output.incTreeDepth();
 
@@ -651,9 +620,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void expr5() throws SourceFileErrorException
-  {
+  private static void expr5() throws SourceFileErrorException {
     TJ.output.printSymbol(NTexpr5);
     TJ.output.incTreeDepth();
 
@@ -662,9 +629,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void expr4() throws SourceFileErrorException
-  {
+  private static void expr4() throws SourceFileErrorException {
     TJ.output.printSymbol(NTexpr4);
     TJ.output.incTreeDepth();
 
@@ -673,9 +638,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void expr3() throws SourceFileErrorException
-  {
+  private static void expr3() throws SourceFileErrorException {
     TJ.output.printSymbol(NTexpr3);
     TJ.output.incTreeDepth();
 
@@ -684,17 +647,15 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void expr2() throws SourceFileErrorException
-  {
+  private static void expr2() throws SourceFileErrorException {
     TJ.output.printSymbol(NTexpr2);
     TJ.output.incTreeDepth();
 
     expr1();
 
-    while (   getCurrentToken() == TIMES
-           || getCurrentToken() == DIV
-           || getCurrentToken() == MOD) {
+    while (getCurrentToken() == TIMES
+        || getCurrentToken() == DIV
+        || getCurrentToken() == MOD) {
 
       Symbols op = getCurrentToken();
       nextToken();
@@ -712,9 +673,7 @@ public final class ParserAndTranslator {
     TJ.output.decTreeDepth();
   }
 
-
-  private static void expr1() throws SourceFileErrorException
-  {
+  private static void expr1() throws SourceFileErrorException {
     TJ.output.printSymbol(NTexpr1);
     TJ.output.incTreeDepth();
 
@@ -735,10 +694,9 @@ public final class ParserAndTranslator {
             accept(LPAREN);
             accept(RPAREN);
             new READINTinstr();
-          }
-          else throw new SourceFileErrorException("Scanner variable expected");
-        }
-        else {
+          } else
+            throw new SourceFileErrorException("Scanner variable expected");
+        } else {
           int dimensionality;
 
           if (getCurrentToken() == LPAREN) {
@@ -746,11 +704,10 @@ public final class ParserAndTranslator {
             argumentList(t);
             CALLSTATMETHODinstr cInstr = new CALLSTATMETHODinstr(t.getStartAddr());
             if (t.getStartAddr() == Instruction.OPERAND_NOT_YET_KNOWN)
-                             /* the method has not yet been declared */
+              /* the method has not yet been declared */
               t.setCallsToBeFixedUp(new FixUpRec(cInstr, t.getCallsToBeFixedUp()));
             dimensionality = t.getDimensionCount();
-          }
-          else {
+          } else {
             VariableRec t = symTab.searchForVariable(identName);
             if (t == null)
               throw new SourceFileErrorException("Undeclared variable: " + identName);
@@ -782,13 +739,11 @@ public final class ParserAndTranslator {
         new PUSHNUMinstr(0);
         break;
 
-
-      default: throw new SourceFileErrorException("Malformed expression");
+      default:
+        throw new SourceFileErrorException("Malformed expression");
     }
 
     TJ.output.decTreeDepth();
   }
 
 }
-
-
