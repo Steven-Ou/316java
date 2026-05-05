@@ -584,7 +584,16 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTwhileStmt);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    accept(WHILE);
+    int loopStart = Instruction.getNextCodeAddress();
+    accept(LPAREN);
+    expr7();
+    accept(RPAREN);
+
+    JUMPONFALSEinstr jumpToEnd = new JUMPONFALSEinstr(Instruction.OPERAND_NOT_YET_KNOWN);
+    statement();
+    new JUMPinstr(loopStart);
+    jumpToEnd.fixUpOperand(Instruction.getNextCodeAddress());
 
     TJ.output.decTreeDepth();
   }
