@@ -527,9 +527,10 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTargumentList);
     TJ.output.incTreeDepth();
 
+    int count =0; 
     if (getCurrentToken() != RPAREN) {
       expr3();
-      int count = 1;
+      count = 1;
       while (getCurrentToken() == COMMA) {
         nextToken();
         expr3();
@@ -695,7 +696,19 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTexpr4);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    expr3();
+    while (getCurrentToken() == EQ || getCurrentToken() == NE || getCurrentToken() == LT 
+           || getCurrentToken() == GT || getCurrentToken() == LE || getCurrentToken() == GE) {
+        Symbols op = getCurrentToken();
+        nextToken();
+        expr3();
+        if (op == EQ) new EQinstr();
+        else if (op == NE) new NEinstr();
+        else if (op == LT) new LTinstr();
+        else if (op == GT) new GTinstr();
+        else if (op == LE) new LEinstr();
+        else if (op == GE) new GEinstr();
+    }
 
     TJ.output.decTreeDepth();
   }
@@ -704,7 +717,13 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTexpr3);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    expr2();
+    while (getCurrentToken() == PLUS || getCurrentToken() == MINUS) {
+        Symbols op = getCurrentToken();
+        nextToken();
+        expr2();
+        if (op == PLUS) new ADDinstr(); else new SUBinstr();
+    }
 
     TJ.output.decTreeDepth();
   }
@@ -740,9 +759,15 @@ public final class ParserAndTranslator {
     TJ.output.incTreeDepth();
 
     switch (getCurrentToken()) {
-
-      /* ???????? */
-
+      case INT_LITERAL:
+        new PUSHNUMinstr(LexicalAnalyzer.getLiteralValue());
+        nextToken();
+        break;
+      case LPAREN:
+        nextToken();
+        expr7();
+        accept(RPAREN);
+        break;
       case IDENT:
         String identName = LexicalAnalyzer.getCurrentSpelling();
         nextToken();
