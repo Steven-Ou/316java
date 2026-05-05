@@ -527,7 +527,7 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTargumentList);
     TJ.output.incTreeDepth();
 
-    int count =0; 
+    int count = 0;
     if (getCurrentToken() != RPAREN) {
       expr3();
       count = 1;
@@ -639,11 +639,11 @@ public final class ParserAndTranslator {
     TJ.output.incTreeDepth();
 
     if (getCurrentToken() == CHARSTRING) {
-        new WRITESTRINGinstr(LexicalAnalyzer.getStartOfString(), LexicalAnalyzer.getEndOfString());
-        nextToken();
+      new WRITESTRINGinstr(LexicalAnalyzer.getStartOfString(), LexicalAnalyzer.getEndOfString());
+      nextToken();
     } else {
-        expr3();
-        new WRITEINTinstr();
+      expr3();
+      new WRITEINTinstr();
     }
 
     TJ.output.decTreeDepth();
@@ -697,17 +697,23 @@ public final class ParserAndTranslator {
     TJ.output.incTreeDepth();
 
     expr3();
-    while (getCurrentToken() == EQ || getCurrentToken() == NE || getCurrentToken() == LT 
-           || getCurrentToken() == GT || getCurrentToken() == LE || getCurrentToken() == GE) {
-        Symbols op = getCurrentToken();
-        nextToken();
-        expr3();
-        if (op == EQ) new EQinstr();
-        else if (op == NE) new NEinstr();
-        else if (op == LT) new LTinstr();
-        else if (op == GT) new GTinstr();
-        else if (op == LE) new LEinstr();
-        else if (op == GE) new GEinstr();
+    while (getCurrentToken() == EQ || getCurrentToken() == NE || getCurrentToken() == LT
+        || getCurrentToken() == GT || getCurrentToken() == LE || getCurrentToken() == GE) {
+      Symbols op = getCurrentToken();
+      nextToken();
+      expr3();
+      if (op == EQ)
+        new EQinstr();
+      else if (op == NE)
+        new NEinstr();
+      else if (op == LT)
+        new LTinstr();
+      else if (op == GT)
+        new GTinstr();
+      else if (op == LE)
+        new LEinstr();
+      else if (op == GE)
+        new GEinstr();
     }
 
     TJ.output.decTreeDepth();
@@ -719,10 +725,13 @@ public final class ParserAndTranslator {
 
     expr2();
     while (getCurrentToken() == PLUS || getCurrentToken() == MINUS) {
-        Symbols op = getCurrentToken();
-        nextToken();
-        expr2();
-        if (op == PLUS) new ADDinstr(); else new SUBinstr();
+      Symbols op = getCurrentToken();
+      nextToken();
+      expr2();
+      if (op == PLUS)
+        new ADDinstr();
+      else
+        new SUBinstr();
     }
 
     TJ.output.decTreeDepth();
@@ -759,8 +768,8 @@ public final class ParserAndTranslator {
     TJ.output.incTreeDepth();
 
     switch (getCurrentToken()) {
-      case PUSHNUM:
-        new PUSHNUMinstr(LexicalAnalyzer.buffer);
+      case UNSIGNEDINT: 
+        new PUSHNUMinstr(LexicalAnalyzer.getCurrentValue()); // Use the correct getter
         nextToken();
         break;
       case LPAREN:
