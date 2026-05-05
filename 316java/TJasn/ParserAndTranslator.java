@@ -608,15 +608,26 @@ public final class ParserAndTranslator {
     accept(DOT);
 
     switch (getCurrentToken()) {
+      case PRINT:
+          nextToken(); 
+          accept(LPAREN);
+          printArgument();
+          accept(RPAREN);
+          accept(SEMICOLON);
+          break;
 
-      /*
-       * ????????
-       * 
-       * default: throw new
-       * SourceFileErrorException("print() or println() expected, not "
-       * + getCurrentToken().symbolRepresentationForOutputFile);
-       */
+      case PRINTLN:
+          nextToken(); 
+          accept(LPAREN);
+          printArgument();
+          accept(RPAREN);
+          accept(SEMICOLON);
+          new WRITELNOPinstr(); 
+          break;
 
+      default: 
+          throw new SourceFileErrorException("print() or println() expected, not "
+            + getCurrentToken().symbolRepresentationForOutputFile);
     }
 
     TJ.output.decTreeDepth();
