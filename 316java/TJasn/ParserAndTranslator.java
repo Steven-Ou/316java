@@ -637,7 +637,16 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTprintArgument);
     TJ.output.incTreeDepth();
 
-    /* ???????? */
+    if (getCurrentToken() == Symbols.CHARSTRING) {
+        int start = LexicalAnalyzer.getStartOfString(); 
+        int end = LexicalAnalyzer.getEndOfString(); 
+        
+        new WRITESTRINGinstr(start, end);
+        nextToken();
+    } else {
+        expr3();
+        new WRITEINTinstr();
+    }
 
     TJ.output.decTreeDepth();
   }
