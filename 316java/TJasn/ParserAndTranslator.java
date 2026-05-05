@@ -609,24 +609,24 @@ public final class ParserAndTranslator {
 
     switch (getCurrentToken()) {
       case PRINT:
-          nextToken(); 
-          accept(LPAREN);
-          printArgument();
-          accept(RPAREN);
-          accept(SEMICOLON);
-          break;
+        nextToken();
+        accept(LPAREN);
+        printArgument();
+        accept(RPAREN);
+        accept(SEMICOLON);
+        break;
 
       case PRINTLN:
-          nextToken(); 
-          accept(LPAREN);
-          printArgument();
-          accept(RPAREN);
-          accept(SEMICOLON);
-          new WRITELNOPinstr(); 
-          break;
+        nextToken();
+        accept(LPAREN);
+        printArgument();
+        accept(RPAREN);
+        accept(SEMICOLON);
+        new WRITELNOPinstr();
+        break;
 
-      default: 
-          throw new SourceFileErrorException("print() or println() expected, not "
+      default:
+        throw new SourceFileErrorException("print() or println() expected, not "
             + getCurrentToken().symbolRepresentationForOutputFile);
     }
 
