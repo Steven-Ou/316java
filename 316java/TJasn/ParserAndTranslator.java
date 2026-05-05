@@ -759,8 +759,8 @@ public final class ParserAndTranslator {
     TJ.output.incTreeDepth();
 
     switch (getCurrentToken()) {
-      case INT_LITERAL:
-        new PUSHNUMinstr(LexicalAnalyzer.getLiteralValue());
+      case PUSHNUM:
+        new PUSHNUMinstr(LexicalAnalyzer.buffer);
         nextToken();
         break;
       case LPAREN:
