@@ -1443,26 +1443,3 @@ Instructions Generated:
 197:    SAVETOADDR
 198:    CALLSTATMETHOD    111
 199:    RETURN            0
-
-
-
-Data memory dump
-
-  Data memory--addresses 0 to top of stack, and allocated heap locations:
-  0: 4 = Ctrl-D
-  1: 173
-  2: 173
-  3: 30000
-  4: 173
-  5: 1 = Ctrl-A
-  6: 1189
-  7: 2147438112 = PTR TO 20000
-
-  PC=27  ESP=0  FP= PTR TO 7  ASP= PTR TO 8
-  HP= PTR TO 10000  HMAX= PTR TO 15000
-
-  Total number of instructions executed: 1676
-  Last instruction to be executed: 26:     STOP
-
-  Expression evaluation stack: <empty>
-

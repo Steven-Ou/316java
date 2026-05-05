@@ -150,19 +150,3 @@ Instructions Generated:
 12:     DISCARDVALUE
 13:     PUSHNUM           4
 14:     RETURN            0
-
-
-
-Data memory dump
-
-  Data memory--addresses 0 to top of stack, and allocated heap locations:
-  0: 2147438112 = PTR TO 20000
-
-  PC=7  ESP=0  FP= PTR TO 0  ASP= PTR TO 1
-  HP= PTR TO 10000  HMAX= PTR TO 15000
-
-  Total number of instructions executed: 15
-  Last instruction to be executed: 6:      STOP
-
-  Expression evaluation stack: <empty>
-

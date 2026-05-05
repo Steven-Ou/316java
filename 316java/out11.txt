@@ -552,19 +552,3 @@ Instructions Generated:
 65:     SUB
 66:     ADD
 67:     RETURN            1
-
-
-
-Data memory dump
-
-  Data memory--addresses 0 to top of stack, and allocated heap locations:
-  0: 2147438112 = PTR TO 20000
-
-  PC=7  ESP=0  FP= PTR TO 0  ASP= PTR TO 1
-  HP= PTR TO 10000  HMAX= PTR TO 15000
-
-  Total number of instructions executed: 15351
-  Last instruction to be executed: 6:      STOP
-
-  Expression evaluation stack: <empty>
-
