@@ -527,27 +527,25 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTargumentList);
     TJ.output.incTreeDepth();
 
+    accept(LPAREN); 
     int count = 0;
     if (getCurrentToken() != RPAREN) {
       expr3();
+      new PASSPARAMinstr(); 
       count = 1;
       while (getCurrentToken() == COMMA) {
         nextToken();
         expr3();
+        new PASSPARAMinstr(); 
         count++;
       }
-      if (m.getArgCount() != MethodRec.NOT_KNOWN && m.getArgCount() != count) {
-        throw new SourceFileErrorException("Method " + m.name + " was previously called with "
-            + m.getArgCount() + " arguments");
-      }
-      m.setArgCount(count);
-    } else {
-      if (m.getArgCount() != MethodRec.NOT_KNOWN && m.getArgCount() != 0) {
-        throw new SourceFileErrorException("Method " + m.name + " was previously called with "
-            + m.getArgCount() + " arguments");
-      }
-      m.setArgCount(0);
     }
+    accept(RPAREN); // Ensure you consume the ')'
+
+    if (m.getArgCount() == MethodRec.NOT_KNOWN)
+      m.setArgCount(count);
+    else if (m.getArgCount() != count)
+      throw new SourceFileErrorException("Method " + m.name + " called with wrong number of arguments");
 
     TJ.output.decTreeDepth();
   }
@@ -769,15 +767,15 @@ public final class ParserAndTranslator {
 
     switch (getCurrentToken()) {
       case NEW:
-        nextToken(); 
-        accept(INT); 
-        accept(LBRACKET); 
-        expr3();    
+        nextToken();
+        accept(INT);
+        accept(LBRACKET);
+        expr3();
         accept(RBRACKET);
-        new HEAPALLOCinstr(); 
+        new HEAPALLOCinstr();
         break;
 
-      case UNSIGNEDINT: 
+      case UNSIGNEDINT:
         new PUSHNUMinstr(LexicalAnalyzer.getCurrentValue()); // Use the correct getter
         nextToken();
         break;
