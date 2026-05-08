@@ -766,6 +766,16 @@ public final class ParserAndTranslator {
     TJ.output.incTreeDepth();
 
     switch (getCurrentToken()) {
+      case PLUS:
+        nextToken();
+        expr1(); // Handle unary plus
+        break;
+
+      case MINUS:
+        nextToken();
+        expr1(); 
+        new CHANGESIGNinstr(); // Handle unary minus
+        break;
       case NEW:
         nextToken();
         accept(INT);
