@@ -768,6 +768,15 @@ public final class ParserAndTranslator {
     TJ.output.incTreeDepth();
 
     switch (getCurrentToken()) {
+      case NEW:
+        nextToken(); 
+        accept(INT); 
+        accept(LBRACKET); 
+        expr3();    
+        accept(RBRACKET);
+        new HEAPALLOCinstr(); 
+        break;
+
       case UNSIGNEDINT: 
         new PUSHNUMinstr(LexicalAnalyzer.getCurrentValue()); // Use the correct getter
         nextToken();
