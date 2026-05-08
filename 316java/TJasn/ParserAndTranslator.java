@@ -215,12 +215,13 @@ public final class ParserAndTranslator {
 
       if (getCurrentToken() == BECOMES) {
         nextToken();
-        expr3();
+
         if (level == 1)
           new PUSHSTATADDRinstr(v.offset);
         else
           new PUSHLOCADDRinstr(v.offset);
-        
+
+        expr3();
         new SAVETOADDRinstr();
       }
     } else
@@ -530,16 +531,16 @@ public final class ParserAndTranslator {
     TJ.output.printSymbol(NTargumentList);
     TJ.output.incTreeDepth();
 
-    accept(LPAREN); 
+    accept(LPAREN);
     int count = 0;
     if (getCurrentToken() != RPAREN) {
       expr3();
-      new PASSPARAMinstr(); 
+      new PASSPARAMinstr();
       count = 1;
       while (getCurrentToken() == COMMA) {
         nextToken();
         expr3();
-        new PASSPARAMinstr(); 
+        new PASSPARAMinstr();
         count++;
       }
     }
@@ -621,7 +622,9 @@ public final class ParserAndTranslator {
       case PRINTLN:
         nextToken();
         accept(LPAREN);
-        printArgument();
+        if (getCurrentToken() != RPAREN) { // Add this check
+          printArgument();
+        }
         accept(RPAREN);
         accept(SEMICOLON);
         new WRITELNOPinstr();
@@ -776,7 +779,7 @@ public final class ParserAndTranslator {
 
       case MINUS:
         nextToken();
-        expr1(); 
+        expr1();
         new CHANGESIGNinstr(); // Handle unary minus
         break;
       case NEW:
@@ -786,6 +789,10 @@ public final class ParserAndTranslator {
         expr3();
         accept(RBRACKET);
         new HEAPALLOCinstr();
+        while (getCurrentToken() == LBRACKET) {
+          nextToken();
+          accept(RBRACKET);
+        }
         break;
 
       case UNSIGNEDINT:
