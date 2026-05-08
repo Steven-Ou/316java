@@ -832,12 +832,13 @@ public final class ParserAndTranslator {
               new PUSHLOCADDRinstr(t.offset);
             else
               new PUSHSTATADDRinstr(t.offset);
+            
             new LOADFROMADDRinstr();
             dimensionality = t.dimensionCount;
           }
 
           while (getCurrentToken() == LBRACKET) {
-            if (dimensionality-- == 0)
+            if (dimensionality-- <= 0)
               throw new SourceFileErrorException("Unexpected index expression");
             nextToken();
             expr3();
