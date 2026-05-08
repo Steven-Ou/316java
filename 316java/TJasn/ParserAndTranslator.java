@@ -493,6 +493,8 @@ public final class ParserAndTranslator {
       accept(BECOMES);
       expr3();
       new SAVETOADDRinstr();
+
+      accept(SEMICOLON);
     }
 
     else {
