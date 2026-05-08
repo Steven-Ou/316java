@@ -776,7 +776,11 @@ public final class ParserAndTranslator {
         nextToken();
         expr1(); // Handle unary plus
         break;
-
+      case NOT:
+        nextToken();
+        expr1();
+        new NOTinstr();
+        break;
       case MINUS:
         nextToken();
         expr1();
