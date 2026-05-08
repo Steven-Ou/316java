@@ -215,11 +215,12 @@ public final class ParserAndTranslator {
 
       if (getCurrentToken() == BECOMES) {
         nextToken();
+        expr3();
         if (level == 1)
           new PUSHSTATADDRinstr(v.offset);
         else
           new PUSHLOCADDRinstr(v.offset);
-        expr3();
+        
         new SAVETOADDRinstr();
       }
     } else
@@ -832,7 +833,7 @@ public final class ParserAndTranslator {
               new PUSHLOCADDRinstr(t.offset);
             else
               new PUSHSTATADDRinstr(t.offset);
-            
+
             new LOADFROMADDRinstr();
             dimensionality = t.dimensionCount;
           }
