@@ -850,13 +850,14 @@ public final class ParserAndTranslator {
           }
 
           while (getCurrentToken() == LBRACKET) {
-            if (dimensionality-- <= 0)
+            if (dimensionality == 0)
               throw new SourceFileErrorException("Unexpected index expression");
             nextToken();
             expr3();
             new ADDTOPTRinstr();
             new LOADFROMADDRinstr();
             accept(RBRACKET);
+	    dimensionality--;
           }
         }
 
