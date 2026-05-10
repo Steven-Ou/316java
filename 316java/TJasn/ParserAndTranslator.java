@@ -857,7 +857,7 @@ public final class ParserAndTranslator {
             new ADDTOPTRinstr();
             new LOADFROMADDRinstr();
             accept(RBRACKET);
-	    dimensionality--;
+            dimensionality--;
           }
         }
 
