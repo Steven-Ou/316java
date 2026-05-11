@@ -5,14 +5,11 @@ import TJasn.virtualMachine.VirtualMachineHaltException;
 
 public class CHANGESIGNinstr extends ZeroOperandInstruction {
 
-  void execute () throws VirtualMachineHaltException
-  {
-      /* ???????? */
+  void execute() throws VirtualMachineHaltException {
+    EXPRSTACK[ESP - 1] = -EXPRSTACK[ESP - 1];
   }
 
-  public CHANGESIGNinstr ()
-  {
+  public CHANGESIGNinstr() {
     super("CHANGESIGN");
   }
 }
-
