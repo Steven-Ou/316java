@@ -5,13 +5,12 @@ import TJasn.TJ;
 
 public class CALLSTATMETHODinstr extends OneOperandInstruction {
 
-  void execute ()
-  {
-    /* ???????? */
+  void execute() {
+    TJ.data[ASP++ - POINTERTAG] = PC; // Push return address
+    PC = operand;
   }
 
-  public CALLSTATMETHODinstr (int startAddr)
-  {
+  public CALLSTATMETHODinstr(int startAddr) {
     super(startAddr, "CALLSTATMETHOD");
   }
 }
