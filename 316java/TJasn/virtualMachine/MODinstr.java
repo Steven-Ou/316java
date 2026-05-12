@@ -4,14 +4,11 @@ import static TJasn.virtualMachine.CodeInterpreter.*;
 
 public class MODinstr extends ZeroOperandInstruction {
 
-  void execute ()
-  {
-    /* ???????? */
+  void execute() {
+    EXPRSTACK[--ESP - 1] %= EXPRSTACK[ESP];
   }
 
-  public MODinstr ()
-  {
+  public MODinstr() {
     super("MOD");
   }
 }
-

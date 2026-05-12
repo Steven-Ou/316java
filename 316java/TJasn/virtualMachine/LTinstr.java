@@ -4,13 +4,11 @@ import static TJasn.virtualMachine.CodeInterpreter.*;
 
 public class LTinstr extends ZeroOperandInstruction {
 
-  void execute ()
-  {
-    /* ???????? */
+  void execute() {
+    EXPRSTACK[--ESP - 1] = (EXPRSTACK[ESP - 1] < EXPRSTACK[ESP]) ? 1 : 0;
   }
 
-  public LTinstr ()
-  {
+  public LTinstr() {
     super("LT");
   }
 }
