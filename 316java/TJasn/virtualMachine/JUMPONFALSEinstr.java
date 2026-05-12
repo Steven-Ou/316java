@@ -4,14 +4,13 @@ import static TJasn.virtualMachine.CodeInterpreter.*;
 
 public class JUMPONFALSEinstr extends OneOperandInstruction {
 
-  void execute ()
-  {
-    /* ???????? */
+  void execute() {
+    if (EXPRSTACK[--ESP] == 0) {
+      PC = operand;
+    }
   }
 
-  public JUMPONFALSEinstr (int address)
-  {
+  public JUMPONFALSEinstr(int address) {
     super(address, "JUMPONFALSE");
   }
 }
-
