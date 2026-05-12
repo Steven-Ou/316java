@@ -5,17 +5,14 @@ import TJasn.TJ;
 
 public class RETURNinstr extends OneOperandInstruction {
 
-  void execute ()
-  {
-   ASP = FP; 
-    FP = TJ.data[--ASP - POINTERTAG]; 
-    PC = TJ.data[--ASP - POINTERTAG]; 
+  void execute() {
+    ASP = FP;
+    FP = TJ.data[--ASP - POINTERTAG];
+    PC = TJ.data[--ASP - POINTERTAG];
     ASP -= operand;
   }
 
-  public RETURNinstr (int operand)
-  {
+  public RETURNinstr(int operand) {
     super(operand, "RETURN");
   }
 }
-
