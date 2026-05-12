@@ -6,14 +6,11 @@ import TJasn.TJ;
 
 public class MULinstr extends ZeroOperandInstruction {
 
-  void execute () throws VirtualMachineHaltException
-  {
-      /* ???????? */
+  void execute() throws VirtualMachineHaltException {
+    EXPRSTACK[--ESP - 1] *= EXPRSTACK[ESP];
   }
 
-  public MULinstr ()
-  {
+  public MULinstr() {
     super("MUL");
   }
 }
-
