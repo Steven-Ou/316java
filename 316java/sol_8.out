@@ -32,7 +32,7 @@
   [
   ]
   )
-   *** Generating:  0:      INITSTKFRM        ?
+  *** Generating:  0:      INITSTKFRM        ?
   <compoundStmt>
    {
    <statement>
@@ -62,12 +62,12 @@
       <expr3>
        <expr2>
         <expr1>
-          *** Generating:  1:      PUSHNUM           9999
+         *** Generating:  1:      PUSHNUM           9999
          UNSIGNED INTEGER LITERAL: 9999
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  2:      WRITEINT
+      *** Generating:  2:      WRITEINT
       ... node has no more children
      )
      ;
@@ -82,12 +82,12 @@
      Reserved Word: println
      (
      <printArgument>
-       *** Generating:  3:      WRITESTRING       1     6
+      *** Generating:  3:      WRITESTRING       1     6
       CHARACTER STRING LITERAL: " quits"
       ... node has no more children
      )
      ;
-      *** Generating:  4:      WRITELNOP
+     *** Generating:  4:      WRITELNOP
      ... node has no more children
     ... node has no more children
    <statement>
@@ -99,7 +99,7 @@
      Reserved Word: print
      (
      <printArgument>
-       *** Generating:  5:      WRITESTRING       7     36
+      *** Generating:  5:      WRITESTRING       7     36
       CHARACTER STRING LITERAL: "Enter a non-negative integer: "
       ... node has no more children
      )
@@ -109,7 +109,7 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: i  [static var (address = 0)]
-      *** Generating:  6:      PUSHSTATADDR      0
+     *** Generating:  6:      PUSHSTATADDR      0
      =
      <expr3>
       <expr2>
@@ -119,11 +119,11 @@
         Reserved Word: nextInt
         (
         )
-         *** Generating:  7:      READINT
+        *** Generating:  7:      READINT
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  8:      SAVETOADDR
+     *** Generating:  8:      SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -139,29 +139,29 @@
           <expr2>
            <expr1>
             IDENTIFIER: i  [static var (address = 0)]
-             *** Generating:  9:      PUSHSTATADDR      0
-             *** Generating:  10:     LOADFROMADDR
+            *** Generating:  9:      PUSHSTATADDR      0
+            *** Generating:  10:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         !=
+         ... node has no more children
+        !=
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  11:     PUSHNUM           9999
+            *** Generating:  11:     PUSHNUM           9999
             UNSIGNED INTEGER LITERAL: 9999
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  12:     NE
-         <expr4>
          ... node has no more children
-        ... node has no more children
+        *** Generating:  12:     NE
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  13:     JUMPONFALSE       ?
+     *** Generating:  13:     JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
@@ -184,23 +184,23 @@
                <expr2>
                 <expr1>
                  IDENTIFIER: i  [static var (address = 0)]
-                  *** Generating:  14:     PUSHSTATADDR      0
-                  *** Generating:  15:     LOADFROMADDR
+                 *** Generating:  14:     PUSHSTATADDR      0
+                 *** Generating:  15:     LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  16:     PASSPARAM
+              *** Generating:  16:     PASSPARAM
               )
               ... node has no more children
-              *** Generating:  17:     CALLSTATMETHOD    ?
+             *** Generating:  17:     CALLSTATMETHOD    ?
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  18:     WRITEINT
+          *** Generating:  18:     WRITEINT
           ... node has no more children
          )
          ;
-          *** Generating:  19:     WRITELNOP
+         *** Generating:  19:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
@@ -213,7 +213,7 @@
          (
          )
          ;
-          *** Generating:  20:     WRITELNOP
+         *** Generating:  20:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
@@ -228,12 +228,12 @@
           <expr3>
            <expr2>
             <expr1>
-              *** Generating:  21:     PUSHNUM           9999
+             *** Generating:  21:     PUSHNUM           9999
              UNSIGNED INTEGER LITERAL: 9999
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  22:     WRITEINT
+          *** Generating:  22:     WRITEINT
           ... node has no more children
          )
          ;
@@ -248,12 +248,12 @@
          Reserved Word: println
          (
          <printArgument>
-           *** Generating:  23:     WRITESTRING       37    42
+          *** Generating:  23:     WRITESTRING       37    42
           CHARACTER STRING LITERAL: " quits"
           ... node has no more children
          )
          ;
-          *** Generating:  24:     WRITELNOP
+         *** Generating:  24:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
@@ -265,7 +265,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  25:     WRITESTRING       43    72
+          *** Generating:  25:     WRITESTRING       43    72
           CHARACTER STRING LITERAL: "Enter a non-negative integer: "
           ... node has no more children
          )
@@ -275,7 +275,7 @@
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: i  [static var (address = 0)]
-          *** Generating:  26:     PUSHSTATADDR      0
+         *** Generating:  26:     PUSHSTATADDR      0
          =
          <expr3>
           <expr2>
@@ -285,31 +285,31 @@
             Reserved Word: nextInt
             (
             )
-             *** Generating:  27:     READINT
+            *** Generating:  27:     READINT
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  28:     SAVETOADDR
+         *** Generating:  28:     SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  29:     JUMP              9
+     *** Generating:  29:     JUMP              9
      *** Fixed Up:  13:     JUMPONFALSE       30
      ... node has no more children
     ... node has no more children
    }
    ... node has no more children
   *** Fixed Up:  0:      INITSTKFRM        0
-   *** Generating:  30:     STOP
+  *** Generating:  30:     STOP
   ... node has no more children
  <methodDecl>
   Reserved Word: static
   Reserved Word: int
   *** Fixed Up:  17:     CALLSTATMETHOD    31
-   *** Generating:  31:     INITSTKFRM        ?
+  *** Generating:  31:     INITSTKFRM        ?
   IDENTIFIER: ninetyOne  [method (start address = 31)]
   (
   <parameterDeclList>
@@ -333,8 +333,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: n  [local var (stackframe offset = -2)]
-             *** Generating:  32:     PUSHLOCADDR       -2
-             *** Generating:  33:     LOADFROMADDR
+            *** Generating:  32:     PUSHLOCADDR       -2
+            *** Generating:  33:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -342,44 +342,42 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  34:     PUSHNUM           100
+            *** Generating:  34:     PUSHNUM           100
             UNSIGNED INTEGER LITERAL: 100
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  35:     GT
-         <expr4>
+         *** Generating:  35:     GT
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  36:     JUMPONFALSE       ?
+     *** Generating:  36:     JUMPONFALSE       ?
      <statement>
       Reserved Word: return
       <expr3>
        <expr2>
         <expr1>
          IDENTIFIER: n  [local var (stackframe offset = -2)]
-          *** Generating:  37:     PUSHLOCADDR       -2
-          *** Generating:  38:     LOADFROMADDR
+         *** Generating:  37:     PUSHLOCADDR       -2
+         *** Generating:  38:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        -
        <expr2>
         <expr1>
-          *** Generating:  39:     PUSHNUM           10
+         *** Generating:  39:     PUSHNUM           10
          UNSIGNED INTEGER LITERAL: 10
          ... node has no more children
         ... node has no more children
-        *** Generating:  40:     SUB
+       *** Generating:  40:     SUB
        ... node has no more children
-       *** Generating:  41:     RETURN            1
+      *** Generating:  41:     RETURN            1
       ;
       ... node has no more children
      Reserved Word: else
-      *** Generating:  42:     JUMP              ?
+     *** Generating:  42:     JUMP              ?
      *** Fixed Up:  36:     JUMPONFALSE       43
      <statement>
       Reserved Word: return
@@ -399,34 +397,34 @@
                <expr2>
                 <expr1>
                  IDENTIFIER: n  [local var (stackframe offset = -2)]
-                  *** Generating:  43:     PUSHLOCADDR       -2
-                  *** Generating:  44:     LOADFROMADDR
+                 *** Generating:  43:     PUSHLOCADDR       -2
+                 *** Generating:  44:     LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                +
                <expr2>
                 <expr1>
-                  *** Generating:  45:     PUSHNUM           11
+                 *** Generating:  45:     PUSHNUM           11
                  UNSIGNED INTEGER LITERAL: 11
                  ... node has no more children
                 ... node has no more children
-                *** Generating:  46:     ADD
+               *** Generating:  46:     ADD
                ... node has no more children
-               *** Generating:  47:     PASSPARAM
+              *** Generating:  47:     PASSPARAM
               )
               ... node has no more children
-              *** Generating:  48:     CALLSTATMETHOD    31
+             *** Generating:  48:     CALLSTATMETHOD    31
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  49:     PASSPARAM
+          *** Generating:  49:     PASSPARAM
           )
           ... node has no more children
-          *** Generating:  50:     CALLSTATMETHOD    31
+         *** Generating:  50:     CALLSTATMETHOD    31
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  51:     RETURN            1
+      *** Generating:  51:     RETURN            1
       ;
       ... node has no more children
      *** Fixed Up:  42:     JUMP              52

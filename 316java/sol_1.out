@@ -36,16 +36,16 @@
    <singleVarDecl>
     IDENTIFIER: moveCounter  [not in symbol table]
     =
-     *** Generating:  0:      PUSHSTATADDR      3
+    *** Generating:  0:      PUSHSTATADDR      3
     <expr3>
      <expr2>
       <expr1>
-        *** Generating:  1:      PUSHNUM           0
+       *** Generating:  1:      PUSHNUM           0
        UNSIGNED INTEGER LITERAL: 0
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  2:      SAVETOADDR
+    *** Generating:  2:      SAVETOADDR
     ... node has no more children
    ;
    ... node has no more children
@@ -61,7 +61,7 @@
   [
   ]
   )
-   *** Generating:  3:      INITSTKFRM        ?
+  *** Generating:  3:      INITSTKFRM        ?
   <compoundStmt>
    {
    <statement>
@@ -73,7 +73,7 @@
      Reserved Word: print
      (
      <printArgument>
-       *** Generating:  4:      WRITESTRING       4     53
+      *** Generating:  4:      WRITESTRING       4     53
       CHARACTER STRING LITERAL: "Recursive Solution to the Tower of Hanoi Problem
 
 "
@@ -91,7 +91,7 @@
      Reserved Word: print
      (
      <printArgument>
-       *** Generating:  5:      WRITESTRING       54    76
+      *** Generating:  5:      WRITESTRING       54    76
       CHARACTER STRING LITERAL: "Enter number of rings: "
       ... node has no more children
      )
@@ -116,7 +116,7 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: argNumRingsToMove  [static var (address = 0)]
-      *** Generating:  6:      PUSHSTATADDR      0
+     *** Generating:  6:      PUSHSTATADDR      0
      =
      <expr3>
       <expr2>
@@ -126,45 +126,45 @@
         Reserved Word: nextInt
         (
         )
-         *** Generating:  7:      READINT
+        *** Generating:  7:      READINT
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  8:      SAVETOADDR
+     *** Generating:  8:      SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: argFromPeg  [static var (address = 1)]
-      *** Generating:  9:      PUSHSTATADDR      1
+     *** Generating:  9:      PUSHSTATADDR      1
      =
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  10:     PUSHNUM           1
+        *** Generating:  10:     PUSHNUM           1
         UNSIGNED INTEGER LITERAL: 1
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  11:     SAVETOADDR
+     *** Generating:  11:     SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: argToPeg  [static var (address = 2)]
-      *** Generating:  12:     PUSHSTATADDR      2
+     *** Generating:  12:     PUSHSTATADDR      2
      =
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  13:     PUSHNUM           3
+        *** Generating:  13:     PUSHNUM           3
         UNSIGNED INTEGER LITERAL: 3
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  14:     SAVETOADDR
+     *** Generating:  14:     SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -175,22 +175,22 @@
       (
       )
       ... node has no more children
-      *** Generating:  15:     CALLSTATMETHOD    ?
-      *** Generating:  16:     NOPorDISCARDVALUE
+     *** Generating:  15:     CALLSTATMETHOD    ?
+     *** Generating:  16:     NOPorDISCARDVALUE
      ;
      ... node has no more children
     ... node has no more children
    }
    ... node has no more children
   *** Fixed Up:  3:      INITSTKFRM        0
-   *** Generating:  17:     STOP
+  *** Generating:  17:     STOP
   ... node has no more children
  <methodDecl>
   Reserved Word: static
   Reserved Word: void
   *** Fixed Up: 16:     NOP
   *** Fixed Up:  15:     CALLSTATMETHOD    18
-   *** Generating:  18:     INITSTKFRM        ?
+  *** Generating:  18:     INITSTKFRM        ?
   IDENTIFIER: moveRings  [method (start address = 18)]
   (
   <parameterDeclList>
@@ -205,49 +205,49 @@
      <singleVarDecl>
       IDENTIFIER: paramNumRingsToMove  [not in symbol table]
       =
-       *** Generating:  19:     PUSHLOCADDR       1
+      *** Generating:  19:     PUSHLOCADDR       1
       <expr3>
        <expr2>
         <expr1>
          IDENTIFIER: argNumRingsToMove  [static var (address = 0)]
-          *** Generating:  20:     PUSHSTATADDR      0
-          *** Generating:  21:     LOADFROMADDR
+         *** Generating:  20:     PUSHSTATADDR      0
+         *** Generating:  21:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  22:     SAVETOADDR
+      *** Generating:  22:     SAVETOADDR
       ... node has no more children
      ,
      <singleVarDecl>
       IDENTIFIER: paramFromPeg  [not in symbol table]
       =
-       *** Generating:  23:     PUSHLOCADDR       2
+      *** Generating:  23:     PUSHLOCADDR       2
       <expr3>
        <expr2>
         <expr1>
          IDENTIFIER: argFromPeg  [static var (address = 1)]
-          *** Generating:  24:     PUSHSTATADDR      1
-          *** Generating:  25:     LOADFROMADDR
+         *** Generating:  24:     PUSHSTATADDR      1
+         *** Generating:  25:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  26:     SAVETOADDR
+      *** Generating:  26:     SAVETOADDR
       ... node has no more children
      ,
      <singleVarDecl>
       IDENTIFIER: paramToPeg  [not in symbol table]
       =
-       *** Generating:  27:     PUSHLOCADDR       3
+      *** Generating:  27:     PUSHLOCADDR       3
       <expr3>
        <expr2>
         <expr1>
          IDENTIFIER: argToPeg  [static var (address = 2)]
-          *** Generating:  28:     PUSHSTATADDR      2
-          *** Generating:  29:     LOADFROMADDR
+         *** Generating:  28:     PUSHSTATADDR      2
+         *** Generating:  29:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  30:     SAVETOADDR
+      *** Generating:  30:     SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -264,8 +264,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: paramNumRingsToMove  [local var (stackframe offset = 1)]
-             *** Generating:  31:     PUSHLOCADDR       1
-             *** Generating:  32:     LOADFROMADDR
+            *** Generating:  31:     PUSHLOCADDR       1
+            *** Generating:  32:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -273,46 +273,44 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  33:     PUSHNUM           1
+            *** Generating:  33:     PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  34:     GT
-         <expr4>
+         *** Generating:  34:     GT
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  35:     JUMPONFALSE       ?
+     *** Generating:  35:     JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: argNumRingsToMove  [static var (address = 0)]
-          *** Generating:  36:     PUSHSTATADDR      0
+         *** Generating:  36:     PUSHSTATADDR      0
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: paramNumRingsToMove  [local var (stackframe offset = 1)]
-             *** Generating:  37:     PUSHLOCADDR       1
-             *** Generating:  38:     LOADFROMADDR
+            *** Generating:  37:     PUSHLOCADDR       1
+            *** Generating:  38:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           -
           <expr2>
            <expr1>
-             *** Generating:  39:     PUSHNUM           1
+            *** Generating:  39:     PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  40:     SUB
+          *** Generating:  40:     SUB
           ... node has no more children
-          *** Generating:  41:     SAVETOADDR
+         *** Generating:  41:     SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
@@ -328,83 +326,83 @@
               <expr2>
                <expr1>
                 IDENTIFIER: paramToPeg  [local var (stackframe offset = 3)]
-                 *** Generating:  42:     PUSHLOCADDR       3
-                 *** Generating:  43:     LOADFROMADDR
+                *** Generating:  42:     PUSHLOCADDR       3
+                *** Generating:  43:     LOADFROMADDR
                 ... node has no more children
                %
                <expr1>
-                 *** Generating:  44:     PUSHNUM           3
+                *** Generating:  44:     PUSHNUM           3
                 UNSIGNED INTEGER LITERAL: 3
                 ... node has no more children
-                *** Generating:  45:     MOD
+               *** Generating:  45:     MOD
                ... node has no more children
               +
               <expr2>
                <expr1>
-                 *** Generating:  46:     PUSHNUM           1
+                *** Generating:  46:     PUSHNUM           1
                 UNSIGNED INTEGER LITERAL: 1
                 ... node has no more children
                ... node has no more children
-               *** Generating:  47:     ADD
+              *** Generating:  47:     ADD
               ... node has no more children
-             !=
+             ... node has no more children
+            !=
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: paramFromPeg  [local var (stackframe offset = 2)]
-                 *** Generating:  48:     PUSHLOCADDR       2
-                 *** Generating:  49:     LOADFROMADDR
+                *** Generating:  48:     PUSHLOCADDR       2
+                *** Generating:  49:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  50:     NE
-             <expr4>
              ... node has no more children
-            ... node has no more children
+            *** Generating:  50:     NE
             ... node has no more children
            ... node has no more children
           ... node has no more children
          )
-          *** Generating:  51:     JUMPONFALSE       ?
+         *** Generating:  51:     JUMPONFALSE       ?
          <statement>
           <assignmentOrInvoc>
            IDENTIFIER: argToPeg  [static var (address = 2)]
-            *** Generating:  52:     PUSHSTATADDR      2
+           *** Generating:  52:     PUSHSTATADDR      2
            =
            <expr3>
             <expr2>
              <expr1>
               IDENTIFIER: paramToPeg  [local var (stackframe offset = 3)]
-               *** Generating:  53:     PUSHLOCADDR       3
-               *** Generating:  54:     LOADFROMADDR
+              *** Generating:  53:     PUSHLOCADDR       3
+              *** Generating:  54:     LOADFROMADDR
               ... node has no more children
              %
              <expr1>
-               *** Generating:  55:     PUSHNUM           3
+              *** Generating:  55:     PUSHNUM           3
               UNSIGNED INTEGER LITERAL: 3
               ... node has no more children
-              *** Generating:  56:     MOD
+             *** Generating:  56:     MOD
              ... node has no more children
             +
             <expr2>
              <expr1>
-               *** Generating:  57:     PUSHNUM           1
+              *** Generating:  57:     PUSHNUM           1
               UNSIGNED INTEGER LITERAL: 1
               ... node has no more children
              ... node has no more children
-             *** Generating:  58:     ADD
+            *** Generating:  58:     ADD
             ... node has no more children
-            *** Generating:  59:     SAVETOADDR
+           *** Generating:  59:     SAVETOADDR
            ;
            ... node has no more children
           ... node has no more children
          Reserved Word: else
-          *** Generating:  60:     JUMP              ?
+         *** Generating:  60:     JUMP              ?
          *** Fixed Up:  51:     JUMPONFALSE       61
          <statement>
           <assignmentOrInvoc>
            IDENTIFIER: argToPeg  [static var (address = 2)]
-            *** Generating:  61:     PUSHSTATADDR      2
+           *** Generating:  61:     PUSHSTATADDR      2
            =
            <expr3>
             <expr2>
@@ -418,22 +416,20 @@
                    <expr2>
                     <expr1>
                      IDENTIFIER: paramToPeg  [local var (stackframe offset = 3)]
-                      *** Generating:  62:     PUSHLOCADDR       3
-                      *** Generating:  63:     LOADFROMADDR
+                     *** Generating:  62:     PUSHLOCADDR       3
+                     *** Generating:  63:     LOADFROMADDR
                      ... node has no more children
                     ... node has no more children
                    +
                    <expr2>
                     <expr1>
-                      *** Generating:  64:     PUSHNUM           1
+                     *** Generating:  64:     PUSHNUM           1
                      UNSIGNED INTEGER LITERAL: 1
                      ... node has no more children
                     ... node has no more children
-                    *** Generating:  65:     ADD
+                   *** Generating:  65:     ADD
                    ... node has no more children
-                  <expr4>
                   ... node has no more children
-                 ... node has no more children
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
@@ -441,21 +437,21 @@
               ... node has no more children
              %
              <expr1>
-               *** Generating:  66:     PUSHNUM           3
+              *** Generating:  66:     PUSHNUM           3
               UNSIGNED INTEGER LITERAL: 3
               ... node has no more children
-              *** Generating:  67:     MOD
+             *** Generating:  67:     MOD
              ... node has no more children
             +
             <expr2>
              <expr1>
-               *** Generating:  68:     PUSHNUM           1
+              *** Generating:  68:     PUSHNUM           1
               UNSIGNED INTEGER LITERAL: 1
               ... node has no more children
              ... node has no more children
-             *** Generating:  69:     ADD
+            *** Generating:  69:     ADD
             ... node has no more children
-            *** Generating:  70:     SAVETOADDR
+           *** Generating:  70:     SAVETOADDR
            ;
            ... node has no more children
           ... node has no more children
@@ -469,7 +465,7 @@
           (
           )
           ... node has no more children
-          *** Generating:  71:     CALLSTATMETHOD    18
+         *** Generating:  71:     CALLSTATMETHOD    18
          ;
          ... node has no more children
         ... node has no more children
@@ -482,26 +478,26 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: moveCounter  [static var (address = 3)]
-      *** Generating:  72:     PUSHSTATADDR      3
+     *** Generating:  72:     PUSHSTATADDR      3
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: moveCounter  [static var (address = 3)]
-         *** Generating:  73:     PUSHSTATADDR      3
-         *** Generating:  74:     LOADFROMADDR
+        *** Generating:  73:     PUSHSTATADDR      3
+        *** Generating:  74:     LOADFROMADDR
         ... node has no more children
        ... node has no more children
       +
       <expr2>
        <expr1>
-         *** Generating:  75:     PUSHNUM           1
+        *** Generating:  75:     PUSHNUM           1
         UNSIGNED INTEGER LITERAL: 1
         ... node has no more children
        ... node has no more children
-       *** Generating:  76:     ADD
+      *** Generating:  76:     ADD
       ... node has no more children
-      *** Generating:  77:     SAVETOADDR
+     *** Generating:  77:     SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -518,12 +514,12 @@
        <expr2>
         <expr1>
          IDENTIFIER: moveCounter  [static var (address = 3)]
-          *** Generating:  78:     PUSHSTATADDR      3
-          *** Generating:  79:     LOADFROMADDR
+         *** Generating:  78:     PUSHSTATADDR      3
+         *** Generating:  79:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  80:     WRITEINT
+      *** Generating:  80:     WRITEINT
       ... node has no more children
      )
      ;
@@ -538,7 +534,7 @@
      Reserved Word: print
      (
      <printArgument>
-       *** Generating:  81:     WRITESTRING       77    88
+      *** Generating:  81:     WRITESTRING       77    88
       CHARACTER STRING LITERAL: ": Move ring "
       ... node has no more children
      )
@@ -558,12 +554,12 @@
        <expr2>
         <expr1>
          IDENTIFIER: paramNumRingsToMove  [local var (stackframe offset = 1)]
-          *** Generating:  82:     PUSHLOCADDR       1
-          *** Generating:  83:     LOADFROMADDR
+         *** Generating:  82:     PUSHLOCADDR       1
+         *** Generating:  83:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  84:     WRITEINT
+      *** Generating:  84:     WRITEINT
       ... node has no more children
      )
      ;
@@ -578,7 +574,7 @@
      Reserved Word: print
      (
      <printArgument>
-       *** Generating:  85:     WRITESTRING       89    98
+      *** Generating:  85:     WRITESTRING       89    98
       CHARACTER STRING LITERAL: " from peg "
       ... node has no more children
      )
@@ -598,12 +594,12 @@
        <expr2>
         <expr1>
          IDENTIFIER: paramFromPeg  [local var (stackframe offset = 2)]
-          *** Generating:  86:     PUSHLOCADDR       2
-          *** Generating:  87:     LOADFROMADDR
+         *** Generating:  86:     PUSHLOCADDR       2
+         *** Generating:  87:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  88:     WRITEINT
+      *** Generating:  88:     WRITEINT
       ... node has no more children
      )
      ;
@@ -618,7 +614,7 @@
      Reserved Word: print
      (
      <printArgument>
-       *** Generating:  89:     WRITESTRING       99    106
+      *** Generating:  89:     WRITESTRING       99    106
       CHARACTER STRING LITERAL: " to peg "
       ... node has no more children
      )
@@ -638,16 +634,16 @@
        <expr2>
         <expr1>
          IDENTIFIER: paramToPeg  [local var (stackframe offset = 3)]
-          *** Generating:  90:     PUSHLOCADDR       3
-          *** Generating:  91:     LOADFROMADDR
+         *** Generating:  90:     PUSHLOCADDR       3
+         *** Generating:  91:     LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  92:     WRITEINT
+      *** Generating:  92:     WRITEINT
       ... node has no more children
      )
      ;
-      *** Generating:  93:     WRITELNOP
+     *** Generating:  93:     WRITELNOP
      ... node has no more children
     ... node has no more children
    <statement>
@@ -662,8 +658,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: paramNumRingsToMove  [local var (stackframe offset = 1)]
-             *** Generating:  94:     PUSHLOCADDR       1
-             *** Generating:  95:     LOADFROMADDR
+            *** Generating:  94:     PUSHLOCADDR       1
+            *** Generating:  95:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -671,56 +667,54 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  96:     PUSHNUM           1
+            *** Generating:  96:     PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  97:     GT
-         <expr4>
+         *** Generating:  97:     GT
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  98:     JUMPONFALSE       ?
+     *** Generating:  98:     JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: argFromPeg  [static var (address = 1)]
-          *** Generating:  99:     PUSHSTATADDR      1
+         *** Generating:  99:     PUSHSTATADDR      1
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: argToPeg  [static var (address = 2)]
-             *** Generating:  100:    PUSHSTATADDR      2
-             *** Generating:  101:    LOADFROMADDR
+            *** Generating:  100:    PUSHSTATADDR      2
+            *** Generating:  101:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  102:    SAVETOADDR
+         *** Generating:  102:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: argToPeg  [static var (address = 2)]
-          *** Generating:  103:    PUSHSTATADDR      2
+         *** Generating:  103:    PUSHSTATADDR      2
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: paramToPeg  [local var (stackframe offset = 3)]
-             *** Generating:  104:    PUSHLOCADDR       3
-             *** Generating:  105:    LOADFROMADDR
+            *** Generating:  104:    PUSHLOCADDR       3
+            *** Generating:  105:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  106:    SAVETOADDR
+         *** Generating:  106:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
@@ -731,61 +725,61 @@
           (
           )
           ... node has no more children
-          *** Generating:  107:    CALLSTATMETHOD    18
+         *** Generating:  107:    CALLSTATMETHOD    18
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: argNumRingsToMove  [static var (address = 0)]
-          *** Generating:  108:    PUSHSTATADDR      0
+         *** Generating:  108:    PUSHSTATADDR      0
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: paramNumRingsToMove  [local var (stackframe offset = 1)]
-             *** Generating:  109:    PUSHLOCADDR       1
-             *** Generating:  110:    LOADFROMADDR
+            *** Generating:  109:    PUSHLOCADDR       1
+            *** Generating:  110:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  111:    SAVETOADDR
+         *** Generating:  111:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: argFromPeg  [static var (address = 1)]
-          *** Generating:  112:    PUSHSTATADDR      1
+         *** Generating:  112:    PUSHSTATADDR      1
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: paramFromPeg  [local var (stackframe offset = 2)]
-             *** Generating:  113:    PUSHLOCADDR       2
-             *** Generating:  114:    LOADFROMADDR
+            *** Generating:  113:    PUSHLOCADDR       2
+            *** Generating:  114:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  115:    SAVETOADDR
+         *** Generating:  115:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: argToPeg  [static var (address = 2)]
-          *** Generating:  116:    PUSHSTATADDR      2
+         *** Generating:  116:    PUSHSTATADDR      2
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: paramToPeg  [local var (stackframe offset = 3)]
-             *** Generating:  117:    PUSHLOCADDR       3
-             *** Generating:  118:    LOADFROMADDR
+            *** Generating:  117:    PUSHLOCADDR       3
+            *** Generating:  118:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  119:    SAVETOADDR
+         *** Generating:  119:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
@@ -798,7 +792,7 @@
    }
    ... node has no more children
   *** Fixed Up:  18:     INITSTKFRM        3
-   *** Generating:  120:    RETURN            0
+  *** Generating:  120:    RETURN            0
   ... node has no more children
  }
  ... node has no more children

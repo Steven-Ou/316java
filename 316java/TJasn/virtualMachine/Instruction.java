@@ -34,7 +34,7 @@ public abstract class Instruction {
     for (int i = 0; i < TJ.output.getTreeDepth(); i++)
         TJ.output.getOutFileWriter().print(" ");
 
-    TJ.output.getOutFileWriter().print(" *** Generating:  ");
+    TJ.output.getOutFileWriter().print("*** Generating:  ");
   }
 
   abstract void writeInstr();

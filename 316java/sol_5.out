@@ -38,7 +38,7 @@
   [
   ]
   )
-   *** Generating:  0:      INITSTKFRM        ?
+  *** Generating:  0:      INITSTKFRM        ?
   <compoundStmt>
    {
    <statement>
@@ -50,7 +50,7 @@
      Reserved Word: print
      (
      <printArgument>
-       *** Generating:  1:      WRITESTRING       0     38
+      *** Generating:  1:      WRITESTRING       0     38
       CHARACTER STRING LITERAL: "Enter a positive integer less than 10: "
       ... node has no more children
      )
@@ -63,7 +63,7 @@
      <singleVarDecl>
       IDENTIFIER: amtOfInput  [not in symbol table]
       =
-       *** Generating:  2:      PUSHLOCADDR       1
+      *** Generating:  2:      PUSHLOCADDR       1
       <expr3>
        <expr2>
         <expr1>
@@ -72,11 +72,11 @@
          Reserved Word: nextInt
          (
          )
-          *** Generating:  3:      READINT
+         *** Generating:  3:      READINT
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  4:      SAVETOADDR
+      *** Generating:  4:      SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -87,16 +87,16 @@
      <singleVarDecl>
       IDENTIFIER: counter1  [not in symbol table]
       =
-       *** Generating:  5:      PUSHLOCADDR       2
+      *** Generating:  5:      PUSHLOCADDR       2
       <expr3>
        <expr2>
         <expr1>
-          *** Generating:  6:      PUSHNUM           1
+         *** Generating:  6:      PUSHNUM           1
          UNSIGNED INTEGER LITERAL: 1
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  7:      SAVETOADDR
+      *** Generating:  7:      SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -113,8 +113,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: counter1  [local var (stackframe offset = 2)]
-             *** Generating:  8:      PUSHLOCADDR       2
-             *** Generating:  9:      LOADFROMADDR
+            *** Generating:  8:      PUSHLOCADDR       2
+            *** Generating:  9:      LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -123,20 +123,18 @@
           <expr2>
            <expr1>
             IDENTIFIER: amtOfInput  [local var (stackframe offset = 1)]
-             *** Generating:  10:     PUSHLOCADDR       1
-             *** Generating:  11:     LOADFROMADDR
+            *** Generating:  10:     PUSHLOCADDR       1
+            *** Generating:  11:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  12:     LE
-         <expr4>
+         *** Generating:  12:     LE
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  13:     JUMPONFALSE       ?
+     *** Generating:  13:     JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
@@ -150,7 +148,7 @@
          (
          )
          ;
-          *** Generating:  14:     WRITELNOP
+         *** Generating:  14:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
@@ -163,7 +161,7 @@
          (
          )
          ;
-          *** Generating:  15:     WRITELNOP
+         *** Generating:  15:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
@@ -175,7 +173,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  16:     WRITESTRING       39    43
+          *** Generating:  16:     WRITESTRING       39    43
           CHARACTER STRING LITERAL: "Game "
           ... node has no more children
          )
@@ -195,12 +193,12 @@
            <expr2>
             <expr1>
              IDENTIFIER: counter1  [local var (stackframe offset = 2)]
-              *** Generating:  17:     PUSHLOCADDR       2
-              *** Generating:  18:     LOADFROMADDR
+             *** Generating:  17:     PUSHLOCADDR       2
+             *** Generating:  18:     LOADFROMADDR
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  19:     WRITEINT
+          *** Generating:  19:     WRITEINT
           ... node has no more children
          )
          ;
@@ -215,7 +213,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  20:     WRITESTRING       44    47
+          *** Generating:  20:     WRITESTRING       44    47
           CHARACTER STRING LITERAL: " of "
           ... node has no more children
          )
@@ -235,16 +233,16 @@
            <expr2>
             <expr1>
              IDENTIFIER: amtOfInput  [local var (stackframe offset = 1)]
-              *** Generating:  21:     PUSHLOCADDR       1
-              *** Generating:  22:     LOADFROMADDR
+             *** Generating:  21:     PUSHLOCADDR       1
+             *** Generating:  22:     LOADFROMADDR
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  23:     WRITEINT
+          *** Generating:  23:     WRITEINT
           ... node has no more children
          )
          ;
-          *** Generating:  24:     WRITELNOP
+         *** Generating:  24:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
@@ -256,7 +254,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  25:     WRITESTRING       48    90
+          *** Generating:  25:     WRITESTRING       48    90
           CHARACTER STRING LITERAL: "Enter a non-negative integer less than 13: "
           ... node has no more children
          )
@@ -269,7 +267,7 @@
          <singleVarDecl>
           IDENTIFIER: num  [not in symbol table]
           =
-           *** Generating:  26:     PUSHLOCADDR       3
+          *** Generating:  26:     PUSHLOCADDR       3
           <expr3>
            <expr2>
             <expr1>
@@ -278,11 +276,11 @@
              Reserved Word: nextInt
              (
              )
-              *** Generating:  27:     READINT
+             *** Generating:  27:     READINT
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  28:     SAVETOADDR
+          *** Generating:  28:     SAVETOADDR
           ... node has no more children
          ;
          ... node has no more children
@@ -293,16 +291,16 @@
          <singleVarDecl>
           IDENTIFIER: factorial  [not in symbol table]
           =
-           *** Generating:  29:     PUSHLOCADDR       4
+          *** Generating:  29:     PUSHLOCADDR       4
           <expr3>
            <expr2>
             <expr1>
-              *** Generating:  30:     PUSHNUM           1
+             *** Generating:  30:     PUSHNUM           1
              UNSIGNED INTEGER LITERAL: 1
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  31:     SAVETOADDR
+          *** Generating:  31:     SAVETOADDR
           ... node has no more children
          ;
          ... node has no more children
@@ -313,16 +311,16 @@
          <singleVarDecl>
           IDENTIFIER: counter2  [not in symbol table]
           =
-           *** Generating:  32:     PUSHLOCADDR       5
+          *** Generating:  32:     PUSHLOCADDR       5
           <expr3>
            <expr2>
             <expr1>
-              *** Generating:  33:     PUSHNUM           1
+             *** Generating:  33:     PUSHNUM           1
              UNSIGNED INTEGER LITERAL: 1
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  34:     SAVETOADDR
+          *** Generating:  34:     SAVETOADDR
           ... node has no more children
          ;
          ... node has no more children
@@ -339,8 +337,8 @@
               <expr2>
                <expr1>
                 IDENTIFIER: counter2  [local var (stackframe offset = 5)]
-                 *** Generating:  35:     PUSHLOCADDR       5
-                 *** Generating:  36:     LOADFROMADDR
+                *** Generating:  35:     PUSHLOCADDR       5
+                *** Generating:  36:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
@@ -349,78 +347,76 @@
               <expr2>
                <expr1>
                 IDENTIFIER: num  [local var (stackframe offset = 3)]
-                 *** Generating:  37:     PUSHLOCADDR       3
-                 *** Generating:  38:     LOADFROMADDR
+                *** Generating:  37:     PUSHLOCADDR       3
+                *** Generating:  38:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  39:     LE
-             <expr4>
+             *** Generating:  39:     LE
              ... node has no more children
-            ... node has no more children
             ... node has no more children
            ... node has no more children
           ... node has no more children
          )
-          *** Generating:  40:     JUMPONFALSE       ?
+         *** Generating:  40:     JUMPONFALSE       ?
          <statement>
           <compoundStmt>
            {
            <statement>
             <assignmentOrInvoc>
              IDENTIFIER: factorial  [local var (stackframe offset = 4)]
-              *** Generating:  41:     PUSHLOCADDR       4
+             *** Generating:  41:     PUSHLOCADDR       4
              =
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: factorial  [local var (stackframe offset = 4)]
-                 *** Generating:  42:     PUSHLOCADDR       4
-                 *** Generating:  43:     LOADFROMADDR
+                *** Generating:  42:     PUSHLOCADDR       4
+                *** Generating:  43:     LOADFROMADDR
                 ... node has no more children
                *
                <expr1>
                 IDENTIFIER: counter2  [local var (stackframe offset = 5)]
-                 *** Generating:  44:     PUSHLOCADDR       5
-                 *** Generating:  45:     LOADFROMADDR
+                *** Generating:  44:     PUSHLOCADDR       5
+                *** Generating:  45:     LOADFROMADDR
                 ... node has no more children
-                *** Generating:  46:     MUL
+               *** Generating:  46:     MUL
                ... node has no more children
               ... node has no more children
-              *** Generating:  47:     SAVETOADDR
+             *** Generating:  47:     SAVETOADDR
              ;
              ... node has no more children
             ... node has no more children
            <statement>
             <assignmentOrInvoc>
              IDENTIFIER: counter2  [local var (stackframe offset = 5)]
-              *** Generating:  48:     PUSHLOCADDR       5
+             *** Generating:  48:     PUSHLOCADDR       5
              =
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: counter2  [local var (stackframe offset = 5)]
-                 *** Generating:  49:     PUSHLOCADDR       5
-                 *** Generating:  50:     LOADFROMADDR
+                *** Generating:  49:     PUSHLOCADDR       5
+                *** Generating:  50:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               +
               <expr2>
                <expr1>
-                 *** Generating:  51:     PUSHNUM           1
+                *** Generating:  51:     PUSHNUM           1
                 UNSIGNED INTEGER LITERAL: 1
                 ... node has no more children
                ... node has no more children
-               *** Generating:  52:     ADD
+              *** Generating:  52:     ADD
               ... node has no more children
-              *** Generating:  53:     SAVETOADDR
+             *** Generating:  53:     SAVETOADDR
              ;
              ... node has no more children
             ... node has no more children
            }
            ... node has no more children
           ... node has no more children
-          *** Generating:  54:     JUMP              35
+         *** Generating:  54:     JUMP              35
          *** Fixed Up:  40:     JUMPONFALSE       55
          ... node has no more children
         ... node has no more children
@@ -433,7 +429,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  55:     WRITESTRING       91    107
+          *** Generating:  55:     WRITESTRING       91    107
           CHARACTER STRING LITERAL: "The factorial of "
           ... node has no more children
          )
@@ -453,12 +449,12 @@
            <expr2>
             <expr1>
              IDENTIFIER: num  [local var (stackframe offset = 3)]
-              *** Generating:  56:     PUSHLOCADDR       3
-              *** Generating:  57:     LOADFROMADDR
+             *** Generating:  56:     PUSHLOCADDR       3
+             *** Generating:  57:     LOADFROMADDR
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  58:     WRITEINT
+          *** Generating:  58:     WRITEINT
           ... node has no more children
          )
          ;
@@ -473,7 +469,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  59:     WRITESTRING       108   112
+          *** Generating:  59:     WRITESTRING       108   112
           CHARACTER STRING LITERAL: " is: "
           ... node has no more children
          )
@@ -493,55 +489,55 @@
            <expr2>
             <expr1>
              IDENTIFIER: factorial  [local var (stackframe offset = 4)]
-              *** Generating:  60:     PUSHLOCADDR       4
-              *** Generating:  61:     LOADFROMADDR
+             *** Generating:  60:     PUSHLOCADDR       4
+             *** Generating:  61:     LOADFROMADDR
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  62:     WRITEINT
+          *** Generating:  62:     WRITEINT
           ... node has no more children
          )
          ;
-          *** Generating:  63:     WRITELNOP
+         *** Generating:  63:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: counter1  [local var (stackframe offset = 2)]
-          *** Generating:  64:     PUSHLOCADDR       2
+         *** Generating:  64:     PUSHLOCADDR       2
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: counter1  [local var (stackframe offset = 2)]
-             *** Generating:  65:     PUSHLOCADDR       2
-             *** Generating:  66:     LOADFROMADDR
+            *** Generating:  65:     PUSHLOCADDR       2
+            *** Generating:  66:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           +
           <expr2>
            <expr1>
-             *** Generating:  67:     PUSHNUM           1
+            *** Generating:  67:     PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  68:     ADD
+          *** Generating:  68:     ADD
           ... node has no more children
-          *** Generating:  69:     SAVETOADDR
+         *** Generating:  69:     SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  70:     JUMP              8
+     *** Generating:  70:     JUMP              8
      *** Fixed Up:  13:     JUMPONFALSE       71
      ... node has no more children
     ... node has no more children
    }
    ... node has no more children
   *** Fixed Up:  0:      INITSTKFRM        5
-   *** Generating:  71:     STOP
+  *** Generating:  71:     STOP
   ... node has no more children
  }
  ... node has no more children

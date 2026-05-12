@@ -693,9 +693,6 @@ public final class ParserAndTranslator {
       expr4();
     }
 
-    for (int i = 0; i < TJ.output.getTreeDepth(); i++) TJ.output.getOutFileWriter().print(" ");
-    TJ.output.getOutFileWriter().println("... node has no more children");
-
     TJ.output.decTreeDepth();
   }
 
@@ -722,9 +719,6 @@ public final class ParserAndTranslator {
       else if (op == GE)
         new GEinstr();
     }
-
-    for (int i = 0; i < TJ.output.getTreeDepth(); i++) TJ.output.getOutFileWriter().print(" ");
-    TJ.output.getOutFileWriter().println("<expr4>");
 
     TJ.output.decTreeDepth();
   }

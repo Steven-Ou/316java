@@ -42,13 +42,13 @@
   [
   ]
   )
-   *** Generating:  0:      INITSTKFRM        ?
+  *** Generating:  0:      INITSTKFRM        ?
   <compoundStmt>
    {
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: numlist  [static var (address = 2)]
-      *** Generating:  1:      PUSHSTATADDR      2
+     *** Generating:  1:      PUSHSTATADDR      2
      =
      <expr3>
       <expr2>
@@ -59,34 +59,34 @@
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  2:      PUSHNUM           51
+           *** Generating:  2:      PUSHNUM           51
            UNSIGNED INTEGER LITERAL: 51
            ... node has no more children
           ... node has no more children
          ... node has no more children
+        *** Generating:  3:      HEAPALLOC
         ]
-         *** Generating:  3:      HEAPALLOC
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  4:      SAVETOADDR
+     *** Generating:  4:      SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: again  [static var (address = 1)]
-      *** Generating:  5:      PUSHSTATADDR      1
+     *** Generating:  5:      PUSHSTATADDR      1
      =
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  6:      PUSHNUM           1
+        *** Generating:  6:      PUSHNUM           1
         UNSIGNED INTEGER LITERAL: 1
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  7:      SAVETOADDR
+     *** Generating:  7:      SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -102,29 +102,29 @@
           <expr2>
            <expr1>
             IDENTIFIER: again  [static var (address = 1)]
-             *** Generating:  8:      PUSHSTATADDR      1
-             *** Generating:  9:      LOADFROMADDR
+            *** Generating:  8:      PUSHSTATADDR      1
+            *** Generating:  9:      LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  10:     PUSHNUM           1
+            *** Generating:  10:     PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  11:     EQ
-         <expr4>
          ... node has no more children
-        ... node has no more children
+        *** Generating:  11:     EQ
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  12:     JUMPONFALSE       ?
+     *** Generating:  12:     JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
@@ -138,7 +138,7 @@
          (
          )
          ;
-          *** Generating:  13:     WRITELNOP
+         *** Generating:  13:     WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
@@ -148,8 +148,8 @@
           (
           )
           ... node has no more children
-          *** Generating:  14:     CALLSTATMETHOD    ?
-          *** Generating:  15:     NOPorDISCARDVALUE
+         *** Generating:  14:     CALLSTATMETHOD    ?
+         *** Generating:  15:     NOPorDISCARDVALUE
          ;
          ... node has no more children
         ... node has no more children
@@ -165,29 +165,29 @@
               <expr2>
                <expr1>
                 IDENTIFIER: size  [static var (address = 0)]
-                 *** Generating:  16:     PUSHSTATADDR      0
-                 *** Generating:  17:     LOADFROMADDR
+                *** Generating:  16:     PUSHSTATADDR      0
+                *** Generating:  17:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             !=
+             ... node has no more children
+            !=
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  18:     PUSHNUM           0
+                *** Generating:  18:     PUSHNUM           0
                 UNSIGNED INTEGER LITERAL: 0
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  19:     NE
-             <expr4>
              ... node has no more children
-            ... node has no more children
+            *** Generating:  19:     NE
             ... node has no more children
            ... node has no more children
           ... node has no more children
          )
-          *** Generating:  20:     JUMPONFALSE       ?
+         *** Generating:  20:     JUMPONFALSE       ?
          <statement>
           <compoundStmt>
            {
@@ -197,7 +197,7 @@
              <singleVarDecl>
               IDENTIFIER: x  [not in symbol table]
               =
-               *** Generating:  21:     PUSHLOCADDR       1
+              *** Generating:  21:     PUSHLOCADDR       1
               <expr3>
                <expr2>
                 <expr1>
@@ -206,11 +206,11 @@
                   (
                   )
                   ... node has no more children
-                  *** Generating:  22:     CALLSTATMETHOD    ?
+                 *** Generating:  22:     CALLSTATMETHOD    ?
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  23:     SAVETOADDR
+              *** Generating:  23:     SAVETOADDR
               ... node has no more children
              ;
              ... node has no more children
@@ -222,8 +222,8 @@
               (
               )
               ... node has no more children
-              *** Generating:  24:     CALLSTATMETHOD    ?
-              *** Generating:  25:     DISCARDVALUE
+             *** Generating:  24:     CALLSTATMETHOD    ?
+             *** Generating:  25:     DISCARDVALUE
              ;
              ... node has no more children
             ... node has no more children
@@ -234,8 +234,8 @@
               (
               )
               ... node has no more children
-              *** Generating:  26:     CALLSTATMETHOD    ?
-              *** Generating:  27:     NOPorDISCARDVALUE
+             *** Generating:  26:     CALLSTATMETHOD    ?
+             *** Generating:  27:     NOPorDISCARDVALUE
              ;
              ... node has no more children
             ... node has no more children
@@ -254,7 +254,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  28:     WRITESTRING       3     34
+          *** Generating:  28:     WRITESTRING       3     34
           CHARACTER STRING LITERAL: "Type 1 to try again, 0 to quit: "
           ... node has no more children
          )
@@ -279,7 +279,7 @@
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: again  [static var (address = 1)]
-          *** Generating:  29:     PUSHSTATADDR      1
+         *** Generating:  29:     PUSHSTATADDR      1
          =
          <expr3>
           <expr2>
@@ -289,30 +289,30 @@
             Reserved Word: nextInt
             (
             )
-             *** Generating:  30:     READINT
+            *** Generating:  30:     READINT
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  31:     SAVETOADDR
+         *** Generating:  31:     SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  32:     JUMP              8
+     *** Generating:  32:     JUMP              8
      *** Fixed Up:  12:     JUMPONFALSE       33
      ... node has no more children
     ... node has no more children
    }
    ... node has no more children
   *** Fixed Up:  0:      INITSTKFRM        1
-   *** Generating:  33:     STOP
+  *** Generating:  33:     STOP
   ... node has no more children
  <methodDecl>
   Reserved Word: static
   Reserved Word: int
-   *** Generating:  34:     INITSTKFRM        ?
+  *** Generating:  34:     INITSTKFRM        ?
   IDENTIFIER: eq  [method (start address = 34)]
   (
   <parameterDeclList>
@@ -341,57 +341,57 @@
           <expr2>
            <expr1>
             IDENTIFIER: a  [local var (stackframe offset = -3)]
-             *** Generating:  35:     PUSHLOCADDR       -3
-             *** Generating:  36:     LOADFROMADDR
+            *** Generating:  35:     PUSHLOCADDR       -3
+            *** Generating:  36:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: b  [local var (stackframe offset = -2)]
-             *** Generating:  37:     PUSHLOCADDR       -2
-             *** Generating:  38:     LOADFROMADDR
+            *** Generating:  37:     PUSHLOCADDR       -2
+            *** Generating:  38:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  39:     EQ
-         <expr4>
          ... node has no more children
-        ... node has no more children
+        *** Generating:  39:     EQ
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  40:     JUMPONFALSE       ?
+     *** Generating:  40:     JUMPONFALSE       ?
      <statement>
       Reserved Word: return
       <expr3>
        <expr2>
         <expr1>
-          *** Generating:  41:     PUSHNUM           1
+         *** Generating:  41:     PUSHNUM           1
          UNSIGNED INTEGER LITERAL: 1
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  42:     RETURN            2
+      *** Generating:  42:     RETURN            2
       ;
       ... node has no more children
      Reserved Word: else
-      *** Generating:  43:     JUMP              ?
+     *** Generating:  43:     JUMP              ?
      *** Fixed Up:  40:     JUMPONFALSE       44
      <statement>
       Reserved Word: return
       <expr3>
        <expr2>
         <expr1>
-          *** Generating:  44:     PUSHNUM           0
+         *** Generating:  44:     PUSHNUM           0
          UNSIGNED INTEGER LITERAL: 0
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  45:     RETURN            2
+      *** Generating:  45:     RETURN            2
       ;
       ... node has no more children
      *** Fixed Up:  43:     JUMP              46
@@ -404,7 +404,7 @@
  <methodDecl>
   Reserved Word: static
   Reserved Word: int
-   *** Generating:  46:     INITSTKFRM        ?
+  *** Generating:  46:     INITSTKFRM        ?
   IDENTIFIER: leq  [method (start address = 46)]
   (
   <parameterDeclList>
@@ -442,8 +442,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: a  [local var (stackframe offset = -3)]
-             *** Generating:  47:     PUSHLOCADDR       -3
-             *** Generating:  48:     LOADFROMADDR
+            *** Generating:  47:     PUSHLOCADDR       -3
+            *** Generating:  48:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -452,54 +452,52 @@
           <expr2>
            <expr1>
             IDENTIFIER: b  [local var (stackframe offset = -2)]
-             *** Generating:  49:     PUSHLOCADDR       -2
-             *** Generating:  50:     LOADFROMADDR
+            *** Generating:  49:     PUSHLOCADDR       -2
+            *** Generating:  50:     LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  51:     LE
-         <expr4>
+         *** Generating:  51:     LE
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  52:     JUMPONFALSE       ?
+     *** Generating:  52:     JUMPONFALSE       ?
      <statement>
       <assignmentOrInvoc>
        IDENTIFIER: leq  [local var (stackframe offset = 1),  method (start address = 46)]
-        *** Generating:  53:     PUSHLOCADDR       1
+       *** Generating:  53:     PUSHLOCADDR       1
        =
        <expr3>
         <expr2>
          <expr1>
-           *** Generating:  54:     PUSHNUM           1
+          *** Generating:  54:     PUSHNUM           1
           UNSIGNED INTEGER LITERAL: 1
           ... node has no more children
          ... node has no more children
         ... node has no more children
-        *** Generating:  55:     SAVETOADDR
+       *** Generating:  55:     SAVETOADDR
        ;
        ... node has no more children
       ... node has no more children
      Reserved Word: else
-      *** Generating:  56:     JUMP              ?
+     *** Generating:  56:     JUMP              ?
      *** Fixed Up:  52:     JUMPONFALSE       57
      <statement>
       <assignmentOrInvoc>
        IDENTIFIER: leq  [local var (stackframe offset = 1),  method (start address = 46)]
-        *** Generating:  57:     PUSHLOCADDR       1
+       *** Generating:  57:     PUSHLOCADDR       1
        =
        <expr3>
         <expr2>
          <expr1>
-           *** Generating:  58:     PUSHNUM           0
+          *** Generating:  58:     PUSHNUM           0
           UNSIGNED INTEGER LITERAL: 0
           ... node has no more children
          ... node has no more children
         ... node has no more children
-        *** Generating:  59:     SAVETOADDR
+       *** Generating:  59:     SAVETOADDR
        ;
        ... node has no more children
       ... node has no more children
@@ -512,12 +510,12 @@
      <expr2>
       <expr1>
        IDENTIFIER: leq  [local var (stackframe offset = 1),  method (start address = 46)]
-        *** Generating:  60:     PUSHLOCADDR       1
-        *** Generating:  61:     LOADFROMADDR
+       *** Generating:  60:     PUSHLOCADDR       1
+       *** Generating:  61:     LOADFROMADDR
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  62:     RETURN            2
+    *** Generating:  62:     RETURN            2
     ;
     ... node has no more children
    }
@@ -529,7 +527,7 @@
   Reserved Word: int
   *** Fixed Up: 15:     DISCARDVALUE
   *** Fixed Up:  14:     CALLSTATMETHOD    63
-   *** Generating:  63:     INITSTKFRM        ?
+  *** Generating:  63:     INITSTKFRM        ?
   IDENTIFIER: readin  [method (start address = 63)]
   (
   <parameterDeclList>
@@ -574,34 +572,34 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: size  [static var (address = 0)]
-      *** Generating:  64:     PUSHSTATADDR      0
+     *** Generating:  64:     PUSHSTATADDR      0
      =
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  65:     PUSHNUM           0
+        *** Generating:  65:     PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  66:     SAVETOADDR
+     *** Generating:  66:     SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: finished  [local var (stackframe offset = 1)]
-      *** Generating:  67:     PUSHLOCADDR       1
+     *** Generating:  67:     PUSHLOCADDR       1
      =
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  68:     PUSHNUM           0
+        *** Generating:  68:     PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  69:     SAVETOADDR
+     *** Generating:  69:     SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -623,41 +621,41 @@
               <expr2>
                <expr1>
                 IDENTIFIER: size  [static var (address = 0)]
-                 *** Generating:  70:     PUSHSTATADDR      0
-                 *** Generating:  71:     LOADFROMADDR
+                *** Generating:  70:     PUSHSTATADDR      0
+                *** Generating:  71:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  72:     PASSPARAM
+             *** Generating:  72:     PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  73:     PUSHNUM           50
+                *** Generating:  73:     PUSHNUM           50
                 UNSIGNED INTEGER LITERAL: 50
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  74:     PASSPARAM
+             *** Generating:  74:     PASSPARAM
              )
              ... node has no more children
-             *** Generating:  75:     CALLSTATMETHOD    46
+            *** Generating:  75:     CALLSTATMETHOD    46
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  76:     PUSHNUM           1
+            *** Generating:  76:     PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  77:     EQ
-         <expr4>
          ... node has no more children
-        ... node has no more children
+        *** Generating:  77:     EQ
         ... node has no more children
        &
        <expr5>
@@ -672,47 +670,47 @@
               <expr2>
                <expr1>
                 IDENTIFIER: finished  [local var (stackframe offset = 1)]
-                 *** Generating:  78:     PUSHLOCADDR       1
-                 *** Generating:  79:     LOADFROMADDR
+                *** Generating:  78:     PUSHLOCADDR       1
+                *** Generating:  79:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  80:     PASSPARAM
+             *** Generating:  80:     PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  81:     PUSHNUM           0
+                *** Generating:  81:     PUSHNUM           0
                 UNSIGNED INTEGER LITERAL: 0
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  82:     PASSPARAM
+             *** Generating:  82:     PASSPARAM
              )
              ... node has no more children
-             *** Generating:  83:     CALLSTATMETHOD    34
+            *** Generating:  83:     CALLSTATMETHOD    34
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  84:     PUSHNUM           1
+            *** Generating:  84:     PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  85:     EQ
-         <expr4>
          ... node has no more children
+        *** Generating:  85:     EQ
         ... node has no more children
-        ... node has no more children
-        *** Generating:  86:     AND
+       *** Generating:  86:     AND
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  87:     JUMPONFALSE       ?
+     *** Generating:  87:     JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
@@ -725,7 +723,7 @@
          Reserved Word: print
          (
          <printArgument>
-           *** Generating:  88:     WRITESTRING       35    86
+          *** Generating:  88:     WRITESTRING       35    86
           CHARACTER STRING LITERAL: "Enter a positive or negative integer--or 0 to quit: "
           ... node has no more children
          )
@@ -735,7 +733,7 @@
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: number  [local var (stackframe offset = 2)]
-          *** Generating:  89:     PUSHLOCADDR       2
+         *** Generating:  89:     PUSHLOCADDR       2
          =
          <expr3>
           <expr2>
@@ -745,11 +743,11 @@
             Reserved Word: nextInt
             (
             )
-             *** Generating:  90:     READINT
+            *** Generating:  90:     READINT
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  91:     SAVETOADDR
+         *** Generating:  91:     SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
@@ -765,86 +763,86 @@
               <expr2>
                <expr1>
                 IDENTIFIER: number  [local var (stackframe offset = 2)]
-                 *** Generating:  92:     PUSHLOCADDR       2
-                 *** Generating:  93:     LOADFROMADDR
+                *** Generating:  92:     PUSHLOCADDR       2
+                *** Generating:  93:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             !=
+             ... node has no more children
+            !=
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  94:     PUSHNUM           0
+                *** Generating:  94:     PUSHNUM           0
                 UNSIGNED INTEGER LITERAL: 0
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  95:     NE
-             <expr4>
              ... node has no more children
-            ... node has no more children
+            *** Generating:  95:     NE
             ... node has no more children
            ... node has no more children
           ... node has no more children
          )
-          *** Generating:  96:     JUMPONFALSE       ?
+         *** Generating:  96:     JUMPONFALSE       ?
          <statement>
           <compoundStmt>
            {
            <statement>
             <assignmentOrInvoc>
              IDENTIFIER: size  [static var (address = 0)]
-              *** Generating:  97:     PUSHSTATADDR      0
+             *** Generating:  97:     PUSHSTATADDR      0
              =
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: size  [static var (address = 0)]
-                 *** Generating:  98:     PUSHSTATADDR      0
-                 *** Generating:  99:     LOADFROMADDR
+                *** Generating:  98:     PUSHSTATADDR      0
+                *** Generating:  99:     LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               +
               <expr2>
                <expr1>
-                 *** Generating:  100:    PUSHNUM           1
+                *** Generating:  100:    PUSHNUM           1
                 UNSIGNED INTEGER LITERAL: 1
                 ... node has no more children
                ... node has no more children
-               *** Generating:  101:    ADD
+              *** Generating:  101:    ADD
               ... node has no more children
-              *** Generating:  102:    SAVETOADDR
+             *** Generating:  102:    SAVETOADDR
              ;
              ... node has no more children
             ... node has no more children
            <statement>
             <assignmentOrInvoc>
              IDENTIFIER: numlist  [static var (address = 2)]
-              *** Generating:  103:    PUSHSTATADDR      2
-              *** Generating:  104:    LOADFROMADDR
+             *** Generating:  103:    PUSHSTATADDR      2
+             *** Generating:  104:    LOADFROMADDR
              [
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: size  [static var (address = 0)]
-                 *** Generating:  105:    PUSHSTATADDR      0
-                 *** Generating:  106:    LOADFROMADDR
+                *** Generating:  105:    PUSHSTATADDR      0
+                *** Generating:  106:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
              ]
-              *** Generating:  107:    ADDTOPTR
+             *** Generating:  107:    ADDTOPTR
              =
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: number  [local var (stackframe offset = 2)]
-                 *** Generating:  108:    PUSHLOCADDR       2
-                 *** Generating:  109:    LOADFROMADDR
+                *** Generating:  108:    PUSHLOCADDR       2
+                *** Generating:  109:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  110:    SAVETOADDR
+             *** Generating:  110:    SAVETOADDR
              ;
              ... node has no more children
             ... node has no more children
@@ -852,22 +850,22 @@
            ... node has no more children
           ... node has no more children
          Reserved Word: else
-          *** Generating:  111:    JUMP              ?
+         *** Generating:  111:    JUMP              ?
          *** Fixed Up:  96:     JUMPONFALSE       112
          <statement>
           <assignmentOrInvoc>
            IDENTIFIER: finished  [local var (stackframe offset = 1)]
-            *** Generating:  112:    PUSHLOCADDR       1
+           *** Generating:  112:    PUSHLOCADDR       1
            =
            <expr3>
             <expr2>
              <expr1>
-               *** Generating:  113:    PUSHNUM           1
+              *** Generating:  113:    PUSHNUM           1
               UNSIGNED INTEGER LITERAL: 1
               ... node has no more children
              ... node has no more children
             ... node has no more children
-            *** Generating:  114:    SAVETOADDR
+           *** Generating:  114:    SAVETOADDR
            ;
            ... node has no more children
           ... node has no more children
@@ -877,7 +875,7 @@
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  115:    JUMP              70
+     *** Generating:  115:    JUMP              70
      *** Fixed Up:  87:     JUMPONFALSE       116
      ... node has no more children
     ... node has no more children
@@ -886,12 +884,12 @@
     <expr3>
      <expr2>
       <expr1>
-        *** Generating:  116:    PUSHNUM           0
+       *** Generating:  116:    PUSHNUM           0
        UNSIGNED INTEGER LITERAL: 0
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  117:    RETURN            0
+    *** Generating:  117:    RETURN            0
     ;
     ... node has no more children
    }
@@ -903,7 +901,7 @@
   Reserved Word: int
   *** Fixed Up: 27:     DISCARDVALUE
   *** Fixed Up:  26:     CALLSTATMETHOD    118
-   *** Generating:  118:    INITSTKFRM        ?
+  *** Generating:  118:    INITSTKFRM        ?
   IDENTIFIER: writeout  [method (start address = 118)]
   (
   <parameterDeclList>
@@ -918,16 +916,16 @@
      <singleVarDecl>
       IDENTIFIER: i  [not in symbol table]
       =
-       *** Generating:  119:    PUSHLOCADDR       1
+      *** Generating:  119:    PUSHLOCADDR       1
       <expr3>
        <expr2>
         <expr1>
-          *** Generating:  120:    PUSHNUM           1
+         *** Generating:  120:    PUSHNUM           1
          UNSIGNED INTEGER LITERAL: 1
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  121:    SAVETOADDR
+      *** Generating:  121:    SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -942,7 +940,7 @@
      (
      )
      ;
-      *** Generating:  122:    WRITELNOP
+     *** Generating:  122:    WRITELNOP
      ... node has no more children
     ... node has no more children
    <statement>
@@ -957,8 +955,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: i  [local var (stackframe offset = 1)]
-             *** Generating:  123:    PUSHLOCADDR       1
-             *** Generating:  124:    LOADFROMADDR
+            *** Generating:  123:    PUSHLOCADDR       1
+            *** Generating:  124:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -967,20 +965,18 @@
           <expr2>
            <expr1>
             IDENTIFIER: size  [static var (address = 0)]
-             *** Generating:  125:    PUSHSTATADDR      0
-             *** Generating:  126:    LOADFROMADDR
+            *** Generating:  125:    PUSHSTATADDR      0
+            *** Generating:  126:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  127:    LE
-         <expr4>
+         *** Generating:  127:    LE
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  128:    JUMPONFALSE       ?
+     *** Generating:  128:    JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
@@ -997,61 +993,61 @@
            <expr2>
             <expr1>
              IDENTIFIER: numlist  [static var (address = 2)]
-              *** Generating:  129:    PUSHSTATADDR      2
-              *** Generating:  130:    LOADFROMADDR
+             *** Generating:  129:    PUSHSTATADDR      2
+             *** Generating:  130:    LOADFROMADDR
              [
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: i  [local var (stackframe offset = 1)]
-                 *** Generating:  131:    PUSHLOCADDR       1
-                 *** Generating:  132:    LOADFROMADDR
+                *** Generating:  131:    PUSHLOCADDR       1
+                *** Generating:  132:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  133:    ADDTOPTR
-              *** Generating:  134:    LOADFROMADDR
+             *** Generating:  133:    ADDTOPTR
+             *** Generating:  134:    LOADFROMADDR
              ]
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  135:    WRITEINT
+          *** Generating:  135:    WRITEINT
           ... node has no more children
          )
          ;
-          *** Generating:  136:    WRITELNOP
+         *** Generating:  136:    WRITELNOP
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: i  [local var (stackframe offset = 1)]
-          *** Generating:  137:    PUSHLOCADDR       1
+         *** Generating:  137:    PUSHLOCADDR       1
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: i  [local var (stackframe offset = 1)]
-             *** Generating:  138:    PUSHLOCADDR       1
-             *** Generating:  139:    LOADFROMADDR
+            *** Generating:  138:    PUSHLOCADDR       1
+            *** Generating:  139:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           +
           <expr2>
            <expr1>
-             *** Generating:  140:    PUSHNUM           1
+            *** Generating:  140:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  141:    ADD
+          *** Generating:  141:    ADD
           ... node has no more children
-          *** Generating:  142:    SAVETOADDR
+         *** Generating:  142:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  143:    JUMP              123
+     *** Generating:  143:    JUMP              123
      *** Fixed Up:  128:    JUMPONFALSE       144
      ... node has no more children
     ... node has no more children
@@ -1065,7 +1061,7 @@
      (
      )
      ;
-      *** Generating:  144:    WRITELNOP
+     *** Generating:  144:    WRITELNOP
      ... node has no more children
     ... node has no more children
    <statement>
@@ -1078,7 +1074,7 @@
      (
      )
      ;
-      *** Generating:  145:    WRITELNOP
+     *** Generating:  145:    WRITELNOP
      ... node has no more children
     ... node has no more children
    <statement>
@@ -1086,12 +1082,12 @@
     <expr3>
      <expr2>
       <expr1>
-        *** Generating:  146:    PUSHNUM           0
+       *** Generating:  146:    PUSHNUM           0
        UNSIGNED INTEGER LITERAL: 0
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  147:    RETURN            0
+    *** Generating:  147:    RETURN            0
     ;
     ... node has no more children
    }
@@ -1103,7 +1099,7 @@
   Reserved Word: int
   *** Fixed Up:  24:     CALLSTATMETHOD    148
   *** Fixed Up:  22:     CALLSTATMETHOD    148
-   *** Generating:  148:    INITSTKFRM        ?
+  *** Generating:  148:    INITSTKFRM        ?
   IDENTIFIER: sort  [method (start address = 148)]
   (
   <parameterDeclList>
@@ -1120,16 +1116,16 @@
       [
       ]
       =
-       *** Generating:  149:    PUSHLOCADDR       1
+      *** Generating:  149:    PUSHLOCADDR       1
       <expr3>
        <expr2>
         <expr1>
          Reserved Word: null
-          *** Generating:  150:    PUSHNUM           0
+         *** Generating:  150:    PUSHNUM           0
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  151:    SAVETOADDR
+      *** Generating:  151:    SAVETOADDR
       ... node has no more children
      ,
      <singleVarDecl>
@@ -1137,16 +1133,16 @@
       [
       ]
       =
-       *** Generating:  152:    PUSHLOCADDR       2
+      *** Generating:  152:    PUSHLOCADDR       2
       <expr3>
        <expr2>
         <expr1>
          Reserved Word: null
-          *** Generating:  153:    PUSHNUM           0
+         *** Generating:  153:    PUSHNUM           0
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  154:    SAVETOADDR
+      *** Generating:  154:    SAVETOADDR
       ... node has no more children
      ,
      <singleVarDecl>
@@ -1162,16 +1158,16 @@
       [
       ]
       =
-       *** Generating:  155:    PUSHLOCADDR       5
+      *** Generating:  155:    PUSHLOCADDR       5
       <expr3>
        <expr2>
         <expr1>
          Reserved Word: null
-          *** Generating:  156:    PUSHNUM           0
+         *** Generating:  156:    PUSHNUM           0
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  157:    SAVETOADDR
+      *** Generating:  157:    SAVETOADDR
       ... node has no more children
      ,
      <singleVarDecl>
@@ -1179,7 +1175,7 @@
       [
       ]
       =
-       *** Generating:  158:    PUSHLOCADDR       6
+      *** Generating:  158:    PUSHLOCADDR       6
       <expr3>
        <expr2>
         <expr1>
@@ -1189,17 +1185,17 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  159:    PUSHNUM           1
+            *** Generating:  159:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
+         *** Generating:  160:    HEAPALLOC
          ]
-          *** Generating:  160:    HEAPALLOC
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  161:    SAVETOADDR
+      *** Generating:  161:    SAVETOADDR
       ... node has no more children
      ,
      <singleVarDecl>
@@ -1207,7 +1203,7 @@
       [
       ]
       =
-       *** Generating:  162:    PUSHLOCADDR       7
+      *** Generating:  162:    PUSHLOCADDR       7
       <expr3>
        <expr2>
         <expr1>
@@ -1217,17 +1213,17 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  163:    PUSHNUM           1
+            *** Generating:  163:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
+         *** Generating:  164:    HEAPALLOC
          ]
-          *** Generating:  164:    HEAPALLOC
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  165:    SAVETOADDR
+      *** Generating:  165:    SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -1240,7 +1236,7 @@
       [
       ]
       =
-       *** Generating:  166:    PUSHLOCADDR       8
+      *** Generating:  166:    PUSHLOCADDR       8
       <expr3>
        <expr2>
         <expr1>
@@ -1250,17 +1246,17 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  167:    PUSHNUM           51
+            *** Generating:  167:    PUSHNUM           51
             UNSIGNED INTEGER LITERAL: 51
             ... node has no more children
            ... node has no more children
           ... node has no more children
+         *** Generating:  168:    HEAPALLOC
          ]
-          *** Generating:  168:    HEAPALLOC
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  169:    SAVETOADDR
+      *** Generating:  169:    SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -1279,7 +1275,7 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: i  [local var (stackframe offset = 1)]
-      *** Generating:  170:    PUSHLOCADDR       1
+     *** Generating:  170:    PUSHLOCADDR       1
      =
      <expr3>
       <expr2>
@@ -1290,24 +1286,24 @@
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  171:    PUSHNUM           1
+           *** Generating:  171:    PUSHNUM           1
            UNSIGNED INTEGER LITERAL: 1
            ... node has no more children
           ... node has no more children
          ... node has no more children
+        *** Generating:  172:    HEAPALLOC
         ]
-         *** Generating:  172:    HEAPALLOC
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  173:    SAVETOADDR
+     *** Generating:  173:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: j  [local var (stackframe offset = 2)]
-      *** Generating:  174:    PUSHLOCADDR       2
+     *** Generating:  174:    PUSHLOCADDR       2
      =
      <expr3>
       <expr2>
@@ -1318,24 +1314,24 @@
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  175:    PUSHNUM           1
+           *** Generating:  175:    PUSHNUM           1
            UNSIGNED INTEGER LITERAL: 1
            ... node has no more children
           ... node has no more children
          ... node has no more children
+        *** Generating:  176:    HEAPALLOC
         ]
-         *** Generating:  176:    HEAPALLOC
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  177:    SAVETOADDR
+     *** Generating:  177:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: top  [local var (stackframe offset = 9)]
-      *** Generating:  178:    PUSHLOCADDR       9
+     *** Generating:  178:    PUSHLOCADDR       9
      =
      <expr3>
       <expr2>
@@ -1346,24 +1342,24 @@
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  179:    PUSHNUM           1
+           *** Generating:  179:    PUSHNUM           1
            UNSIGNED INTEGER LITERAL: 1
            ... node has no more children
           ... node has no more children
          ... node has no more children
+        *** Generating:  180:    HEAPALLOC
         ]
-         *** Generating:  180:    HEAPALLOC
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  181:    SAVETOADDR
+     *** Generating:  181:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: value  [local var (stackframe offset = 5)]
-      *** Generating:  182:    PUSHLOCADDR       5
+     *** Generating:  182:    PUSHLOCADDR       5
      =
      <expr3>
       <expr2>
@@ -1374,24 +1370,24 @@
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  183:    PUSHNUM           1
+           *** Generating:  183:    PUSHNUM           1
            UNSIGNED INTEGER LITERAL: 1
            ... node has no more children
           ... node has no more children
          ... node has no more children
+        *** Generating:  184:    HEAPALLOC
         ]
-         *** Generating:  184:    HEAPALLOC
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  185:    SAVETOADDR
+     *** Generating:  185:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: stack  [local var (stackframe offset = 8)]
-      *** Generating:  186:    PUSHLOCADDR       8
+     *** Generating:  186:    PUSHLOCADDR       8
      =
      <expr3>
       <expr2>
@@ -1403,66 +1399,66 @@
           <expr2>
            <expr1>
             IDENTIFIER: stack  [local var (stackframe offset = 8)]
-             *** Generating:  187:    PUSHLOCADDR       8
-             *** Generating:  188:    LOADFROMADDR
+            *** Generating:  187:    PUSHLOCADDR       8
+            *** Generating:  188:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  189:    PASSPARAM
+         *** Generating:  189:    PASSPARAM
          ,
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: top  [local var (stackframe offset = 9)]
-             *** Generating:  190:    PUSHLOCADDR       9
-             *** Generating:  191:    LOADFROMADDR
+            *** Generating:  190:    PUSHLOCADDR       9
+            *** Generating:  191:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  192:    PASSPARAM
+         *** Generating:  192:    PASSPARAM
          )
          ... node has no more children
-         *** Generating:  193:    CALLSTATMETHOD    ?
+        *** Generating:  193:    CALLSTATMETHOD    ?
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  194:    SAVETOADDR
+     *** Generating:  194:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: value  [local var (stackframe offset = 5)]
-      *** Generating:  195:    PUSHLOCADDR       5
-      *** Generating:  196:    LOADFROMADDR
+     *** Generating:  195:    PUSHLOCADDR       5
+     *** Generating:  196:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  197:    PUSHNUM           0
+        *** Generating:  197:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  198:    ADDTOPTR
+     *** Generating:  198:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  199:    PUSHNUM           1
+        *** Generating:  199:    PUSHNUM           1
         UNSIGNED INTEGER LITERAL: 1
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  200:    SAVETOADDR
+     *** Generating:  200:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: stack  [local var (stackframe offset = 8)]
-      *** Generating:  201:    PUSHLOCADDR       8
+     *** Generating:  201:    PUSHLOCADDR       8
      =
      <expr3>
       <expr2>
@@ -1474,90 +1470,90 @@
           <expr2>
            <expr1>
             IDENTIFIER: stack  [local var (stackframe offset = 8)]
-             *** Generating:  202:    PUSHLOCADDR       8
-             *** Generating:  203:    LOADFROMADDR
+            *** Generating:  202:    PUSHLOCADDR       8
+            *** Generating:  203:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  204:    PASSPARAM
+         *** Generating:  204:    PASSPARAM
          ,
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: top  [local var (stackframe offset = 9)]
-             *** Generating:  205:    PUSHLOCADDR       9
-             *** Generating:  206:    LOADFROMADDR
+            *** Generating:  205:    PUSHLOCADDR       9
+            *** Generating:  206:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  207:    PASSPARAM
+         *** Generating:  207:    PASSPARAM
          ,
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: value  [local var (stackframe offset = 5)]
-             *** Generating:  208:    PUSHLOCADDR       5
-             *** Generating:  209:    LOADFROMADDR
+            *** Generating:  208:    PUSHLOCADDR       5
+            *** Generating:  209:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  210:    PUSHNUM           0
+               *** Generating:  210:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  211:    ADDTOPTR
-             *** Generating:  212:    LOADFROMADDR
+            *** Generating:  211:    ADDTOPTR
+            *** Generating:  212:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  213:    PASSPARAM
+         *** Generating:  213:    PASSPARAM
          )
          ... node has no more children
-         *** Generating:  214:    CALLSTATMETHOD    ?
+        *** Generating:  214:    CALLSTATMETHOD    ?
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  215:    SAVETOADDR
+     *** Generating:  215:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: value  [local var (stackframe offset = 5)]
-      *** Generating:  216:    PUSHLOCADDR       5
-      *** Generating:  217:    LOADFROMADDR
+     *** Generating:  216:    PUSHLOCADDR       5
+     *** Generating:  217:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  218:    PUSHNUM           0
+        *** Generating:  218:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  219:    ADDTOPTR
+     *** Generating:  219:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: size  [static var (address = 0)]
-         *** Generating:  220:    PUSHSTATADDR      0
-         *** Generating:  221:    LOADFROMADDR
+        *** Generating:  220:    PUSHSTATADDR      0
+        *** Generating:  221:    LOADFROMADDR
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  222:    SAVETOADDR
+     *** Generating:  222:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: stack  [local var (stackframe offset = 8)]
-      *** Generating:  223:    PUSHLOCADDR       8
+     *** Generating:  223:    PUSHLOCADDR       8
      =
      <expr3>
       <expr2>
@@ -1569,53 +1565,53 @@
           <expr2>
            <expr1>
             IDENTIFIER: stack  [local var (stackframe offset = 8)]
-             *** Generating:  224:    PUSHLOCADDR       8
-             *** Generating:  225:    LOADFROMADDR
+            *** Generating:  224:    PUSHLOCADDR       8
+            *** Generating:  225:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  226:    PASSPARAM
+         *** Generating:  226:    PASSPARAM
          ,
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: top  [local var (stackframe offset = 9)]
-             *** Generating:  227:    PUSHLOCADDR       9
-             *** Generating:  228:    LOADFROMADDR
+            *** Generating:  227:    PUSHLOCADDR       9
+            *** Generating:  228:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  229:    PASSPARAM
+         *** Generating:  229:    PASSPARAM
          ,
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: value  [local var (stackframe offset = 5)]
-             *** Generating:  230:    PUSHLOCADDR       5
-             *** Generating:  231:    LOADFROMADDR
+            *** Generating:  230:    PUSHLOCADDR       5
+            *** Generating:  231:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  232:    PUSHNUM           0
+               *** Generating:  232:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  233:    ADDTOPTR
-             *** Generating:  234:    LOADFROMADDR
+            *** Generating:  233:    ADDTOPTR
+            *** Generating:  234:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  235:    PASSPARAM
+         *** Generating:  235:    PASSPARAM
          )
          ... node has no more children
-         *** Generating:  236:    CALLSTATMETHOD    ?
+        *** Generating:  236:    CALLSTATMETHOD    ?
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  237:    SAVETOADDR
+     *** Generating:  237:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -1631,52 +1627,52 @@
           <expr2>
            <expr1>
             IDENTIFIER: top  [local var (stackframe offset = 9)]
-             *** Generating:  238:    PUSHLOCADDR       9
-             *** Generating:  239:    LOADFROMADDR
+            *** Generating:  238:    PUSHLOCADDR       9
+            *** Generating:  239:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  240:    PUSHNUM           0
+               *** Generating:  240:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  241:    ADDTOPTR
-             *** Generating:  242:    LOADFROMADDR
+            *** Generating:  241:    ADDTOPTR
+            *** Generating:  242:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         !=
+         ... node has no more children
+        !=
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
             -
             <expr1>
-              *** Generating:  243:    PUSHNUM           1
+             *** Generating:  243:    PUSHNUM           1
              UNSIGNED INTEGER LITERAL: 1
              ... node has no more children
-             *** Generating:  244:    CHANGESIGN
+            *** Generating:  244:    CHANGESIGN
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  245:    NE
-         <expr4>
          ... node has no more children
-        ... node has no more children
+        *** Generating:  245:    NE
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  246:    JUMPONFALSE       ?
+     *** Generating:  246:    JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: stack  [local var (stackframe offset = 8)]
-          *** Generating:  247:    PUSHLOCADDR       8
+         *** Generating:  247:    PUSHLOCADDR       8
          =
          <expr3>
           <expr2>
@@ -1688,78 +1684,78 @@
               <expr2>
                <expr1>
                 IDENTIFIER: stack  [local var (stackframe offset = 8)]
-                 *** Generating:  248:    PUSHLOCADDR       8
-                 *** Generating:  249:    LOADFROMADDR
+                *** Generating:  248:    PUSHLOCADDR       8
+                *** Generating:  249:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  250:    PASSPARAM
+             *** Generating:  250:    PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: top  [local var (stackframe offset = 9)]
-                 *** Generating:  251:    PUSHLOCADDR       9
-                 *** Generating:  252:    LOADFROMADDR
+                *** Generating:  251:    PUSHLOCADDR       9
+                *** Generating:  252:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  253:    PASSPARAM
+             *** Generating:  253:    PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: value  [local var (stackframe offset = 5)]
-                 *** Generating:  254:    PUSHLOCADDR       5
-                 *** Generating:  255:    LOADFROMADDR
+                *** Generating:  254:    PUSHLOCADDR       5
+                *** Generating:  255:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  256:    PASSPARAM
+             *** Generating:  256:    PASSPARAM
              )
              ... node has no more children
-             *** Generating:  257:    CALLSTATMETHOD    ?
+            *** Generating:  257:    CALLSTATMETHOD    ?
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  258:    SAVETOADDR
+         *** Generating:  258:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: last  [local var (stackframe offset = 4)]
-          *** Generating:  259:    PUSHLOCADDR       4
+         *** Generating:  259:    PUSHLOCADDR       4
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: value  [local var (stackframe offset = 5)]
-             *** Generating:  260:    PUSHLOCADDR       5
-             *** Generating:  261:    LOADFROMADDR
+            *** Generating:  260:    PUSHLOCADDR       5
+            *** Generating:  261:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  262:    PUSHNUM           0
+               *** Generating:  262:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  263:    ADDTOPTR
-             *** Generating:  264:    LOADFROMADDR
+            *** Generating:  263:    ADDTOPTR
+            *** Generating:  264:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  265:    SAVETOADDR
+         *** Generating:  265:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: stack  [local var (stackframe offset = 8)]
-          *** Generating:  266:    PUSHLOCADDR       8
+         *** Generating:  266:    PUSHLOCADDR       8
          =
          <expr3>
           <expr2>
@@ -1771,101 +1767,101 @@
               <expr2>
                <expr1>
                 IDENTIFIER: stack  [local var (stackframe offset = 8)]
-                 *** Generating:  267:    PUSHLOCADDR       8
-                 *** Generating:  268:    LOADFROMADDR
+                *** Generating:  267:    PUSHLOCADDR       8
+                *** Generating:  268:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  269:    PASSPARAM
+             *** Generating:  269:    PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: top  [local var (stackframe offset = 9)]
-                 *** Generating:  270:    PUSHLOCADDR       9
-                 *** Generating:  271:    LOADFROMADDR
+                *** Generating:  270:    PUSHLOCADDR       9
+                *** Generating:  271:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  272:    PASSPARAM
+             *** Generating:  272:    PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: value  [local var (stackframe offset = 5)]
-                 *** Generating:  273:    PUSHLOCADDR       5
-                 *** Generating:  274:    LOADFROMADDR
+                *** Generating:  273:    PUSHLOCADDR       5
+                *** Generating:  274:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  275:    PASSPARAM
+             *** Generating:  275:    PASSPARAM
              )
              ... node has no more children
-             *** Generating:  276:    CALLSTATMETHOD    ?
+            *** Generating:  276:    CALLSTATMETHOD    ?
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  277:    SAVETOADDR
+         *** Generating:  277:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: first  [local var (stackframe offset = 3)]
-          *** Generating:  278:    PUSHLOCADDR       3
+         *** Generating:  278:    PUSHLOCADDR       3
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: value  [local var (stackframe offset = 5)]
-             *** Generating:  279:    PUSHLOCADDR       5
-             *** Generating:  280:    LOADFROMADDR
+            *** Generating:  279:    PUSHLOCADDR       5
+            *** Generating:  280:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  281:    PUSHNUM           0
+               *** Generating:  281:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  282:    ADDTOPTR
-             *** Generating:  283:    LOADFROMADDR
+            *** Generating:  282:    ADDTOPTR
+            *** Generating:  283:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  284:    SAVETOADDR
+         *** Generating:  284:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: i  [local var (stackframe offset = 1)]
-          *** Generating:  285:    PUSHLOCADDR       1
-          *** Generating:  286:    LOADFROMADDR
+         *** Generating:  285:    PUSHLOCADDR       1
+         *** Generating:  286:    LOADFROMADDR
          [
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  287:    PUSHNUM           0
+            *** Generating:  287:    PUSHNUM           0
             UNSIGNED INTEGER LITERAL: 0
             ... node has no more children
            ... node has no more children
           ... node has no more children
          ]
-          *** Generating:  288:    ADDTOPTR
+         *** Generating:  288:    ADDTOPTR
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: first  [local var (stackframe offset = 3)]
-             *** Generating:  289:    PUSHLOCADDR       3
-             *** Generating:  290:    LOADFROMADDR
+            *** Generating:  289:    PUSHLOCADDR       3
+            *** Generating:  290:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  291:    SAVETOADDR
+         *** Generating:  291:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
@@ -1881,88 +1877,88 @@
               <expr2>
                <expr1>
                 IDENTIFIER: first  [local var (stackframe offset = 3)]
-                 *** Generating:  292:    PUSHLOCADDR       3
-                 *** Generating:  293:    LOADFROMADDR
+                *** Generating:  292:    PUSHLOCADDR       3
+                *** Generating:  293:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             ==
+             ... node has no more children
+            ==
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: last  [local var (stackframe offset = 4)]
-                 *** Generating:  294:    PUSHLOCADDR       4
-                 *** Generating:  295:    LOADFROMADDR
+                *** Generating:  294:    PUSHLOCADDR       4
+                *** Generating:  295:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  296:    EQ
-             <expr4>
              ... node has no more children
-            ... node has no more children
+            *** Generating:  296:    EQ
             ... node has no more children
            ... node has no more children
           ... node has no more children
          )
-          *** Generating:  297:    JUMPONFALSE       ?
+         *** Generating:  297:    JUMPONFALSE       ?
          <statement>
           <assignmentOrInvoc>
            IDENTIFIER: allsame  [local var (stackframe offset = 7)]
-            *** Generating:  298:    PUSHLOCADDR       7
-            *** Generating:  299:    LOADFROMADDR
+           *** Generating:  298:    PUSHLOCADDR       7
+           *** Generating:  299:    LOADFROMADDR
            [
            <expr3>
             <expr2>
              <expr1>
-               *** Generating:  300:    PUSHNUM           0
+              *** Generating:  300:    PUSHNUM           0
               UNSIGNED INTEGER LITERAL: 0
               ... node has no more children
              ... node has no more children
             ... node has no more children
            ]
-            *** Generating:  301:    ADDTOPTR
+           *** Generating:  301:    ADDTOPTR
            =
            <expr3>
             <expr2>
              <expr1>
-               *** Generating:  302:    PUSHNUM           1
+              *** Generating:  302:    PUSHNUM           1
               UNSIGNED INTEGER LITERAL: 1
               ... node has no more children
              ... node has no more children
             ... node has no more children
-            *** Generating:  303:    SAVETOADDR
+           *** Generating:  303:    SAVETOADDR
            ;
            ... node has no more children
           ... node has no more children
          Reserved Word: else
-          *** Generating:  304:    JUMP              ?
+         *** Generating:  304:    JUMP              ?
          *** Fixed Up:  297:    JUMPONFALSE       305
          <statement>
           <assignmentOrInvoc>
            IDENTIFIER: allsame  [local var (stackframe offset = 7)]
-            *** Generating:  305:    PUSHLOCADDR       7
-            *** Generating:  306:    LOADFROMADDR
+           *** Generating:  305:    PUSHLOCADDR       7
+           *** Generating:  306:    LOADFROMADDR
            [
            <expr3>
             <expr2>
              <expr1>
-               *** Generating:  307:    PUSHNUM           0
+              *** Generating:  307:    PUSHNUM           0
               UNSIGNED INTEGER LITERAL: 0
               ... node has no more children
              ... node has no more children
             ... node has no more children
            ]
-            *** Generating:  308:    ADDTOPTR
+           *** Generating:  308:    ADDTOPTR
            =
            <expr3>
             <expr2>
              <expr1>
-               *** Generating:  309:    PUSHNUM           0
+              *** Generating:  309:    PUSHNUM           0
               UNSIGNED INTEGER LITERAL: 0
               ... node has no more children
              ... node has no more children
             ... node has no more children
-            *** Generating:  310:    SAVETOADDR
+           *** Generating:  310:    SAVETOADDR
            ;
            ... node has no more children
           ... node has no more children
@@ -1981,71 +1977,71 @@
               <expr2>
                <expr1>
                 IDENTIFIER: allsame  [local var (stackframe offset = 7)]
-                 *** Generating:  311:    PUSHLOCADDR       7
-                 *** Generating:  312:    LOADFROMADDR
+                *** Generating:  311:    PUSHLOCADDR       7
+                *** Generating:  312:    LOADFROMADDR
                 [
                 <expr3>
                  <expr2>
                   <expr1>
-                    *** Generating:  313:    PUSHNUM           0
+                   *** Generating:  313:    PUSHNUM           0
                    UNSIGNED INTEGER LITERAL: 0
                    ... node has no more children
                   ... node has no more children
                  ... node has no more children
-                 *** Generating:  314:    ADDTOPTR
-                 *** Generating:  315:    LOADFROMADDR
+                *** Generating:  314:    ADDTOPTR
+                *** Generating:  315:    LOADFROMADDR
                 ]
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-             ==
+             ... node has no more children
+            ==
+            <expr4>
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  316:    PUSHNUM           0
+                *** Generating:  316:    PUSHNUM           0
                 UNSIGNED INTEGER LITERAL: 0
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  317:    EQ
-             <expr4>
              ... node has no more children
-            ... node has no more children
+            *** Generating:  317:    EQ
             ... node has no more children
            ... node has no more children
           ... node has no more children
          )
-          *** Generating:  318:    JUMPONFALSE       ?
+         *** Generating:  318:    JUMPONFALSE       ?
          <statement>
           <compoundStmt>
            {
            <statement>
             <assignmentOrInvoc>
              IDENTIFIER: j  [local var (stackframe offset = 2)]
-              *** Generating:  319:    PUSHLOCADDR       2
-              *** Generating:  320:    LOADFROMADDR
+             *** Generating:  319:    PUSHLOCADDR       2
+             *** Generating:  320:    LOADFROMADDR
              [
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  321:    PUSHNUM           0
+                *** Generating:  321:    PUSHNUM           0
                 UNSIGNED INTEGER LITERAL: 0
                 ... node has no more children
                ... node has no more children
               ... node has no more children
              ]
-              *** Generating:  322:    ADDTOPTR
+             *** Generating:  322:    ADDTOPTR
              =
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: last  [local var (stackframe offset = 4)]
-                 *** Generating:  323:    PUSHLOCADDR       4
-                 *** Generating:  324:    LOADFROMADDR
+                *** Generating:  323:    PUSHLOCADDR       4
+                *** Generating:  324:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  325:    SAVETOADDR
+             *** Generating:  325:    SAVETOADDR
              ;
              ... node has no more children
             ... node has no more children
@@ -2058,49 +2054,49 @@
                <expr2>
                 <expr1>
                  IDENTIFIER: pivot  [local var (stackframe offset = 6)]
-                  *** Generating:  326:    PUSHLOCADDR       6
-                  *** Generating:  327:    LOADFROMADDR
+                 *** Generating:  326:    PUSHLOCADDR       6
+                 *** Generating:  327:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  328:    PASSPARAM
+              *** Generating:  328:    PASSPARAM
               ,
               <expr3>
                <expr2>
                 <expr1>
                  IDENTIFIER: first  [local var (stackframe offset = 3)]
-                  *** Generating:  329:    PUSHLOCADDR       3
-                  *** Generating:  330:    LOADFROMADDR
+                 *** Generating:  329:    PUSHLOCADDR       3
+                 *** Generating:  330:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  331:    PASSPARAM
+              *** Generating:  331:    PASSPARAM
               ,
               <expr3>
                <expr2>
                 <expr1>
                  IDENTIFIER: last  [local var (stackframe offset = 4)]
-                  *** Generating:  332:    PUSHLOCADDR       4
-                  *** Generating:  333:    LOADFROMADDR
+                 *** Generating:  332:    PUSHLOCADDR       4
+                 *** Generating:  333:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  334:    PASSPARAM
+              *** Generating:  334:    PASSPARAM
               ,
               <expr3>
                <expr2>
                 <expr1>
                  IDENTIFIER: allsame  [local var (stackframe offset = 7)]
-                  *** Generating:  335:    PUSHLOCADDR       7
-                  *** Generating:  336:    LOADFROMADDR
+                 *** Generating:  335:    PUSHLOCADDR       7
+                 *** Generating:  336:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  337:    PASSPARAM
+              *** Generating:  337:    PASSPARAM
               )
               ... node has no more children
-              *** Generating:  338:    CALLSTATMETHOD    ?
-              *** Generating:  339:    NOPorDISCARDVALUE
+             *** Generating:  338:    CALLSTATMETHOD    ?
+             *** Generating:  339:    NOPorDISCARDVALUE
              ;
              ... node has no more children
             ... node has no more children
@@ -2116,41 +2112,41 @@
                   <expr2>
                    <expr1>
                     IDENTIFIER: allsame  [local var (stackframe offset = 7)]
-                     *** Generating:  340:    PUSHLOCADDR       7
-                     *** Generating:  341:    LOADFROMADDR
+                    *** Generating:  340:    PUSHLOCADDR       7
+                    *** Generating:  341:    LOADFROMADDR
                     [
                     <expr3>
                      <expr2>
                       <expr1>
-                        *** Generating:  342:    PUSHNUM           0
+                       *** Generating:  342:    PUSHNUM           0
                        UNSIGNED INTEGER LITERAL: 0
                        ... node has no more children
                       ... node has no more children
                      ... node has no more children
-                     *** Generating:  343:    ADDTOPTR
-                     *** Generating:  344:    LOADFROMADDR
+                    *** Generating:  343:    ADDTOPTR
+                    *** Generating:  344:    LOADFROMADDR
                     ]
                     ... node has no more children
                    ... node has no more children
                   ... node has no more children
-                 ==
+                 ... node has no more children
+                ==
+                <expr4>
                  <expr3>
                   <expr2>
                    <expr1>
-                     *** Generating:  345:    PUSHNUM           0
+                    *** Generating:  345:    PUSHNUM           0
                     UNSIGNED INTEGER LITERAL: 0
                     ... node has no more children
                    ... node has no more children
                   ... node has no more children
-                  *** Generating:  346:    EQ
-                 <expr4>
                  ... node has no more children
-                ... node has no more children
+                *** Generating:  346:    EQ
                 ... node has no more children
                ... node has no more children
               ... node has no more children
              )
-              *** Generating:  347:    JUMPONFALSE       ?
+             *** Generating:  347:    JUMPONFALSE       ?
              <statement>
               <compoundStmt>
                {
@@ -2166,62 +2162,62 @@
                       <expr2>
                        <expr1>
                         IDENTIFIER: i  [local var (stackframe offset = 1)]
-                         *** Generating:  348:    PUSHLOCADDR       1
-                         *** Generating:  349:    LOADFROMADDR
+                        *** Generating:  348:    PUSHLOCADDR       1
+                        *** Generating:  349:    LOADFROMADDR
                         [
                         <expr3>
                          <expr2>
                           <expr1>
-                            *** Generating:  350:    PUSHNUM           0
+                           *** Generating:  350:    PUSHNUM           0
                            UNSIGNED INTEGER LITERAL: 0
                            ... node has no more children
                           ... node has no more children
                          ... node has no more children
-                         *** Generating:  351:    ADDTOPTR
-                         *** Generating:  352:    LOADFROMADDR
+                        *** Generating:  351:    ADDTOPTR
+                        *** Generating:  352:    LOADFROMADDR
                         ]
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
-                     !=
+                     ... node has no more children
+                    !=
+                    <expr4>
                      <expr3>
                       <expr2>
                        <expr1>
                         IDENTIFIER: j  [local var (stackframe offset = 2)]
-                         *** Generating:  353:    PUSHLOCADDR       2
-                         *** Generating:  354:    LOADFROMADDR
+                        *** Generating:  353:    PUSHLOCADDR       2
+                        *** Generating:  354:    LOADFROMADDR
                         [
                         <expr3>
                          <expr2>
                           <expr1>
-                            *** Generating:  355:    PUSHNUM           0
+                           *** Generating:  355:    PUSHNUM           0
                            UNSIGNED INTEGER LITERAL: 0
                            ... node has no more children
                           ... node has no more children
                          ... node has no more children
-                         *** Generating:  356:    ADDTOPTR
-                         *** Generating:  357:    LOADFROMADDR
+                        *** Generating:  356:    ADDTOPTR
+                        *** Generating:  357:    LOADFROMADDR
                         ]
                         ... node has no more children
                        ... node has no more children
                       +
                       <expr2>
                        <expr1>
-                         *** Generating:  358:    PUSHNUM           1
+                        *** Generating:  358:    PUSHNUM           1
                         UNSIGNED INTEGER LITERAL: 1
                         ... node has no more children
                        ... node has no more children
-                       *** Generating:  359:    ADD
+                      *** Generating:  359:    ADD
                       ... node has no more children
-                      *** Generating:  360:    NE
-                     <expr4>
                      ... node has no more children
-                    ... node has no more children
+                    *** Generating:  360:    NE
                     ... node has no more children
                    ... node has no more children
                   ... node has no more children
                  )
-                  *** Generating:  361:    JUMPONFALSE       ?
+                 *** Generating:  361:    JUMPONFALSE       ?
                  <statement>
                   <assignmentOrInvoc>
                    IDENTIFIER: oneswap  [not in symbol table]
@@ -2231,54 +2227,54 @@
                      <expr2>
                       <expr1>
                        IDENTIFIER: i  [local var (stackframe offset = 1)]
-                        *** Generating:  362:    PUSHLOCADDR       1
-                        *** Generating:  363:    LOADFROMADDR
+                       *** Generating:  362:    PUSHLOCADDR       1
+                       *** Generating:  363:    LOADFROMADDR
                        ... node has no more children
                       ... node has no more children
                      ... node has no more children
-                     *** Generating:  364:    PASSPARAM
+                    *** Generating:  364:    PASSPARAM
                     ,
                     <expr3>
                      <expr2>
                       <expr1>
                        IDENTIFIER: j  [local var (stackframe offset = 2)]
-                        *** Generating:  365:    PUSHLOCADDR       2
-                        *** Generating:  366:    LOADFROMADDR
+                       *** Generating:  365:    PUSHLOCADDR       2
+                       *** Generating:  366:    LOADFROMADDR
                        ... node has no more children
                       ... node has no more children
                      ... node has no more children
-                     *** Generating:  367:    PASSPARAM
+                    *** Generating:  367:    PASSPARAM
                     ,
                     <expr3>
                      <expr2>
                       <expr1>
                        IDENTIFIER: pivot  [local var (stackframe offset = 6)]
-                        *** Generating:  368:    PUSHLOCADDR       6
-                        *** Generating:  369:    LOADFROMADDR
+                       *** Generating:  368:    PUSHLOCADDR       6
+                       *** Generating:  369:    LOADFROMADDR
                        [
                        <expr3>
                         <expr2>
                          <expr1>
-                           *** Generating:  370:    PUSHNUM           0
+                          *** Generating:  370:    PUSHNUM           0
                           UNSIGNED INTEGER LITERAL: 0
                           ... node has no more children
                          ... node has no more children
                         ... node has no more children
-                        *** Generating:  371:    ADDTOPTR
-                        *** Generating:  372:    LOADFROMADDR
+                       *** Generating:  371:    ADDTOPTR
+                       *** Generating:  372:    LOADFROMADDR
                        ]
                        ... node has no more children
                       ... node has no more children
                      ... node has no more children
-                     *** Generating:  373:    PASSPARAM
+                    *** Generating:  373:    PASSPARAM
                     )
                     ... node has no more children
-                    *** Generating:  374:    CALLSTATMETHOD    ?
-                    *** Generating:  375:    NOPorDISCARDVALUE
+                   *** Generating:  374:    CALLSTATMETHOD    ?
+                   *** Generating:  375:    NOPorDISCARDVALUE
                    ;
                    ... node has no more children
                   ... node has no more children
-                  *** Generating:  376:    JUMP              348
+                 *** Generating:  376:    JUMP              348
                  *** Fixed Up:  361:    JUMPONFALSE       377
                  ... node has no more children
                 ... node has no more children
@@ -2294,8 +2290,8 @@
                       <expr2>
                        <expr1>
                         IDENTIFIER: first  [local var (stackframe offset = 3)]
-                         *** Generating:  377:    PUSHLOCADDR       3
-                         *** Generating:  378:    LOADFROMADDR
+                        *** Generating:  377:    PUSHLOCADDR       3
+                        *** Generating:  378:    LOADFROMADDR
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
@@ -2304,69 +2300,67 @@
                       <expr2>
                        <expr1>
                         IDENTIFIER: j  [local var (stackframe offset = 2)]
-                         *** Generating:  379:    PUSHLOCADDR       2
-                         *** Generating:  380:    LOADFROMADDR
+                        *** Generating:  379:    PUSHLOCADDR       2
+                        *** Generating:  380:    LOADFROMADDR
                         [
                         <expr3>
                          <expr2>
                           <expr1>
-                            *** Generating:  381:    PUSHNUM           0
+                           *** Generating:  381:    PUSHNUM           0
                            UNSIGNED INTEGER LITERAL: 0
                            ... node has no more children
                           ... node has no more children
                          ... node has no more children
-                         *** Generating:  382:    ADDTOPTR
-                         *** Generating:  383:    LOADFROMADDR
+                        *** Generating:  382:    ADDTOPTR
+                        *** Generating:  383:    LOADFROMADDR
                         ]
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
-                      *** Generating:  384:    LT
-                     <expr4>
+                     *** Generating:  384:    LT
                      ... node has no more children
-                    ... node has no more children
                     ... node has no more children
                    ... node has no more children
                   ... node has no more children
                  )
-                  *** Generating:  385:    JUMPONFALSE       ?
+                 *** Generating:  385:    JUMPONFALSE       ?
                  <statement>
                   <compoundStmt>
                    {
                    <statement>
                     <assignmentOrInvoc>
                      IDENTIFIER: value  [local var (stackframe offset = 5)]
-                      *** Generating:  386:    PUSHLOCADDR       5
-                      *** Generating:  387:    LOADFROMADDR
+                     *** Generating:  386:    PUSHLOCADDR       5
+                     *** Generating:  387:    LOADFROMADDR
                      [
                      <expr3>
                       <expr2>
                        <expr1>
-                         *** Generating:  388:    PUSHNUM           0
+                        *** Generating:  388:    PUSHNUM           0
                         UNSIGNED INTEGER LITERAL: 0
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
                      ]
-                      *** Generating:  389:    ADDTOPTR
+                     *** Generating:  389:    ADDTOPTR
                      =
                      <expr3>
                       <expr2>
                        <expr1>
                         IDENTIFIER: first  [local var (stackframe offset = 3)]
-                         *** Generating:  390:    PUSHLOCADDR       3
-                         *** Generating:  391:    LOADFROMADDR
+                        *** Generating:  390:    PUSHLOCADDR       3
+                        *** Generating:  391:    LOADFROMADDR
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
-                      *** Generating:  392:    SAVETOADDR
+                     *** Generating:  392:    SAVETOADDR
                      ;
                      ... node has no more children
                     ... node has no more children
                    <statement>
                     <assignmentOrInvoc>
                      IDENTIFIER: stack  [local var (stackframe offset = 8)]
-                      *** Generating:  393:    PUSHLOCADDR       8
+                     *** Generating:  393:    PUSHLOCADDR       8
                      =
                      <expr3>
                       <expr2>
@@ -2378,102 +2372,102 @@
                           <expr2>
                            <expr1>
                             IDENTIFIER: stack  [local var (stackframe offset = 8)]
-                             *** Generating:  394:    PUSHLOCADDR       8
-                             *** Generating:  395:    LOADFROMADDR
+                            *** Generating:  394:    PUSHLOCADDR       8
+                            *** Generating:  395:    LOADFROMADDR
                             ... node has no more children
                            ... node has no more children
                           ... node has no more children
-                          *** Generating:  396:    PASSPARAM
+                         *** Generating:  396:    PASSPARAM
                          ,
                          <expr3>
                           <expr2>
                            <expr1>
                             IDENTIFIER: top  [local var (stackframe offset = 9)]
-                             *** Generating:  397:    PUSHLOCADDR       9
-                             *** Generating:  398:    LOADFROMADDR
+                            *** Generating:  397:    PUSHLOCADDR       9
+                            *** Generating:  398:    LOADFROMADDR
                             ... node has no more children
                            ... node has no more children
                           ... node has no more children
-                          *** Generating:  399:    PASSPARAM
+                         *** Generating:  399:    PASSPARAM
                          ,
                          <expr3>
                           <expr2>
                            <expr1>
                             IDENTIFIER: value  [local var (stackframe offset = 5)]
-                             *** Generating:  400:    PUSHLOCADDR       5
-                             *** Generating:  401:    LOADFROMADDR
+                            *** Generating:  400:    PUSHLOCADDR       5
+                            *** Generating:  401:    LOADFROMADDR
                             [
                             <expr3>
                              <expr2>
                               <expr1>
-                                *** Generating:  402:    PUSHNUM           0
+                               *** Generating:  402:    PUSHNUM           0
                                UNSIGNED INTEGER LITERAL: 0
                                ... node has no more children
                               ... node has no more children
                              ... node has no more children
-                             *** Generating:  403:    ADDTOPTR
-                             *** Generating:  404:    LOADFROMADDR
+                            *** Generating:  403:    ADDTOPTR
+                            *** Generating:  404:    LOADFROMADDR
                             ]
                             ... node has no more children
                            ... node has no more children
                           ... node has no more children
-                          *** Generating:  405:    PASSPARAM
+                         *** Generating:  405:    PASSPARAM
                          )
                          ... node has no more children
-                         *** Generating:  406:    CALLSTATMETHOD    ?
+                        *** Generating:  406:    CALLSTATMETHOD    ?
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
-                      *** Generating:  407:    SAVETOADDR
+                     *** Generating:  407:    SAVETOADDR
                      ;
                      ... node has no more children
                     ... node has no more children
                    <statement>
                     <assignmentOrInvoc>
                      IDENTIFIER: value  [local var (stackframe offset = 5)]
-                      *** Generating:  408:    PUSHLOCADDR       5
-                      *** Generating:  409:    LOADFROMADDR
+                     *** Generating:  408:    PUSHLOCADDR       5
+                     *** Generating:  409:    LOADFROMADDR
                      [
                      <expr3>
                       <expr2>
                        <expr1>
-                         *** Generating:  410:    PUSHNUM           0
+                        *** Generating:  410:    PUSHNUM           0
                         UNSIGNED INTEGER LITERAL: 0
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
                      ]
-                      *** Generating:  411:    ADDTOPTR
+                     *** Generating:  411:    ADDTOPTR
                      =
                      <expr3>
                       <expr2>
                        <expr1>
                         IDENTIFIER: j  [local var (stackframe offset = 2)]
-                         *** Generating:  412:    PUSHLOCADDR       2
-                         *** Generating:  413:    LOADFROMADDR
+                        *** Generating:  412:    PUSHLOCADDR       2
+                        *** Generating:  413:    LOADFROMADDR
                         [
                         <expr3>
                          <expr2>
                           <expr1>
-                            *** Generating:  414:    PUSHNUM           0
+                           *** Generating:  414:    PUSHNUM           0
                            UNSIGNED INTEGER LITERAL: 0
                            ... node has no more children
                           ... node has no more children
                          ... node has no more children
-                         *** Generating:  415:    ADDTOPTR
-                         *** Generating:  416:    LOADFROMADDR
+                        *** Generating:  415:    ADDTOPTR
+                        *** Generating:  416:    LOADFROMADDR
                         ]
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
-                      *** Generating:  417:    SAVETOADDR
+                     *** Generating:  417:    SAVETOADDR
                      ;
                      ... node has no more children
                     ... node has no more children
                    <statement>
                     <assignmentOrInvoc>
                      IDENTIFIER: stack  [local var (stackframe offset = 8)]
-                      *** Generating:  418:    PUSHLOCADDR       8
+                     *** Generating:  418:    PUSHLOCADDR       8
                      =
                      <expr3>
                       <expr2>
@@ -2485,53 +2479,53 @@
                           <expr2>
                            <expr1>
                             IDENTIFIER: stack  [local var (stackframe offset = 8)]
-                             *** Generating:  419:    PUSHLOCADDR       8
-                             *** Generating:  420:    LOADFROMADDR
+                            *** Generating:  419:    PUSHLOCADDR       8
+                            *** Generating:  420:    LOADFROMADDR
                             ... node has no more children
                            ... node has no more children
                           ... node has no more children
-                          *** Generating:  421:    PASSPARAM
+                         *** Generating:  421:    PASSPARAM
                          ,
                          <expr3>
                           <expr2>
                            <expr1>
                             IDENTIFIER: top  [local var (stackframe offset = 9)]
-                             *** Generating:  422:    PUSHLOCADDR       9
-                             *** Generating:  423:    LOADFROMADDR
+                            *** Generating:  422:    PUSHLOCADDR       9
+                            *** Generating:  423:    LOADFROMADDR
                             ... node has no more children
                            ... node has no more children
                           ... node has no more children
-                          *** Generating:  424:    PASSPARAM
+                         *** Generating:  424:    PASSPARAM
                          ,
                          <expr3>
                           <expr2>
                            <expr1>
                             IDENTIFIER: value  [local var (stackframe offset = 5)]
-                             *** Generating:  425:    PUSHLOCADDR       5
-                             *** Generating:  426:    LOADFROMADDR
+                            *** Generating:  425:    PUSHLOCADDR       5
+                            *** Generating:  426:    LOADFROMADDR
                             [
                             <expr3>
                              <expr2>
                               <expr1>
-                                *** Generating:  427:    PUSHNUM           0
+                               *** Generating:  427:    PUSHNUM           0
                                UNSIGNED INTEGER LITERAL: 0
                                ... node has no more children
                               ... node has no more children
                              ... node has no more children
-                             *** Generating:  428:    ADDTOPTR
-                             *** Generating:  429:    LOADFROMADDR
+                            *** Generating:  428:    ADDTOPTR
+                            *** Generating:  429:    LOADFROMADDR
                             ]
                             ... node has no more children
                            ... node has no more children
                           ... node has no more children
-                          *** Generating:  430:    PASSPARAM
+                         *** Generating:  430:    PASSPARAM
                          )
                          ... node has no more children
-                         *** Generating:  431:    CALLSTATMETHOD    ?
+                        *** Generating:  431:    CALLSTATMETHOD    ?
                         ... node has no more children
                        ... node has no more children
                       ... node has no more children
-                      *** Generating:  432:    SAVETOADDR
+                     *** Generating:  432:    SAVETOADDR
                      ;
                      ... node has no more children
                     ... node has no more children
@@ -2544,30 +2538,30 @@
                <statement>
                 <assignmentOrInvoc>
                  IDENTIFIER: first  [local var (stackframe offset = 3)]
-                  *** Generating:  433:    PUSHLOCADDR       3
+                 *** Generating:  433:    PUSHLOCADDR       3
                  =
                  <expr3>
                   <expr2>
                    <expr1>
                     IDENTIFIER: i  [local var (stackframe offset = 1)]
-                     *** Generating:  434:    PUSHLOCADDR       1
-                     *** Generating:  435:    LOADFROMADDR
+                    *** Generating:  434:    PUSHLOCADDR       1
+                    *** Generating:  435:    LOADFROMADDR
                     [
                     <expr3>
                      <expr2>
                       <expr1>
-                        *** Generating:  436:    PUSHNUM           0
+                       *** Generating:  436:    PUSHNUM           0
                        UNSIGNED INTEGER LITERAL: 0
                        ... node has no more children
                       ... node has no more children
                      ... node has no more children
-                     *** Generating:  437:    ADDTOPTR
-                     *** Generating:  438:    LOADFROMADDR
+                    *** Generating:  437:    ADDTOPTR
+                    *** Generating:  438:    LOADFROMADDR
                     ]
                     ... node has no more children
                    ... node has no more children
                   ... node has no more children
-                  *** Generating:  439:    SAVETOADDR
+                 *** Generating:  439:    SAVETOADDR
                  ;
                  ... node has no more children
                 ... node has no more children
@@ -2580,14 +2574,14 @@
            }
            ... node has no more children
           ... node has no more children
-          *** Generating:  440:    JUMP              311
+         *** Generating:  440:    JUMP              311
          *** Fixed Up:  318:    JUMPONFALSE       441
          ... node has no more children
         ... node has no more children
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  441:    JUMP              238
+     *** Generating:  441:    JUMP              238
      *** Fixed Up:  246:    JUMPONFALSE       442
      ... node has no more children
     ... node has no more children
@@ -2597,16 +2591,16 @@
      <singleVarDecl>
       IDENTIFIER: i1  [not in symbol table]
       =
-       *** Generating:  442:    PUSHLOCADDR       10
+      *** Generating:  442:    PUSHLOCADDR       10
       <expr3>
        <expr2>
         <expr1>
-          *** Generating:  443:    PUSHNUM           0
+         *** Generating:  443:    PUSHNUM           0
          UNSIGNED INTEGER LITERAL: 0
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  444:    SAVETOADDR
+      *** Generating:  444:    SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -2623,8 +2617,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: i1  [local var (stackframe offset = 10)]
-             *** Generating:  445:    PUSHLOCADDR       10
-             *** Generating:  446:    LOADFROMADDR
+            *** Generating:  445:    PUSHLOCADDR       10
+            *** Generating:  446:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -2632,20 +2626,18 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  447:    PUSHNUM           10
+            *** Generating:  447:    PUSHNUM           10
             UNSIGNED INTEGER LITERAL: 10
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  448:    LT
-         <expr4>
+         *** Generating:  448:    LT
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  449:    JUMPONFALSE       ?
+     *** Generating:  449:    JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
@@ -2668,43 +2660,43 @@
                <expr2>
                 <expr1>
                  IDENTIFIER: stack  [local var (stackframe offset = 8)]
-                  *** Generating:  450:    PUSHLOCADDR       8
-                  *** Generating:  451:    LOADFROMADDR
+                 *** Generating:  450:    PUSHLOCADDR       8
+                 *** Generating:  451:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  452:    PASSPARAM
+              *** Generating:  452:    PASSPARAM
               ,
               <expr3>
                <expr2>
                 <expr1>
                  IDENTIFIER: top  [local var (stackframe offset = 9)]
-                  *** Generating:  453:    PUSHLOCADDR       9
-                  *** Generating:  454:    LOADFROMADDR
+                 *** Generating:  453:    PUSHLOCADDR       9
+                 *** Generating:  454:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  455:    PASSPARAM
+              *** Generating:  455:    PASSPARAM
               )
               ... node has no more children
-              *** Generating:  456:    CALLSTATMETHOD    ?
+             *** Generating:  456:    CALLSTATMETHOD    ?
              [
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: i1  [local var (stackframe offset = 10)]
-                 *** Generating:  457:    PUSHLOCADDR       10
-                 *** Generating:  458:    LOADFROMADDR
+                *** Generating:  457:    PUSHLOCADDR       10
+                *** Generating:  458:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  459:    ADDTOPTR
-              *** Generating:  460:    LOADFROMADDR
+             *** Generating:  459:    ADDTOPTR
+             *** Generating:  460:    LOADFROMADDR
              ]
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  461:    WRITEINT
+          *** Generating:  461:    WRITEINT
           ... node has no more children
          )
          ;
@@ -2713,33 +2705,33 @@
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: i1  [local var (stackframe offset = 10)]
-          *** Generating:  462:    PUSHLOCADDR       10
+         *** Generating:  462:    PUSHLOCADDR       10
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: i1  [local var (stackframe offset = 10)]
-             *** Generating:  463:    PUSHLOCADDR       10
-             *** Generating:  464:    LOADFROMADDR
+            *** Generating:  463:    PUSHLOCADDR       10
+            *** Generating:  464:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           +
           <expr2>
            <expr1>
-             *** Generating:  465:    PUSHNUM           1
+            *** Generating:  465:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  466:    ADD
+          *** Generating:  466:    ADD
           ... node has no more children
-          *** Generating:  467:    SAVETOADDR
+         *** Generating:  467:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  468:    JUMP              445
+     *** Generating:  468:    JUMP              445
      *** Fixed Up:  449:    JUMPONFALSE       469
      ... node has no more children
     ... node has no more children
@@ -2748,12 +2740,12 @@
     <expr3>
      <expr2>
       <expr1>
-        *** Generating:  469:    PUSHNUM           0
+       *** Generating:  469:    PUSHNUM           0
        UNSIGNED INTEGER LITERAL: 0
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  470:    RETURN            0
+    *** Generating:  470:    RETURN            0
     ;
     ... node has no more children
    }
@@ -2769,7 +2761,7 @@
   *** Fixed Up:  406:    CALLSTATMETHOD    471
   *** Fixed Up:  236:    CALLSTATMETHOD    471
   *** Fixed Up:  214:    CALLSTATMETHOD    471
-   *** Generating:  471:    INITSTKFRM        ?
+  *** Generating:  471:    INITSTKFRM        ?
   IDENTIFIER: push  [method (start address = 471)]
   (
   <parameterDeclList>
@@ -2801,29 +2793,29 @@
      <singleVarDecl>
       IDENTIFIER: i  [not in symbol table]
       =
-       *** Generating:  472:    PUSHLOCADDR       1
+      *** Generating:  472:    PUSHLOCADDR       1
       <expr3>
        <expr2>
         <expr1>
          IDENTIFIER: top  [local var (stackframe offset = -3)]
-          *** Generating:  473:    PUSHLOCADDR       -3
-          *** Generating:  474:    LOADFROMADDR
+         *** Generating:  473:    PUSHLOCADDR       -3
+         *** Generating:  474:    LOADFROMADDR
          [
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  475:    PUSHNUM           0
+            *** Generating:  475:    PUSHNUM           0
             UNSIGNED INTEGER LITERAL: 0
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  476:    ADDTOPTR
-          *** Generating:  477:    LOADFROMADDR
+         *** Generating:  476:    ADDTOPTR
+         *** Generating:  477:    LOADFROMADDR
          ]
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  478:    SAVETOADDR
+      *** Generating:  478:    SAVETOADDR
       ... node has no more children
      ,
      <singleVarDecl>
@@ -2831,7 +2823,7 @@
       [
       ]
       =
-       *** Generating:  479:    PUSHLOCADDR       2
+      *** Generating:  479:    PUSHLOCADDR       2
       <expr3>
        <expr2>
         <expr1>
@@ -2841,17 +2833,17 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  480:    PUSHNUM           51
+            *** Generating:  480:    PUSHNUM           51
             UNSIGNED INTEGER LITERAL: 51
             ... node has no more children
            ... node has no more children
           ... node has no more children
+         *** Generating:  481:    HEAPALLOC
          ]
-          *** Generating:  481:    HEAPALLOC
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  482:    SAVETOADDR
+      *** Generating:  482:    SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -2868,8 +2860,8 @@
           <expr2>
            <expr1>
             IDENTIFIER: i  [local var (stackframe offset = 1)]
-             *** Generating:  483:    PUSHLOCADDR       1
-             *** Generating:  484:    LOADFROMADDR
+            *** Generating:  483:    PUSHLOCADDR       1
+            *** Generating:  484:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
@@ -2877,190 +2869,188 @@
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  485:    PUSHNUM           0
+            *** Generating:  485:    PUSHNUM           0
             UNSIGNED INTEGER LITERAL: 0
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  486:    GE
-         <expr4>
+         *** Generating:  486:    GE
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  487:    JUMPONFALSE       ?
+     *** Generating:  487:    JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: newStack  [local var (stackframe offset = 2)]
-          *** Generating:  488:    PUSHLOCADDR       2
-          *** Generating:  489:    LOADFROMADDR
+         *** Generating:  488:    PUSHLOCADDR       2
+         *** Generating:  489:    LOADFROMADDR
          [
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: i  [local var (stackframe offset = 1)]
-             *** Generating:  490:    PUSHLOCADDR       1
-             *** Generating:  491:    LOADFROMADDR
+            *** Generating:  490:    PUSHLOCADDR       1
+            *** Generating:  491:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
          ]
-          *** Generating:  492:    ADDTOPTR
+         *** Generating:  492:    ADDTOPTR
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: stack  [local var (stackframe offset = -4)]
-             *** Generating:  493:    PUSHLOCADDR       -4
-             *** Generating:  494:    LOADFROMADDR
+            *** Generating:  493:    PUSHLOCADDR       -4
+            *** Generating:  494:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
                IDENTIFIER: i  [local var (stackframe offset = 1)]
-                *** Generating:  495:    PUSHLOCADDR       1
-                *** Generating:  496:    LOADFROMADDR
+               *** Generating:  495:    PUSHLOCADDR       1
+               *** Generating:  496:    LOADFROMADDR
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  497:    ADDTOPTR
-             *** Generating:  498:    LOADFROMADDR
+            *** Generating:  497:    ADDTOPTR
+            *** Generating:  498:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  499:    SAVETOADDR
+         *** Generating:  499:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: i  [local var (stackframe offset = 1)]
-          *** Generating:  500:    PUSHLOCADDR       1
+         *** Generating:  500:    PUSHLOCADDR       1
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: i  [local var (stackframe offset = 1)]
-             *** Generating:  501:    PUSHLOCADDR       1
-             *** Generating:  502:    LOADFROMADDR
+            *** Generating:  501:    PUSHLOCADDR       1
+            *** Generating:  502:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           -
           <expr2>
            <expr1>
-             *** Generating:  503:    PUSHNUM           1
+            *** Generating:  503:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  504:    SUB
+          *** Generating:  504:    SUB
           ... node has no more children
-          *** Generating:  505:    SAVETOADDR
+         *** Generating:  505:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        }
        ... node has no more children
       ... node has no more children
-      *** Generating:  506:    JUMP              483
+     *** Generating:  506:    JUMP              483
      *** Fixed Up:  487:    JUMPONFALSE       507
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: top  [local var (stackframe offset = -3)]
-      *** Generating:  507:    PUSHLOCADDR       -3
-      *** Generating:  508:    LOADFROMADDR
+     *** Generating:  507:    PUSHLOCADDR       -3
+     *** Generating:  508:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  509:    PUSHNUM           0
+        *** Generating:  509:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  510:    ADDTOPTR
+     *** Generating:  510:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: top  [local var (stackframe offset = -3)]
-         *** Generating:  511:    PUSHLOCADDR       -3
-         *** Generating:  512:    LOADFROMADDR
+        *** Generating:  511:    PUSHLOCADDR       -3
+        *** Generating:  512:    LOADFROMADDR
         [
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  513:    PUSHNUM           0
+           *** Generating:  513:    PUSHNUM           0
            UNSIGNED INTEGER LITERAL: 0
            ... node has no more children
           ... node has no more children
          ... node has no more children
-         *** Generating:  514:    ADDTOPTR
-         *** Generating:  515:    LOADFROMADDR
+        *** Generating:  514:    ADDTOPTR
+        *** Generating:  515:    LOADFROMADDR
         ]
         ... node has no more children
        ... node has no more children
       +
       <expr2>
        <expr1>
-         *** Generating:  516:    PUSHNUM           1
+        *** Generating:  516:    PUSHNUM           1
         UNSIGNED INTEGER LITERAL: 1
         ... node has no more children
        ... node has no more children
-       *** Generating:  517:    ADD
+      *** Generating:  517:    ADD
       ... node has no more children
-      *** Generating:  518:    SAVETOADDR
+     *** Generating:  518:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: newStack  [local var (stackframe offset = 2)]
-      *** Generating:  519:    PUSHLOCADDR       2
-      *** Generating:  520:    LOADFROMADDR
+     *** Generating:  519:    PUSHLOCADDR       2
+     *** Generating:  520:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: top  [local var (stackframe offset = -3)]
-         *** Generating:  521:    PUSHLOCADDR       -3
-         *** Generating:  522:    LOADFROMADDR
+        *** Generating:  521:    PUSHLOCADDR       -3
+        *** Generating:  522:    LOADFROMADDR
         [
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  523:    PUSHNUM           0
+           *** Generating:  523:    PUSHNUM           0
            UNSIGNED INTEGER LITERAL: 0
            ... node has no more children
           ... node has no more children
          ... node has no more children
-         *** Generating:  524:    ADDTOPTR
-         *** Generating:  525:    LOADFROMADDR
+        *** Generating:  524:    ADDTOPTR
+        *** Generating:  525:    LOADFROMADDR
         ]
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  526:    ADDTOPTR
+     *** Generating:  526:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: v  [local var (stackframe offset = -2)]
-         *** Generating:  527:    PUSHLOCADDR       -2
-         *** Generating:  528:    LOADFROMADDR
+        *** Generating:  527:    PUSHLOCADDR       -2
+        *** Generating:  528:    LOADFROMADDR
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  529:    SAVETOADDR
+     *** Generating:  529:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -3070,12 +3060,12 @@
      <expr2>
       <expr1>
        IDENTIFIER: newStack  [local var (stackframe offset = 2)]
-        *** Generating:  530:    PUSHLOCADDR       2
-        *** Generating:  531:    LOADFROMADDR
+       *** Generating:  530:    PUSHLOCADDR       2
+       *** Generating:  531:    LOADFROMADDR
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  532:    RETURN            3
+    *** Generating:  532:    RETURN            3
     ;
     ... node has no more children
    }
@@ -3089,7 +3079,7 @@
   ]
   *** Fixed Up:  276:    CALLSTATMETHOD    533
   *** Fixed Up:  257:    CALLSTATMETHOD    533
-   *** Generating:  533:    INITSTKFRM        ?
+  *** Generating:  533:    INITSTKFRM        ?
   IDENTIFIER: pop  [method (start address = 533)]
   (
   <parameterDeclList>
@@ -3125,17 +3115,17 @@
       [
       ]
       =
-       *** Generating:  534:    PUSHLOCADDR       1
+      *** Generating:  534:    PUSHLOCADDR       1
       <expr3>
        <expr2>
         <expr1>
          IDENTIFIER: stack  [local var (stackframe offset = -4)]
-          *** Generating:  535:    PUSHLOCADDR       -4
-          *** Generating:  536:    LOADFROMADDR
+         *** Generating:  535:    PUSHLOCADDR       -4
+         *** Generating:  536:    LOADFROMADDR
          ... node has no more children
         ... node has no more children
        ... node has no more children
-       *** Generating:  537:    SAVETOADDR
+      *** Generating:  537:    SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -3143,105 +3133,105 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: value  [local var (stackframe offset = -2)]
-      *** Generating:  538:    PUSHLOCADDR       -2
-      *** Generating:  539:    LOADFROMADDR
+     *** Generating:  538:    PUSHLOCADDR       -2
+     *** Generating:  539:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  540:    PUSHNUM           0
+        *** Generating:  540:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  541:    ADDTOPTR
+     *** Generating:  541:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: stack  [local var (stackframe offset = -4)]
-         *** Generating:  542:    PUSHLOCADDR       -4
-         *** Generating:  543:    LOADFROMADDR
+        *** Generating:  542:    PUSHLOCADDR       -4
+        *** Generating:  543:    LOADFROMADDR
         [
         <expr3>
          <expr2>
           <expr1>
            IDENTIFIER: top  [local var (stackframe offset = -3)]
-            *** Generating:  544:    PUSHLOCADDR       -3
-            *** Generating:  545:    LOADFROMADDR
+           *** Generating:  544:    PUSHLOCADDR       -3
+           *** Generating:  545:    LOADFROMADDR
            [
            <expr3>
             <expr2>
              <expr1>
-               *** Generating:  546:    PUSHNUM           0
+              *** Generating:  546:    PUSHNUM           0
               UNSIGNED INTEGER LITERAL: 0
               ... node has no more children
              ... node has no more children
             ... node has no more children
-            *** Generating:  547:    ADDTOPTR
-            *** Generating:  548:    LOADFROMADDR
+           *** Generating:  547:    ADDTOPTR
+           *** Generating:  548:    LOADFROMADDR
            ]
            ... node has no more children
           ... node has no more children
          ... node has no more children
-         *** Generating:  549:    ADDTOPTR
-         *** Generating:  550:    LOADFROMADDR
+        *** Generating:  549:    ADDTOPTR
+        *** Generating:  550:    LOADFROMADDR
         ]
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  551:    SAVETOADDR
+     *** Generating:  551:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: top  [local var (stackframe offset = -3)]
-      *** Generating:  552:    PUSHLOCADDR       -3
-      *** Generating:  553:    LOADFROMADDR
+     *** Generating:  552:    PUSHLOCADDR       -3
+     *** Generating:  553:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  554:    PUSHNUM           0
+        *** Generating:  554:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  555:    ADDTOPTR
+     *** Generating:  555:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: top  [local var (stackframe offset = -3)]
-         *** Generating:  556:    PUSHLOCADDR       -3
-         *** Generating:  557:    LOADFROMADDR
+        *** Generating:  556:    PUSHLOCADDR       -3
+        *** Generating:  557:    LOADFROMADDR
         [
         <expr3>
          <expr2>
           <expr1>
-            *** Generating:  558:    PUSHNUM           0
+           *** Generating:  558:    PUSHNUM           0
            UNSIGNED INTEGER LITERAL: 0
            ... node has no more children
           ... node has no more children
          ... node has no more children
-         *** Generating:  559:    ADDTOPTR
-         *** Generating:  560:    LOADFROMADDR
+        *** Generating:  559:    ADDTOPTR
+        *** Generating:  560:    LOADFROMADDR
         ]
         ... node has no more children
        ... node has no more children
       -
       <expr2>
        <expr1>
-         *** Generating:  561:    PUSHNUM           1
+        *** Generating:  561:    PUSHNUM           1
         UNSIGNED INTEGER LITERAL: 1
         ... node has no more children
        ... node has no more children
-       *** Generating:  562:    SUB
+      *** Generating:  562:    SUB
       ... node has no more children
-      *** Generating:  563:    SAVETOADDR
+     *** Generating:  563:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -3251,12 +3241,12 @@
      <expr2>
       <expr1>
        IDENTIFIER: newStack  [local var (stackframe offset = 1)]
-        *** Generating:  564:    PUSHLOCADDR       1
-        *** Generating:  565:    LOADFROMADDR
+       *** Generating:  564:    PUSHLOCADDR       1
+       *** Generating:  565:    LOADFROMADDR
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  566:    RETURN            3
+    *** Generating:  566:    RETURN            3
     ;
     ... node has no more children
    }
@@ -3270,7 +3260,7 @@
   ]
   *** Fixed Up:  456:    CALLSTATMETHOD    567
   *** Fixed Up:  193:    CALLSTATMETHOD    567
-   *** Generating:  567:    INITSTKFRM        ?
+  *** Generating:  567:    INITSTKFRM        ?
   IDENTIFIER: initstack  [method (start address = 567)]
   (
   <parameterDeclList>
@@ -3294,33 +3284,33 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: top  [local var (stackframe offset = -2)]
-      *** Generating:  568:    PUSHLOCADDR       -2
-      *** Generating:  569:    LOADFROMADDR
+     *** Generating:  568:    PUSHLOCADDR       -2
+     *** Generating:  569:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  570:    PUSHNUM           0
+        *** Generating:  570:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  571:    ADDTOPTR
+     *** Generating:  571:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         -
         <expr1>
-          *** Generating:  572:    PUSHNUM           1
+         *** Generating:  572:    PUSHNUM           1
          UNSIGNED INTEGER LITERAL: 1
          ... node has no more children
-         *** Generating:  573:    CHANGESIGN
+        *** Generating:  573:    CHANGESIGN
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  574:    SAVETOADDR
+     *** Generating:  574:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -3330,12 +3320,12 @@
      <expr2>
       <expr1>
        IDENTIFIER: stack  [local var (stackframe offset = -3)]
-        *** Generating:  575:    PUSHLOCADDR       -3
-        *** Generating:  576:    LOADFROMADDR
+       *** Generating:  575:    PUSHLOCADDR       -3
+       *** Generating:  576:    LOADFROMADDR
        ... node has no more children
       ... node has no more children
      ... node has no more children
-     *** Generating:  577:    RETURN            2
+    *** Generating:  577:    RETURN            2
     ;
     ... node has no more children
    }
@@ -3345,7 +3335,7 @@
  <methodDecl>
   Reserved Word: static
   Reserved Word: void
-   *** Generating:  578:    INITSTKFRM        ?
+  *** Generating:  578:    INITSTKFRM        ?
   IDENTIFIER: swaplistij  [method (start address = 578)]
   (
   <parameterDeclList>
@@ -3374,120 +3364,120 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: temp  [local var (stackframe offset = 1)]
-      *** Generating:  579:    PUSHLOCADDR       1
+     *** Generating:  579:    PUSHLOCADDR       1
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: numlist  [static var (address = 2)]
-         *** Generating:  580:    PUSHSTATADDR      2
-         *** Generating:  581:    LOADFROMADDR
+        *** Generating:  580:    PUSHSTATADDR      2
+        *** Generating:  581:    LOADFROMADDR
         [
         <expr3>
          <expr2>
           <expr1>
            IDENTIFIER: i  [local var (stackframe offset = -3)]
-            *** Generating:  582:    PUSHLOCADDR       -3
-            *** Generating:  583:    LOADFROMADDR
+           *** Generating:  582:    PUSHLOCADDR       -3
+           *** Generating:  583:    LOADFROMADDR
            ... node has no more children
           ... node has no more children
          ... node has no more children
-         *** Generating:  584:    ADDTOPTR
-         *** Generating:  585:    LOADFROMADDR
+        *** Generating:  584:    ADDTOPTR
+        *** Generating:  585:    LOADFROMADDR
         ]
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  586:    SAVETOADDR
+     *** Generating:  586:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: numlist  [static var (address = 2)]
-      *** Generating:  587:    PUSHSTATADDR      2
-      *** Generating:  588:    LOADFROMADDR
+     *** Generating:  587:    PUSHSTATADDR      2
+     *** Generating:  588:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: i  [local var (stackframe offset = -3)]
-         *** Generating:  589:    PUSHLOCADDR       -3
-         *** Generating:  590:    LOADFROMADDR
+        *** Generating:  589:    PUSHLOCADDR       -3
+        *** Generating:  590:    LOADFROMADDR
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  591:    ADDTOPTR
+     *** Generating:  591:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: numlist  [static var (address = 2)]
-         *** Generating:  592:    PUSHSTATADDR      2
-         *** Generating:  593:    LOADFROMADDR
+        *** Generating:  592:    PUSHSTATADDR      2
+        *** Generating:  593:    LOADFROMADDR
         [
         <expr3>
          <expr2>
           <expr1>
            IDENTIFIER: j  [local var (stackframe offset = -2)]
-            *** Generating:  594:    PUSHLOCADDR       -2
-            *** Generating:  595:    LOADFROMADDR
+           *** Generating:  594:    PUSHLOCADDR       -2
+           *** Generating:  595:    LOADFROMADDR
            ... node has no more children
           ... node has no more children
          ... node has no more children
-         *** Generating:  596:    ADDTOPTR
-         *** Generating:  597:    LOADFROMADDR
+        *** Generating:  596:    ADDTOPTR
+        *** Generating:  597:    LOADFROMADDR
         ]
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  598:    SAVETOADDR
+     *** Generating:  598:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: numlist  [static var (address = 2)]
-      *** Generating:  599:    PUSHSTATADDR      2
-      *** Generating:  600:    LOADFROMADDR
+     *** Generating:  599:    PUSHSTATADDR      2
+     *** Generating:  600:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: j  [local var (stackframe offset = -2)]
-         *** Generating:  601:    PUSHLOCADDR       -2
-         *** Generating:  602:    LOADFROMADDR
+        *** Generating:  601:    PUSHLOCADDR       -2
+        *** Generating:  602:    LOADFROMADDR
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  603:    ADDTOPTR
+     *** Generating:  603:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
         IDENTIFIER: temp  [local var (stackframe offset = 1)]
-         *** Generating:  604:    PUSHLOCADDR       1
-         *** Generating:  605:    LOADFROMADDR
+        *** Generating:  604:    PUSHLOCADDR       1
+        *** Generating:  605:    LOADFROMADDR
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  606:    SAVETOADDR
+     *** Generating:  606:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
    }
    ... node has no more children
   *** Fixed Up:  578:    INITSTKFRM        1
-   *** Generating:  607:    RETURN            2
+  *** Generating:  607:    RETURN            2
   ... node has no more children
  <methodDecl>
   Reserved Word: static
   Reserved Word: void
   *** Fixed Up: 375:    NOP
   *** Fixed Up:  374:    CALLSTATMETHOD    608
-   *** Generating:  608:    INITSTKFRM        ?
+  *** Generating:  608:    INITSTKFRM        ?
   IDENTIFIER: oneswap  [method (start address = 608)]
   (
   <parameterDeclList>
@@ -3525,32 +3515,32 @@
           <expr2>
            <expr1>
             IDENTIFIER: numlist  [static var (address = 2)]
-             *** Generating:  609:    PUSHSTATADDR      2
-             *** Generating:  610:    LOADFROMADDR
+            *** Generating:  609:    PUSHSTATADDR      2
+            *** Generating:  610:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
                IDENTIFIER: i  [local var (stackframe offset = -4)]
-                *** Generating:  611:    PUSHLOCADDR       -4
-                *** Generating:  612:    LOADFROMADDR
+               *** Generating:  611:    PUSHLOCADDR       -4
+               *** Generating:  612:    LOADFROMADDR
                [
                <expr3>
                 <expr2>
                  <expr1>
-                   *** Generating:  613:    PUSHNUM           0
+                  *** Generating:  613:    PUSHNUM           0
                   UNSIGNED INTEGER LITERAL: 0
                   ... node has no more children
                  ... node has no more children
                 ... node has no more children
-                *** Generating:  614:    ADDTOPTR
-                *** Generating:  615:    LOADFROMADDR
+               *** Generating:  614:    ADDTOPTR
+               *** Generating:  615:    LOADFROMADDR
                ]
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  616:    ADDTOPTR
-             *** Generating:  617:    LOADFROMADDR
+            *** Generating:  616:    ADDTOPTR
+            *** Generating:  617:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
@@ -3560,71 +3550,69 @@
           <expr2>
            <expr1>
             IDENTIFIER: p  [local var (stackframe offset = -2)]
-             *** Generating:  618:    PUSHLOCADDR       -2
-             *** Generating:  619:    LOADFROMADDR
+            *** Generating:  618:    PUSHLOCADDR       -2
+            *** Generating:  619:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  620:    LE
-         <expr4>
+         *** Generating:  620:    LE
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  621:    JUMPONFALSE       ?
+     *** Generating:  621:    JUMPONFALSE       ?
      <statement>
       <assignmentOrInvoc>
        IDENTIFIER: i  [local var (stackframe offset = -4)]
-        *** Generating:  622:    PUSHLOCADDR       -4
-        *** Generating:  623:    LOADFROMADDR
+       *** Generating:  622:    PUSHLOCADDR       -4
+       *** Generating:  623:    LOADFROMADDR
        [
        <expr3>
         <expr2>
          <expr1>
-           *** Generating:  624:    PUSHNUM           0
+          *** Generating:  624:    PUSHNUM           0
           UNSIGNED INTEGER LITERAL: 0
           ... node has no more children
          ... node has no more children
         ... node has no more children
        ]
-        *** Generating:  625:    ADDTOPTR
+       *** Generating:  625:    ADDTOPTR
        =
        <expr3>
         <expr2>
          <expr1>
           IDENTIFIER: i  [local var (stackframe offset = -4)]
-           *** Generating:  626:    PUSHLOCADDR       -4
-           *** Generating:  627:    LOADFROMADDR
+          *** Generating:  626:    PUSHLOCADDR       -4
+          *** Generating:  627:    LOADFROMADDR
           [
           <expr3>
            <expr2>
             <expr1>
-              *** Generating:  628:    PUSHNUM           0
+             *** Generating:  628:    PUSHNUM           0
              UNSIGNED INTEGER LITERAL: 0
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  629:    ADDTOPTR
-           *** Generating:  630:    LOADFROMADDR
+          *** Generating:  629:    ADDTOPTR
+          *** Generating:  630:    LOADFROMADDR
           ]
           ... node has no more children
          ... node has no more children
         +
         <expr2>
          <expr1>
-           *** Generating:  631:    PUSHNUM           1
+          *** Generating:  631:    PUSHNUM           1
           UNSIGNED INTEGER LITERAL: 1
           ... node has no more children
          ... node has no more children
-         *** Generating:  632:    ADD
+        *** Generating:  632:    ADD
         ... node has no more children
-        *** Generating:  633:    SAVETOADDR
+       *** Generating:  633:    SAVETOADDR
        ;
        ... node has no more children
       ... node has no more children
-      *** Generating:  634:    JUMP              609
+     *** Generating:  634:    JUMP              609
      *** Fixed Up:  621:    JUMPONFALSE       635
      ... node has no more children
     ... node has no more children
@@ -3640,32 +3628,32 @@
           <expr2>
            <expr1>
             IDENTIFIER: numlist  [static var (address = 2)]
-             *** Generating:  635:    PUSHSTATADDR      2
-             *** Generating:  636:    LOADFROMADDR
+            *** Generating:  635:    PUSHSTATADDR      2
+            *** Generating:  636:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
                IDENTIFIER: j  [local var (stackframe offset = -3)]
-                *** Generating:  637:    PUSHLOCADDR       -3
-                *** Generating:  638:    LOADFROMADDR
+               *** Generating:  637:    PUSHLOCADDR       -3
+               *** Generating:  638:    LOADFROMADDR
                [
                <expr3>
                 <expr2>
                  <expr1>
-                   *** Generating:  639:    PUSHNUM           0
+                  *** Generating:  639:    PUSHNUM           0
                   UNSIGNED INTEGER LITERAL: 0
                   ... node has no more children
                  ... node has no more children
                 ... node has no more children
-                *** Generating:  640:    ADDTOPTR
-                *** Generating:  641:    LOADFROMADDR
+               *** Generating:  640:    ADDTOPTR
+               *** Generating:  641:    LOADFROMADDR
                ]
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  642:    ADDTOPTR
-             *** Generating:  643:    LOADFROMADDR
+            *** Generating:  642:    ADDTOPTR
+            *** Generating:  643:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
@@ -3675,71 +3663,69 @@
           <expr2>
            <expr1>
             IDENTIFIER: p  [local var (stackframe offset = -2)]
-             *** Generating:  644:    PUSHLOCADDR       -2
-             *** Generating:  645:    LOADFROMADDR
+            *** Generating:  644:    PUSHLOCADDR       -2
+            *** Generating:  645:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  646:    GT
-         <expr4>
+         *** Generating:  646:    GT
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  647:    JUMPONFALSE       ?
+     *** Generating:  647:    JUMPONFALSE       ?
      <statement>
       <assignmentOrInvoc>
        IDENTIFIER: j  [local var (stackframe offset = -3)]
-        *** Generating:  648:    PUSHLOCADDR       -3
-        *** Generating:  649:    LOADFROMADDR
+       *** Generating:  648:    PUSHLOCADDR       -3
+       *** Generating:  649:    LOADFROMADDR
        [
        <expr3>
         <expr2>
          <expr1>
-           *** Generating:  650:    PUSHNUM           0
+          *** Generating:  650:    PUSHNUM           0
           UNSIGNED INTEGER LITERAL: 0
           ... node has no more children
          ... node has no more children
         ... node has no more children
        ]
-        *** Generating:  651:    ADDTOPTR
+       *** Generating:  651:    ADDTOPTR
        =
        <expr3>
         <expr2>
          <expr1>
           IDENTIFIER: j  [local var (stackframe offset = -3)]
-           *** Generating:  652:    PUSHLOCADDR       -3
-           *** Generating:  653:    LOADFROMADDR
+          *** Generating:  652:    PUSHLOCADDR       -3
+          *** Generating:  653:    LOADFROMADDR
           [
           <expr3>
            <expr2>
             <expr1>
-              *** Generating:  654:    PUSHNUM           0
+             *** Generating:  654:    PUSHNUM           0
              UNSIGNED INTEGER LITERAL: 0
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  655:    ADDTOPTR
-           *** Generating:  656:    LOADFROMADDR
+          *** Generating:  655:    ADDTOPTR
+          *** Generating:  656:    LOADFROMADDR
           ]
           ... node has no more children
          ... node has no more children
         -
         <expr2>
          <expr1>
-           *** Generating:  657:    PUSHNUM           1
+          *** Generating:  657:    PUSHNUM           1
           UNSIGNED INTEGER LITERAL: 1
           ... node has no more children
          ... node has no more children
-         *** Generating:  658:    SUB
+        *** Generating:  658:    SUB
         ... node has no more children
-        *** Generating:  659:    SAVETOADDR
+       *** Generating:  659:    SAVETOADDR
        ;
        ... node has no more children
       ... node has no more children
-      *** Generating:  660:    JUMP              635
+     *** Generating:  660:    JUMP              635
      *** Fixed Up:  647:    JUMPONFALSE       661
      ... node has no more children
     ... node has no more children
@@ -3755,19 +3741,19 @@
           <expr2>
            <expr1>
             IDENTIFIER: i  [local var (stackframe offset = -4)]
-             *** Generating:  661:    PUSHLOCADDR       -4
-             *** Generating:  662:    LOADFROMADDR
+            *** Generating:  661:    PUSHLOCADDR       -4
+            *** Generating:  662:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  663:    PUSHNUM           0
+               *** Generating:  663:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  664:    ADDTOPTR
-             *** Generating:  665:    LOADFROMADDR
+            *** Generating:  664:    ADDTOPTR
+            *** Generating:  665:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
@@ -3777,32 +3763,30 @@
           <expr2>
            <expr1>
             IDENTIFIER: j  [local var (stackframe offset = -3)]
-             *** Generating:  666:    PUSHLOCADDR       -3
-             *** Generating:  667:    LOADFROMADDR
+            *** Generating:  666:    PUSHLOCADDR       -3
+            *** Generating:  667:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  668:    PUSHNUM           0
+               *** Generating:  668:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  669:    ADDTOPTR
-             *** Generating:  670:    LOADFROMADDR
+            *** Generating:  669:    ADDTOPTR
+            *** Generating:  670:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  671:    LT
-         <expr4>
+         *** Generating:  671:    LT
          ... node has no more children
-        ... node has no more children
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  672:    JUMPONFALSE       ?
+     *** Generating:  672:    JUMPONFALSE       ?
      <statement>
       <compoundStmt>
        {
@@ -3815,150 +3799,150 @@
            <expr2>
             <expr1>
              IDENTIFIER: i  [local var (stackframe offset = -4)]
-              *** Generating:  673:    PUSHLOCADDR       -4
-              *** Generating:  674:    LOADFROMADDR
+             *** Generating:  673:    PUSHLOCADDR       -4
+             *** Generating:  674:    LOADFROMADDR
              [
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  675:    PUSHNUM           0
+                *** Generating:  675:    PUSHNUM           0
                 UNSIGNED INTEGER LITERAL: 0
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  676:    ADDTOPTR
-              *** Generating:  677:    LOADFROMADDR
+             *** Generating:  676:    ADDTOPTR
+             *** Generating:  677:    LOADFROMADDR
              ]
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  678:    PASSPARAM
+          *** Generating:  678:    PASSPARAM
           ,
           <expr3>
            <expr2>
             <expr1>
              IDENTIFIER: j  [local var (stackframe offset = -3)]
-              *** Generating:  679:    PUSHLOCADDR       -3
-              *** Generating:  680:    LOADFROMADDR
+             *** Generating:  679:    PUSHLOCADDR       -3
+             *** Generating:  680:    LOADFROMADDR
              [
              <expr3>
               <expr2>
                <expr1>
-                 *** Generating:  681:    PUSHNUM           0
+                *** Generating:  681:    PUSHNUM           0
                 UNSIGNED INTEGER LITERAL: 0
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  682:    ADDTOPTR
-              *** Generating:  683:    LOADFROMADDR
+             *** Generating:  682:    ADDTOPTR
+             *** Generating:  683:    LOADFROMADDR
              ]
              ... node has no more children
             ... node has no more children
            ... node has no more children
-           *** Generating:  684:    PASSPARAM
+          *** Generating:  684:    PASSPARAM
           )
           ... node has no more children
-          *** Generating:  685:    CALLSTATMETHOD    578
+         *** Generating:  685:    CALLSTATMETHOD    578
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: i  [local var (stackframe offset = -4)]
-          *** Generating:  686:    PUSHLOCADDR       -4
-          *** Generating:  687:    LOADFROMADDR
+         *** Generating:  686:    PUSHLOCADDR       -4
+         *** Generating:  687:    LOADFROMADDR
          [
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  688:    PUSHNUM           0
+            *** Generating:  688:    PUSHNUM           0
             UNSIGNED INTEGER LITERAL: 0
             ... node has no more children
            ... node has no more children
           ... node has no more children
          ]
-          *** Generating:  689:    ADDTOPTR
+         *** Generating:  689:    ADDTOPTR
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: i  [local var (stackframe offset = -4)]
-             *** Generating:  690:    PUSHLOCADDR       -4
-             *** Generating:  691:    LOADFROMADDR
+            *** Generating:  690:    PUSHLOCADDR       -4
+            *** Generating:  691:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  692:    PUSHNUM           0
+               *** Generating:  692:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  693:    ADDTOPTR
-             *** Generating:  694:    LOADFROMADDR
+            *** Generating:  693:    ADDTOPTR
+            *** Generating:  694:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           +
           <expr2>
            <expr1>
-             *** Generating:  695:    PUSHNUM           1
+            *** Generating:  695:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  696:    ADD
+          *** Generating:  696:    ADD
           ... node has no more children
-          *** Generating:  697:    SAVETOADDR
+         *** Generating:  697:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: j  [local var (stackframe offset = -3)]
-          *** Generating:  698:    PUSHLOCADDR       -3
-          *** Generating:  699:    LOADFROMADDR
+         *** Generating:  698:    PUSHLOCADDR       -3
+         *** Generating:  699:    LOADFROMADDR
          [
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  700:    PUSHNUM           0
+            *** Generating:  700:    PUSHNUM           0
             UNSIGNED INTEGER LITERAL: 0
             ... node has no more children
            ... node has no more children
           ... node has no more children
          ]
-          *** Generating:  701:    ADDTOPTR
+         *** Generating:  701:    ADDTOPTR
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: j  [local var (stackframe offset = -3)]
-             *** Generating:  702:    PUSHLOCADDR       -3
-             *** Generating:  703:    LOADFROMADDR
+            *** Generating:  702:    PUSHLOCADDR       -3
+            *** Generating:  703:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
-                *** Generating:  704:    PUSHNUM           0
+               *** Generating:  704:    PUSHNUM           0
                UNSIGNED INTEGER LITERAL: 0
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  705:    ADDTOPTR
-             *** Generating:  706:    LOADFROMADDR
+            *** Generating:  705:    ADDTOPTR
+            *** Generating:  706:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           -
           <expr2>
            <expr1>
-             *** Generating:  707:    PUSHNUM           1
+            *** Generating:  707:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  708:    SUB
+          *** Generating:  708:    SUB
           ... node has no more children
-          *** Generating:  709:    SAVETOADDR
+         *** Generating:  709:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
@@ -3971,14 +3955,14 @@
    }
    ... node has no more children
   *** Fixed Up:  608:    INITSTKFRM        0
-   *** Generating:  710:    RETURN            3
+  *** Generating:  710:    RETURN            3
   ... node has no more children
  <methodDecl>
   Reserved Word: static
   Reserved Word: void
   *** Fixed Up: 339:    NOP
   *** Fixed Up:  338:    CALLSTATMETHOD    711
-   *** Generating:  711:    INITSTKFRM        ?
+  *** Generating:  711:    INITSTKFRM        ?
   IDENTIFIER: findpivot  [method (start address = 711)]
   (
   <parameterDeclList>
@@ -4012,29 +3996,29 @@
    <statement>
     <assignmentOrInvoc>
      IDENTIFIER: allsame  [local var (stackframe offset = -2)]
-      *** Generating:  712:    PUSHLOCADDR       -2
-      *** Generating:  713:    LOADFROMADDR
+     *** Generating:  712:    PUSHLOCADDR       -2
+     *** Generating:  713:    LOADFROMADDR
      [
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  714:    PUSHNUM           0
+        *** Generating:  714:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
      ]
-      *** Generating:  715:    ADDTOPTR
+     *** Generating:  715:    ADDTOPTR
      =
      <expr3>
       <expr2>
        <expr1>
-         *** Generating:  716:    PUSHNUM           0
+        *** Generating:  716:    PUSHNUM           0
         UNSIGNED INTEGER LITERAL: 0
         ... node has no more children
        ... node has no more children
       ... node has no more children
-      *** Generating:  717:    SAVETOADDR
+     *** Generating:  717:    SAVETOADDR
      ;
      ... node has no more children
     ... node has no more children
@@ -4044,25 +4028,25 @@
      <singleVarDecl>
       IDENTIFIER: k  [not in symbol table]
       =
-       *** Generating:  718:    PUSHLOCADDR       1
+      *** Generating:  718:    PUSHLOCADDR       1
       <expr3>
        <expr2>
         <expr1>
          IDENTIFIER: first  [local var (stackframe offset = -4)]
-          *** Generating:  719:    PUSHLOCADDR       -4
-          *** Generating:  720:    LOADFROMADDR
+         *** Generating:  719:    PUSHLOCADDR       -4
+         *** Generating:  720:    LOADFROMADDR
          ... node has no more children
         ... node has no more children
        +
        <expr2>
         <expr1>
-          *** Generating:  721:    PUSHNUM           1
+         *** Generating:  721:    PUSHNUM           1
          UNSIGNED INTEGER LITERAL: 1
          ... node has no more children
         ... node has no more children
-        *** Generating:  722:    ADD
+       *** Generating:  722:    ADD
        ... node has no more children
-       *** Generating:  723:    SAVETOADDR
+      *** Generating:  723:    SAVETOADDR
       ... node has no more children
      ;
      ... node has no more children
@@ -4085,52 +4069,52 @@
               <expr2>
                <expr1>
                 IDENTIFIER: numlist  [static var (address = 2)]
-                 *** Generating:  724:    PUSHSTATADDR      2
-                 *** Generating:  725:    LOADFROMADDR
+                *** Generating:  724:    PUSHSTATADDR      2
+                *** Generating:  725:    LOADFROMADDR
                 [
                 <expr3>
                  <expr2>
                   <expr1>
                    IDENTIFIER: k  [local var (stackframe offset = 1)]
-                    *** Generating:  726:    PUSHLOCADDR       1
-                    *** Generating:  727:    LOADFROMADDR
+                   *** Generating:  726:    PUSHLOCADDR       1
+                   *** Generating:  727:    LOADFROMADDR
                    ... node has no more children
                   ... node has no more children
                  ... node has no more children
-                 *** Generating:  728:    ADDTOPTR
-                 *** Generating:  729:    LOADFROMADDR
+                *** Generating:  728:    ADDTOPTR
+                *** Generating:  729:    LOADFROMADDR
                 ]
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  730:    PASSPARAM
+             *** Generating:  730:    PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: numlist  [static var (address = 2)]
-                 *** Generating:  731:    PUSHSTATADDR      2
-                 *** Generating:  732:    LOADFROMADDR
+                *** Generating:  731:    PUSHSTATADDR      2
+                *** Generating:  732:    LOADFROMADDR
                 [
                 <expr3>
                  <expr2>
                   <expr1>
                    IDENTIFIER: first  [local var (stackframe offset = -4)]
-                    *** Generating:  733:    PUSHLOCADDR       -4
-                    *** Generating:  734:    LOADFROMADDR
+                   *** Generating:  733:    PUSHLOCADDR       -4
+                   *** Generating:  734:    LOADFROMADDR
                    ... node has no more children
                   ... node has no more children
                  ... node has no more children
-                 *** Generating:  735:    ADDTOPTR
-                 *** Generating:  736:    LOADFROMADDR
+                *** Generating:  735:    ADDTOPTR
+                *** Generating:  736:    LOADFROMADDR
                 ]
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  737:    PASSPARAM
+             *** Generating:  737:    PASSPARAM
              )
              ... node has no more children
-             *** Generating:  738:    CALLSTATMETHOD    34
+            *** Generating:  738:    CALLSTATMETHOD    34
             ... node has no more children
            *
            <expr1>
@@ -4141,75 +4125,75 @@
               <expr2>
                <expr1>
                 IDENTIFIER: k  [local var (stackframe offset = 1)]
-                 *** Generating:  739:    PUSHLOCADDR       1
-                 *** Generating:  740:    LOADFROMADDR
+                *** Generating:  739:    PUSHLOCADDR       1
+                *** Generating:  740:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  741:    PASSPARAM
+             *** Generating:  741:    PASSPARAM
              ,
              <expr3>
               <expr2>
                <expr1>
                 IDENTIFIER: last  [local var (stackframe offset = -3)]
-                 *** Generating:  742:    PUSHLOCADDR       -3
-                 *** Generating:  743:    LOADFROMADDR
+                *** Generating:  742:    PUSHLOCADDR       -3
+                *** Generating:  743:    LOADFROMADDR
                 ... node has no more children
                ... node has no more children
               ... node has no more children
-              *** Generating:  744:    PASSPARAM
+             *** Generating:  744:    PASSPARAM
              )
              ... node has no more children
-             *** Generating:  745:    CALLSTATMETHOD    46
+            *** Generating:  745:    CALLSTATMETHOD    46
             ... node has no more children
-            *** Generating:  746:    MUL
+           *** Generating:  746:    MUL
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  747:    PUSHNUM           1
+            *** Generating:  747:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  748:    EQ
-         <expr4>
          ... node has no more children
-        ... node has no more children
+        *** Generating:  748:    EQ
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  749:    JUMPONFALSE       ?
+     *** Generating:  749:    JUMPONFALSE       ?
      <statement>
       <assignmentOrInvoc>
        IDENTIFIER: k  [local var (stackframe offset = 1)]
-        *** Generating:  750:    PUSHLOCADDR       1
+       *** Generating:  750:    PUSHLOCADDR       1
        =
        <expr3>
         <expr2>
          <expr1>
           IDENTIFIER: k  [local var (stackframe offset = 1)]
-           *** Generating:  751:    PUSHLOCADDR       1
-           *** Generating:  752:    LOADFROMADDR
+          *** Generating:  751:    PUSHLOCADDR       1
+          *** Generating:  752:    LOADFROMADDR
           ... node has no more children
          ... node has no more children
         +
         <expr2>
          <expr1>
-           *** Generating:  753:    PUSHNUM           1
+          *** Generating:  753:    PUSHNUM           1
           UNSIGNED INTEGER LITERAL: 1
           ... node has no more children
          ... node has no more children
-         *** Generating:  754:    ADD
+        *** Generating:  754:    ADD
         ... node has no more children
-        *** Generating:  755:    SAVETOADDR
+       *** Generating:  755:    SAVETOADDR
        ;
        ... node has no more children
       ... node has no more children
-      *** Generating:  756:    JUMP              724
+     *** Generating:  756:    JUMP              724
      *** Fixed Up:  749:    JUMPONFALSE       757
      ... node has no more children
     ... node has no more children
@@ -4225,69 +4209,69 @@
           <expr2>
            <expr1>
             IDENTIFIER: k  [local var (stackframe offset = 1)]
-             *** Generating:  757:    PUSHLOCADDR       1
-             *** Generating:  758:    LOADFROMADDR
+            *** Generating:  757:    PUSHLOCADDR       1
+            *** Generating:  758:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           ... node has no more children
-         ==
+         ... node has no more children
+        ==
+        <expr4>
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: last  [local var (stackframe offset = -3)]
-             *** Generating:  759:    PUSHLOCADDR       -3
-             *** Generating:  760:    LOADFROMADDR
+            *** Generating:  759:    PUSHLOCADDR       -3
+            *** Generating:  760:    LOADFROMADDR
             ... node has no more children
            ... node has no more children
           +
           <expr2>
            <expr1>
-             *** Generating:  761:    PUSHNUM           1
+            *** Generating:  761:    PUSHNUM           1
             UNSIGNED INTEGER LITERAL: 1
             ... node has no more children
            ... node has no more children
-           *** Generating:  762:    ADD
+          *** Generating:  762:    ADD
           ... node has no more children
-          *** Generating:  763:    EQ
-         <expr4>
          ... node has no more children
-        ... node has no more children
+        *** Generating:  763:    EQ
         ... node has no more children
        ... node has no more children
       ... node has no more children
      )
-      *** Generating:  764:    JUMPONFALSE       ?
+     *** Generating:  764:    JUMPONFALSE       ?
      <statement>
       <assignmentOrInvoc>
        IDENTIFIER: allsame  [local var (stackframe offset = -2)]
-        *** Generating:  765:    PUSHLOCADDR       -2
-        *** Generating:  766:    LOADFROMADDR
+       *** Generating:  765:    PUSHLOCADDR       -2
+       *** Generating:  766:    LOADFROMADDR
        [
        <expr3>
         <expr2>
          <expr1>
-           *** Generating:  767:    PUSHNUM           0
+          *** Generating:  767:    PUSHNUM           0
           UNSIGNED INTEGER LITERAL: 0
           ... node has no more children
          ... node has no more children
         ... node has no more children
        ]
-        *** Generating:  768:    ADDTOPTR
+       *** Generating:  768:    ADDTOPTR
        =
        <expr3>
         <expr2>
          <expr1>
-           *** Generating:  769:    PUSHNUM           1
+          *** Generating:  769:    PUSHNUM           1
           UNSIGNED INTEGER LITERAL: 1
           ... node has no more children
          ... node has no more children
         ... node has no more children
-        *** Generating:  770:    SAVETOADDR
+       *** Generating:  770:    SAVETOADDR
        ;
        ... node has no more children
       ... node has no more children
      Reserved Word: else
-      *** Generating:  771:    JUMP              ?
+     *** Generating:  771:    JUMP              ?
      *** Fixed Up:  764:    JUMPONFALSE       772
      <statement>
       <ifStmt>
@@ -4301,20 +4285,20 @@
             <expr2>
              <expr1>
               IDENTIFIER: numlist  [static var (address = 2)]
-               *** Generating:  772:    PUSHSTATADDR      2
-               *** Generating:  773:    LOADFROMADDR
+              *** Generating:  772:    PUSHSTATADDR      2
+              *** Generating:  773:    LOADFROMADDR
               [
               <expr3>
                <expr2>
                 <expr1>
                  IDENTIFIER: k  [local var (stackframe offset = 1)]
-                  *** Generating:  774:    PUSHLOCADDR       1
-                  *** Generating:  775:    LOADFROMADDR
+                 *** Generating:  774:    PUSHLOCADDR       1
+                 *** Generating:  775:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  776:    ADDTOPTR
-               *** Generating:  777:    LOADFROMADDR
+              *** Generating:  776:    ADDTOPTR
+              *** Generating:  777:    LOADFROMADDR
               ]
               ... node has no more children
              ... node has no more children
@@ -4324,119 +4308,117 @@
             <expr2>
              <expr1>
               IDENTIFIER: numlist  [static var (address = 2)]
-               *** Generating:  778:    PUSHSTATADDR      2
-               *** Generating:  779:    LOADFROMADDR
+              *** Generating:  778:    PUSHSTATADDR      2
+              *** Generating:  779:    LOADFROMADDR
               [
               <expr3>
                <expr2>
                 <expr1>
                  IDENTIFIER: first  [local var (stackframe offset = -4)]
-                  *** Generating:  780:    PUSHLOCADDR       -4
-                  *** Generating:  781:    LOADFROMADDR
+                 *** Generating:  780:    PUSHLOCADDR       -4
+                 *** Generating:  781:    LOADFROMADDR
                  ... node has no more children
                 ... node has no more children
                ... node has no more children
-               *** Generating:  782:    ADDTOPTR
-               *** Generating:  783:    LOADFROMADDR
+              *** Generating:  782:    ADDTOPTR
+              *** Generating:  783:    LOADFROMADDR
               ]
               ... node has no more children
              ... node has no more children
             ... node has no more children
-            *** Generating:  784:    LT
-           <expr4>
+           *** Generating:  784:    LT
            ... node has no more children
-          ... node has no more children
           ... node has no more children
          ... node has no more children
         ... node has no more children
        )
-        *** Generating:  785:    JUMPONFALSE       ?
+       *** Generating:  785:    JUMPONFALSE       ?
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: pivot  [local var (stackframe offset = -5)]
-          *** Generating:  786:    PUSHLOCADDR       -5
-          *** Generating:  787:    LOADFROMADDR
+         *** Generating:  786:    PUSHLOCADDR       -5
+         *** Generating:  787:    LOADFROMADDR
          [
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  788:    PUSHNUM           0
+            *** Generating:  788:    PUSHNUM           0
             UNSIGNED INTEGER LITERAL: 0
             ... node has no more children
            ... node has no more children
           ... node has no more children
          ]
-          *** Generating:  789:    ADDTOPTR
+         *** Generating:  789:    ADDTOPTR
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: numlist  [static var (address = 2)]
-             *** Generating:  790:    PUSHSTATADDR      2
-             *** Generating:  791:    LOADFROMADDR
+            *** Generating:  790:    PUSHSTATADDR      2
+            *** Generating:  791:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
                IDENTIFIER: k  [local var (stackframe offset = 1)]
-                *** Generating:  792:    PUSHLOCADDR       1
-                *** Generating:  793:    LOADFROMADDR
+               *** Generating:  792:    PUSHLOCADDR       1
+               *** Generating:  793:    LOADFROMADDR
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  794:    ADDTOPTR
-             *** Generating:  795:    LOADFROMADDR
+            *** Generating:  794:    ADDTOPTR
+            *** Generating:  795:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  796:    SAVETOADDR
+         *** Generating:  796:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
        Reserved Word: else
-        *** Generating:  797:    JUMP              ?
+       *** Generating:  797:    JUMP              ?
        *** Fixed Up:  785:    JUMPONFALSE       798
        <statement>
         <assignmentOrInvoc>
          IDENTIFIER: pivot  [local var (stackframe offset = -5)]
-          *** Generating:  798:    PUSHLOCADDR       -5
-          *** Generating:  799:    LOADFROMADDR
+         *** Generating:  798:    PUSHLOCADDR       -5
+         *** Generating:  799:    LOADFROMADDR
          [
          <expr3>
           <expr2>
            <expr1>
-             *** Generating:  800:    PUSHNUM           0
+            *** Generating:  800:    PUSHNUM           0
             UNSIGNED INTEGER LITERAL: 0
             ... node has no more children
            ... node has no more children
           ... node has no more children
          ]
-          *** Generating:  801:    ADDTOPTR
+         *** Generating:  801:    ADDTOPTR
          =
          <expr3>
           <expr2>
            <expr1>
             IDENTIFIER: numlist  [static var (address = 2)]
-             *** Generating:  802:    PUSHSTATADDR      2
-             *** Generating:  803:    LOADFROMADDR
+            *** Generating:  802:    PUSHSTATADDR      2
+            *** Generating:  803:    LOADFROMADDR
             [
             <expr3>
              <expr2>
               <expr1>
                IDENTIFIER: first  [local var (stackframe offset = -4)]
-                *** Generating:  804:    PUSHLOCADDR       -4
-                *** Generating:  805:    LOADFROMADDR
+               *** Generating:  804:    PUSHLOCADDR       -4
+               *** Generating:  805:    LOADFROMADDR
                ... node has no more children
               ... node has no more children
              ... node has no more children
-             *** Generating:  806:    ADDTOPTR
-             *** Generating:  807:    LOADFROMADDR
+            *** Generating:  806:    ADDTOPTR
+            *** Generating:  807:    LOADFROMADDR
             ]
             ... node has no more children
            ... node has no more children
           ... node has no more children
-          *** Generating:  808:    SAVETOADDR
+         *** Generating:  808:    SAVETOADDR
          ;
          ... node has no more children
         ... node has no more children
@@ -4449,7 +4431,7 @@
    }
    ... node has no more children
   *** Fixed Up:  711:    INITSTKFRM        1
-   *** Generating:  809:    RETURN            4
+  *** Generating:  809:    RETURN            4
   ... node has no more children
  }
  ... node has no more children
