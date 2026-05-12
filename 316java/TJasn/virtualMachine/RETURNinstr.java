@@ -6,7 +6,7 @@ import TJasn.TJ;
 public class RETURNinstr extends OneOperandInstruction {
 
   void execute() {
-    ASP = FP;
+    ASP = FP+1;
     FP = TJ.data[--ASP - POINTERTAG];
     PC = TJ.data[--ASP - POINTERTAG];
     ASP -= operand;

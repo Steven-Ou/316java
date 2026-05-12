@@ -771,3 +771,26 @@ Data memory dump
 
   Expression evaluation stack: <empty>
 
+
+
+
+****** Debugging Stop ******
+
+
+
+Data memory dump
+
+  Data memory--addresses 0 to top of stack, and allocated heap locations:
+  0: 0 = Ctrl-@
+  1: 0 = Ctrl-@
+  2: 32 = ' '
+
+  PC=1  ESP=1  FP=<not in use>  ASP= PTR TO 3
+  HP= PTR TO 10000  HMAX= PTR TO 15000
+
+  Total number of instructions executed: 1
+  Last instruction to be executed: 0:      PUSHSTATADDR      0
+
+  Expression evaluation stack:
+  EXPRSTACK[0]: 2147418112 = PTR TO 0
+

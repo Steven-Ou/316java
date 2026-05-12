@@ -6,16 +6,13 @@ import TJasn.virtualMachine.VirtualMachineHaltException;
 
 public class INITSTKFRMinstr extends OneOperandInstruction {
 
-  void execute () throws VirtualMachineHaltException
-  {
+  void execute() throws VirtualMachineHaltException {
     TJ.data[ASP++ - POINTERTAG] = FP;
-    FP = ASP -1;
-    ASP += operand; 
+    FP = ASP - 1;
+    ASP += operand;
   }
 
-  public INITSTKFRMinstr (int locationsNeededForLocalVars)
-  {
+  public INITSTKFRMinstr(int locationsNeededForLocalVars) {
     super(locationsNeededForLocalVars, "INITSTKFRM");
   }
 }
-
