@@ -7,7 +7,10 @@ public class RETURNinstr extends OneOperandInstruction {
 
   void execute ()
   {
-    /* ???????? */
+   ASP = FP; 
+    FP = TJ.data[--ASP - POINTERTAG]; 
+    PC = TJ.data[--ASP - POINTERTAG]; 
+    ASP -= operand;
   }
 
   public RETURNinstr (int operand)
